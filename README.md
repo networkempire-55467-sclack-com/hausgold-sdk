@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.org/hausgold/hausgold-sdk.svg?branch=master)](https://travis-ci.org/hausgold/hausgold-sdk)
 [![Gem Version](https://badge.fury.io/rb/hausgold-sdk.svg)](https://badge.fury.io/rb/hausgold-sdk)
-[![Maintainability](https://api.codeclimate.com/v1/badges/446f3eff18bebff9c174/maintainability)](https://codeclimate.com/github/hausgold/hausgold-sdk/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/446f3eff18bebff9c174/test_coverage)](https://codeclimate.com/github/hausgold/hausgold-sdk/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/da2292f1669ec814f361/maintainability)](https://codeclimate.com/repos/5c10e400884193028501175a/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/da2292f1669ec814f361/test_coverage)](https://codeclimate.com/repos/5c10e400884193028501175a/test_coverage)
 [![API docs](https://img.shields.io/badge/docs-API-blue.svg)](https://www.rubydoc.info/gems/hausgold-sdk)
 
 This project is dedicated to easily connect your application to the HAUSGOLD

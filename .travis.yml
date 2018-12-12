@@ -1,6 +1,6 @@
 env:
   global:
-    - CC_TEST_REPORTER_ID=xxx
+    - CC_TEST_REPORTER_ID=b6b227b2da27c29ed926ef96edafef23f15ccec08fb10d179948789d95015f06
 
 sudo: false
 language: ruby
