@@ -10,21 +10,22 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.3
   Exclude:
-    - db/schema.rb
     - bin/**/*
-    - db/migrate/**/*
-    - vendor/cache/**/*
-    - vendor/bundle/**/*
+    - vendor/**/*
     - build/**/*
+    - gemfiles/vendor/**/*
 
 Metrics/BlockLength:
   Exclude:
-    # Because of the Grape DSL
-    - lib/**/*.rb
     - Rakefile
     - hausgold-sdk.gemspec
     - spec/**/*.rb
     - '**/*.rake'
+    - doc/**/*.rb
+    # Concerns and middlewares contain by nature long blocks
+    - lib/hausgold/entity/concern/**/*.rb
+    - lib/hausgold/client/request/**/*.rb
+    - lib/hausgold/client/response/**/*.rb
 
 # Document all the things.
 Style/DocumentationMethod:
@@ -41,3 +42,21 @@ Lint/AmbiguousBlockAssociation:
 # supported with the +with(hash_including)+ matchers
 RSpec/MessageSpies:
   EnforcedStyle: receive
+
+# Because nesting makes sense here to group the feature tests
+# more effective. This increases maintainability.
+RSpec/NestedGroups:
+  Max: 4
+
+# Disable regular Rails spec paths.
+RSpec/FilePath:
+  Enabled: false
+
+# Because of the gem name compatiblity.
+Naming/FileName:
+  Exclude:
+    - lib/hausgold-sdk.rb
+
+# Because we just implemented the ActiveRecord API.
+Rails/SkipsModelValidations:
+  Enabled: false

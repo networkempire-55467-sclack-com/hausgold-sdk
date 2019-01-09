@@ -21,17 +21,27 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.16'
+  spec.add_runtime_dependency 'activemodel', '>= 4.2.0'
+  spec.add_runtime_dependency 'activesupport', '>= 4.2.0'
+  spec.add_runtime_dependency 'faraday', '~> 0.15'
+  spec.add_runtime_dependency 'faraday_middleware', '~> 0.12'
+  spec.add_runtime_dependency 'globalid'
+  spec.add_runtime_dependency 'recursive-open-struct', '~> 1.1'
+
+  spec.add_development_dependency 'appraisal'
+  spec.add_development_dependency 'bundler', '>= 1.16', '< 3'
+  spec.add_development_dependency 'factory_bot', '~> 4.11'
+  spec.add_development_dependency 'ffaker', '~> 2.10'
   spec.add_development_dependency 'rack', '~> 2.0'
   spec.add_development_dependency 'rack-test', '~> 0.8.2'
   spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rdoc', '~> 6.1'
+  spec.add_development_dependency 'redcarpet', '~> 3.4'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'simplecov', '~> 0.15'
   spec.add_development_dependency 'timecop', '~> 0.9.1'
   spec.add_development_dependency 'vcr', '~> 3.0'
   spec.add_development_dependency 'webmock', '~> 3.1'
-
-  spec.add_runtime_dependency 'activesupport', '>= 3.2.0'
-  spec.add_runtime_dependency 'httparty'
-  spec.add_runtime_dependency 'recursive-open-struct', '~> 1.0'
+  spec.add_development_dependency 'yard', '~> 0.9.18'
+  spec.add_development_dependency 'yard-activesupport-concern', '~> 0.0.1'
 end

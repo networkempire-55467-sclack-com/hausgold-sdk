@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
 module Hausgold
-  VERSION = '0.1.0'.freeze
+  # The version of the +hausgold-sdk+ gem
+  VERSION = '0.1.0'
 end

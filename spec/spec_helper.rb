@@ -6,6 +6,7 @@ SimpleCov.command_name 'specs'
 require 'bundler/setup'
 require 'hausgold'
 require 'timecop'
+require 'ffaker'
 require 'pp'
 
 # Setup a default timezone for the tests
@@ -26,5 +27,31 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.before do
+    reset_test_configuration!
+  end
+
+  # Add VCR to all tests
+  unless ENV.fetch('VCR', 'true') == 'false'
+    config.around do |example|
+      vcr_tag = example.metadata[:vcr]
+      next VCR.turned_off(&example) if vcr_tag == false
+
+      options = vcr_tag.is_a?(Hash) ? vcr_tag : {}
+      path_data = [example.metadata[:description]]
+      parent = example.example_group
+      while parent != RSpec::ExampleGroups
+        path_data << parent.metadata[:description]
+        parent = parent.parent
+      end
+
+      name = path_data.map do |str|
+        str.underscore.delete('.').gsub(%r{[^\w/]+}, '_').gsub(%r{/$}, '')
+      end.reverse.join('/')
+
+      VCR.use_cassette(name, options, &example)
+    end
   end
 end
