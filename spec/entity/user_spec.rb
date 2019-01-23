@@ -69,7 +69,7 @@ RSpec.describe Hausgold::User do
 
       it 'detects when persisted' do
         entity = described_class.new(id: 'test')
-        entity.changes_applied
+        entity.send(:changes_applied)
         expect(entity.persisted?).to be(true)
       end
     end

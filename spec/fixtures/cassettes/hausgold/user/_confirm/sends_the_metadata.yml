@@ -5,12 +5,12 @@ http_interactions:
     uri: http://identity-api.local/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"leesa6@farrell.us","type":"employee","status":"active","password":"U8Gwbdjp4JRbaxLN","password_confirmation":"U8Gwbdjp4JRbaxLN"}'
+      string: '{"email":"amina6@spinka.com","type":"employee","status":"active","password":"n_4qW4QOfSaxa","password_confirmation":"n_4qW4QOfSaxa"}'
     headers:
       User-Agent:
       - HausgoldSDK/0.1.0 test-client
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
       Content-Type:
       - application/json
       Accept:
@@ -23,24 +23,24 @@ http_interactions:
       message: Created
     headers:
       Location:
-      - "/v1/users/d33fc61d-f8f6-4094-af01-ef2409bc0547"
+      - "/v1/users/3ad4af20-f709-4752-b49e-48b75de714be"
       Content-Type:
       - application/json
       Etag:
-      - W/"5195a41b00ca6853b6d09f3da0e936a8"
+      - W/"88cc30f332f43f9b5b2323e50e351b4a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 31455fab-9525-43d5-92cf-36a6b36265a9
+      - 943bddfb-639d-4b23-a780-a5eb7614b436
       X-Runtime:
-      - '0.070773'
+      - '0.070119'
       Vary:
       - Origin
       Content-Length:
       - '327'
     body:
       encoding: UTF-8
-      string: '{"id":"d33fc61d-f8f6-4094-af01-ef2409bc0547","gid":"gid://identity-api/User/d33fc61d-f8f6-4094-af01-ef2409bc0547","email":"leesa6@farrell.us","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T11:48:10Z","updated_at":"2019-01-23T11:48:10Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
+      string: '{"id":"3ad4af20-f709-4752-b49e-48b75de714be","gid":"gid://identity-api/User/3ad4af20-f709-4752-b49e-48b75de714be","email":"amina6@spinka.com","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:46Z","updated_at":"2019-01-23T14:09:46Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:10 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:46 GMT
 recorded_with: VCR 3.0.3

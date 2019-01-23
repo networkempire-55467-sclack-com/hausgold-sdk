@@ -5,12 +5,12 @@ http_interactions:
     uri: http://identity-api.local/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"verona_littel1@ullrich.name","type":"employee","status":"active","password":"pVonB46NK_0OEQs","password_confirmation":"pVonB46NK_0OEQs"}'
+      string: '{"email":"kendrick_konopelski1@boehm.name","type":"employee","status":"active","password":"yw6zzFpQCNcFEy","password_confirmation":"yw6zzFpQCNcFEy"}'
     headers:
       User-Agent:
       - HausgoldSDK/0.1.0 test-client
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
       Content-Type:
       - application/json
       Accept:
@@ -23,37 +23,37 @@ http_interactions:
       message: Created
     headers:
       Location:
-      - "/v1/users/d54f1540-8d4f-4168-a9e0-da2adfac6e60"
+      - "/v1/users/c823d0cd-f6aa-4d0f-b4d7-3dae2efdfc6d"
       Content-Type:
       - application/json
       Etag:
-      - W/"0a5ce866af3eb53e14a188a18937dc7e"
+      - W/"234f8f8e67c3aebaf537a484694d7364"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 95e00282-5fd8-4c8f-910d-9e85ed1de87f
+      - 80cf2d27-8803-4165-880a-b85934ffd595
       X-Runtime:
-      - '0.064517'
+      - '0.075731'
       Vary:
       - Origin
       Content-Length:
-      - '337'
+      - '341'
     body:
       encoding: UTF-8
-      string: '{"id":"d54f1540-8d4f-4168-a9e0-da2adfac6e60","gid":"gid://identity-api/User/d54f1540-8d4f-4168-a9e0-da2adfac6e60","email":"verona_littel1@ullrich.name","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T11:48:05Z","updated_at":"2019-01-23T11:48:05Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
+      string: '{"id":"c823d0cd-f6aa-4d0f-b4d7-3dae2efdfc6d","gid":"gid://identity-api/User/c823d0cd-f6aa-4d0f-b4d7-3dae2efdfc6d","email":"kendrick_konopelski1@boehm.name","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:41Z","updated_at":"2019-01-23T14:09:41Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:05 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:41 GMT
 - request:
     method: post
     uri: http://identity-api.local/v1/users/workflows/confirm
     body:
       encoding: UTF-8
-      string: '{"id":"d54f1540-8d4f-4168-a9e0-da2adfac6e60"}'
+      string: '{"id":"c823d0cd-f6aa-4d0f-b4d7-3dae2efdfc6d"}'
     headers:
       User-Agent:
       - HausgoldSDK/0.1.0 test-client
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
       Content-Type:
       - application/json
       Accept:
@@ -68,20 +68,20 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"d6de3247f26755edbca341580fdf98cd"
+      - W/"c9e5408265eb11b94d9416ec1220e7b1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2ebfe1e2-69ed-475e-a62e-76bf4851662f
+      - 44bb5f17-71f7-485f-86ca-22470e1ebeda
       X-Runtime:
-      - '0.010145'
+      - '0.011629'
       Vary:
       - Origin
       Content-Length:
-      - '355'
+      - '359'
     body:
       encoding: UTF-8
-      string: '{"id":"d54f1540-8d4f-4168-a9e0-da2adfac6e60","gid":"gid://identity-api/User/d54f1540-8d4f-4168-a9e0-da2adfac6e60","email":"verona_littel1@ullrich.name","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T11:48:05Z","updated_at":"2019-01-23T11:48:05Z","confirmed_at":"2019-01-23T11:48:05Z","locked_at":null,"recovery_at":null}'
+      string: '{"id":"c823d0cd-f6aa-4d0f-b4d7-3dae2efdfc6d","gid":"gid://identity-api/User/c823d0cd-f6aa-4d0f-b4d7-3dae2efdfc6d","email":"kendrick_konopelski1@boehm.name","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:41Z","updated_at":"2019-01-23T14:09:41Z","confirmed_at":"2019-01-23T14:09:41Z","locked_at":null,"recovery_at":null}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:05 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:41 GMT
 recorded_with: VCR 3.0.3

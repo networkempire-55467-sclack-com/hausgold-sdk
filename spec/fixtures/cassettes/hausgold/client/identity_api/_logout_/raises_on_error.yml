@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 4ff19571-8911-4531-85a2-8b64dca0bc7e
+      - ad87af76-f518-4bfd-af7f-4f28f59d5ad8
       X-Runtime:
-      - '0.012336'
+      - '0.012957'
       Vary:
       - Origin
       Content-Length:
@@ -37,5 +37,5 @@ http_interactions:
       string: '{"code":3,"message":"Validation failed: Token not a JWT, Token not
         a refresh token"}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:05 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:41 GMT
 recorded_with: VCR 3.0.3

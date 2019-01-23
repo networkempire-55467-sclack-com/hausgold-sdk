@@ -161,7 +161,7 @@ module Hausgold
               decision(bang: args.fetch(:bang, false)) do |result|
                 result.bang(&bang_entity(entity, res, id: entity.id))
                 result.good(&assign_entity(entity, res) do |entity|
-                  entity.clear_changes_information
+                  entity.send(:clear_changes_information)
                 end)
                 successful?(res)
               end

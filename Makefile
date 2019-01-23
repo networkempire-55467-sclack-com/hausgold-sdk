@@ -26,6 +26,7 @@ BUNDLE ?= bundle
 APPRAISAL ?= appraisal
 RAKE ?= rake
 YARD ?= yard
+RUBOCOP ?= rubocop
 
 # Files
 GEMFILES ?= $(subst _,-,$(patsubst $(GEMFILES_DIR)/%.gemfile,%,\
@@ -63,6 +64,11 @@ install:
 	@$(call run-shell,$(BUNDLE) check || $(BUNDLE) install --path $(VENDOR_DIR))
 	@$(call run-shell,$(BUNDLE) exec $(APPRAISAL) install)
 
+update: install
+	# Install the dependencies
+	@$(MKDIR) -p $(VENDOR_DIR)
+	@$(call run-shell,$(BUNDLE) exec $(APPRAISAL) update)
+
 test: #install
 	# Run the whole test suite
 	@$(call run-shell,$(BUNDLE) exec $(RAKE))
@@ -71,6 +77,13 @@ $(TEST_GEMFILES): GEMFILE=$(@:test-%=%)
 $(TEST_GEMFILES):
 	# Run the whole test suite ($(GEMFILE))
 	@$(call run-shell,$(BUNDLE) exec $(APPRAISAL) $(GEMFILE) $(RAKE))
+
+test-style: \
+	test-style-ruby
+
+test-style-ruby:
+	# Run the static code analyzer (rubocop)
+	@$(call run-shell,$(BUNDLE) exec $(RUBOCOP) -a)
 
 clean:
 	# Clean the dependencies

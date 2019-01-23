@@ -23,20 +23,20 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"53a17c063d4855edf36001a9595b3cce"
+      - W/"73742d0d662a6ca54b1357b022be766c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 86306134-da8f-48af-9777-1e54ae4d8c40
+      - 70bb1913-026f-4815-8a5a-f3c76f5ac03c
       X-Runtime:
-      - '0.082816'
+      - '0.080666'
       Vary:
       - Origin
       Content-Length:
       - '1205'
     body:
       encoding: UTF-8
-      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwOTEsImV4cCI6MTU0ODg0ODg5MSwianRpIjoiNTY0YjI4Y2UyNTgxIiwidHlwIjoiYWNjZXNzIiwic3ViIjoiYmYxMzZhZWQtMDI1OS00NDU4LThjZjctNzYyNTUzZWViZmMyIiwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUuY29tIn0.TUYyRntagAJzHzZ56M2j-WExM93lDJBspFURr5izTxfhLnpmdLm5SFcM_qwtplUJ74JAki7318lrxTpWcTpuqnYIIVI_hAhu2LivJIGLMeUcLZ-jhe6ZEEirJnZ0Dp8tcwO_O0kutR7-Lv6RCJEmsN7LRDIw_xTlTJPR8MQWCzFA76eKv6MeREvbDYewb2ddOKI7JtA_V6mZEzPwq_zssZ9UguAw5KC70gfV8iERXhkMzPd2ZwkHIOkugJJXNkXx8mGuD1OKsm--MqjzfaQeLuakndGD3fDJITMgkhcAZvGpKydotA6l9X9_oCbTVaWJ-W1NYtC-0JA0M9_RQ7JJIQ","expires_in":604800,"refresh_token":null,"user":{"id":"bf136aed-0259-4458-8cf7-762553eebfc2","gid":"gid://identity-api/User/bf136aed-0259-4458-8cf7-762553eebfc2","email":"test@example.com","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-22T11:40:05Z","updated_at":"2019-01-22T11:40:05Z","confirmed_at":"2019-01-22T11:40:05Z","locked_at":null,"recovery_at":null}}'
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1ODcsImV4cCI6MTU0ODg1NzM4NywianRpIjoiYzMzOTY5YTgzOGNhIiwidHlwIjoiYWNjZXNzIiwic3ViIjoiYmYxMzZhZWQtMDI1OS00NDU4LThjZjctNzYyNTUzZWViZmMyIiwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUuY29tIn0.JkPSoNtklZJp8bL81xAxTZ0uVW-dwsBkIw01UjflCAPQTwf5jJA91Te1Fy7vV89V5Ma8G3PBr4AMQOv0VybmRWCvEtDO7Z1H2gJopf37KAQzd1HTHL13-zjQgmrXlBFRCkm2hoqG5WCw1wDTCnuDgmHp79989FN3rlmrxsWv2WIRWc2i0O2b3c8GP-FLewVKOEMMvvPI2eKyzqGWIOuob1hzEcFJv3Cvvg1tPr19vPpcyTNeXDlROzdgRzpTRX3XVHdxF4ZPNN3trii75IfyD5H8bxQqKazfZVRPvlGcWY2Vgbv6Ef5bUUnHpsyqeOcIgXRl5bjp34rbzaC-7M6how","expires_in":604800,"refresh_token":null,"user":{"id":"bf136aed-0259-4458-8cf7-762553eebfc2","gid":"gid://identity-api/User/bf136aed-0259-4458-8cf7-762553eebfc2","email":"test@example.com","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-22T11:40:05Z","updated_at":"2019-01-22T11:40:05Z","confirmed_at":"2019-01-22T11:40:05Z","locked_at":null,"recovery_at":null}}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:11 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:47 GMT
 recorded_with: VCR 3.0.3

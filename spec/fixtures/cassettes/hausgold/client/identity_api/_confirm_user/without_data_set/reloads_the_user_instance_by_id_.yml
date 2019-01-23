@@ -5,12 +5,12 @@ http_interactions:
     uri: http://identity-api.local/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"delbert2@larson.com","type":"employee","status":"active","password":"G0t88KKDt","password_confirmation":"G0t88KKDt"}'
+      string: '{"email":"ailene.prohaska2@green.us","type":"employee","status":"active","password":"GN0Shgfn6","password_confirmation":"GN0Shgfn6"}'
     headers:
       User-Agent:
       - HausgoldSDK/0.1.0 test-client
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
       Content-Type:
       - application/json
       Accept:
@@ -23,37 +23,37 @@ http_interactions:
       message: Created
     headers:
       Location:
-      - "/v1/users/a019dd0e-291e-4756-8125-a3ae15ca6d18"
+      - "/v1/users/c3ec4ef6-de65-489d-8f05-455599a5af21"
       Content-Type:
       - application/json
       Etag:
-      - W/"092acdc8a66c9977a1c307aa757cd7fe"
+      - W/"aeb2005878bfc8cc5182b04304d155c9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5c7d0bb8-68bc-4219-8390-871dc342f316
+      - '0587294b-ed78-49d7-b2c8-9ecb8bfacd35'
       X-Runtime:
-      - '0.066050'
+      - '0.068617'
       Vary:
       - Origin
       Content-Length:
-      - '329'
+      - '335'
     body:
       encoding: UTF-8
-      string: '{"id":"a019dd0e-291e-4756-8125-a3ae15ca6d18","gid":"gid://identity-api/User/a019dd0e-291e-4756-8125-a3ae15ca6d18","email":"delbert2@larson.com","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T11:48:05Z","updated_at":"2019-01-23T11:48:05Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
+      string: '{"id":"c3ec4ef6-de65-489d-8f05-455599a5af21","gid":"gid://identity-api/User/c3ec4ef6-de65-489d-8f05-455599a5af21","email":"ailene.prohaska2@green.us","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:41Z","updated_at":"2019-01-23T14:09:41Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:05 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:41 GMT
 - request:
     method: post
     uri: http://identity-api.local/v1/users/workflows/confirm
     body:
       encoding: UTF-8
-      string: '{"id":"a019dd0e-291e-4756-8125-a3ae15ca6d18"}'
+      string: '{"id":"c3ec4ef6-de65-489d-8f05-455599a5af21"}'
     headers:
       User-Agent:
       - HausgoldSDK/0.1.0 test-client
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
       Content-Type:
       - application/json
       Accept:
@@ -68,20 +68,20 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"a9e3d59fa539e677e2dd44568d8d2146"
+      - W/"c5d89a2567d6c52df7d22d532289d981"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6e63db55-e8e8-4fec-bc73-584b863811e3
+      - fb47d444-992b-4d6a-b1e4-5901d75ea759
       X-Runtime:
-      - '0.009263'
+      - '0.011099'
       Vary:
       - Origin
       Content-Length:
-      - '347'
+      - '353'
     body:
       encoding: UTF-8
-      string: '{"id":"a019dd0e-291e-4756-8125-a3ae15ca6d18","gid":"gid://identity-api/User/a019dd0e-291e-4756-8125-a3ae15ca6d18","email":"delbert2@larson.com","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T11:48:05Z","updated_at":"2019-01-23T11:48:05Z","confirmed_at":"2019-01-23T11:48:05Z","locked_at":null,"recovery_at":null}'
+      string: '{"id":"c3ec4ef6-de65-489d-8f05-455599a5af21","gid":"gid://identity-api/User/c3ec4ef6-de65-489d-8f05-455599a5af21","email":"ailene.prohaska2@green.us","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:41Z","updated_at":"2019-01-23T14:09:41Z","confirmed_at":"2019-01-23T14:09:41Z","locked_at":null,"recovery_at":null}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:05 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:41 GMT
 recorded_with: VCR 3.0.3

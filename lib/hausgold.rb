@@ -15,6 +15,9 @@ require 'faraday'
 require 'faraday_middleware'
 require 'pp'
 
+# Load polyfills if needed
+require 'hausgold/compatibility'
+
 # The HAUSGOLD SDK namespace. Everything is bundled here.
 module Hausgold
   # Top level elements

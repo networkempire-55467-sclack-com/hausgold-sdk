@@ -31,7 +31,7 @@ module Hausgold
         # @return [Hausgold::BaseEntity] pass back ourself
         def clear_changes
           # Clear the top level
-          clear_changes_information
+          send(:clear_changes_information)
           # Stop if there are no associations configured
           return unless respond_to? :associations
 

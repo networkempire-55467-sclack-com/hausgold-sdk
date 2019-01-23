@@ -2,7 +2,9 @@
 
 RSpec.describe Hausgold::Jwt do
   let(:instance) do
-    described_class.new(access_token: 'old').tap(&:changes_applied)
+    described_class.new(access_token: 'old').tap do |jwt|
+      jwt.send(:changes_applied)
+    end
   end
 
   describe '#entity_name' do

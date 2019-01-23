@@ -16,17 +16,23 @@ module Hausgold
         #
         # @param str [String] the string to check
         # @return [Boolean] whenever the string is a Global Id
+        #
+        # rubocop:disable Style/CaseEquality because of Ruby 2.3 compatibility
         def gid?(str)
-          GID.match? str.to_s
+          GID === str.to_s
         end
+        # rubocop:enable Style/CaseEquality
 
         # Check if the given string is a UUID.
         #
         # @param str [String] the string to check
         # @return [Boolean] whenever the string is a UUID
+        #
+        # rubocop:disable Style/CaseEquality because of Ruby 2.3 compatibility
         def uuid?(str)
-          UUID.match? str.to_s
+          UUID === str.to_s
         end
+        # rubocop:enable Style/CaseEquality
 
         # Check if the given string is an email address.
         #

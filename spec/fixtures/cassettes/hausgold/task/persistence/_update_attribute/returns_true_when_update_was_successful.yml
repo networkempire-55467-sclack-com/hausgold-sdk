@@ -6,13 +6,13 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"title":"old","description":"Meaningful description with many details","location":"04179
-        Leipzig Leutzsch","due_date":"2019-01-25 12:48:08 +0100","user_id":"712a480c-623b-4f65-b80d-9cf74b438046","reference_ids":["5bba4aa6-5a6c-4cf8-870b-504ce7561e39","95737d4b-9479-4128-9e01-90f676056a8b","07ae6b8e-e901-45e0-a331-4d25e87871d1","7ced6d5e-a047-4f48-8fa9-2b407af87222"],"metadata":{"add_1":true,"add_2":"2019-01-24
-        12:48:08 +0100","add_3":"Info"}}'
+        Leipzig Leutzsch","due_date":"2019-01-25 15:09:43 +0100","user_id":"32f68474-d7f5-4ead-97d5-50d13344d738","reference_ids":["d9ca8255-c433-4d48-9af3-b56c0186492b","133ed64a-8528-4474-97f7-98c5a4a3db84","4fc086e3-7812-493f-be23-47a73994d762","538ea7c0-d0bc-40a7-a407-089b01fe6b7a","36bceb9e-6fa3-4205-8f9a-60e41faaa3f4"],"metadata":{"add_1":true,"add_2":"2019-01-24
+        15:09:43 +0100","add_3":"Info"}}'
     headers:
       User-Agent:
       - HausgoldSDK/0.1.0 test-client
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
       Content-Type:
       - application/json
       Accept:
@@ -25,31 +25,31 @@ http_interactions:
       message: Created
     headers:
       Location:
-      - "/v1/tasks/837519d1-71bf-4d56-9a26-af96a9054e59"
+      - "/v1/tasks/18d7d839-0732-4092-a05d-8567874ee15e"
       Content-Type:
       - application/json
       Etag:
-      - W/"6ee7a67ee9a7d9a42205280bca885314"
+      - W/"cd1bf6076dd1767299b03bfc481f80f1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1816b19c-fd6b-4f24-97be-ba338e5acf9f
+      - 43ff559b-d037-4f78-b1b1-a0821ecbf9b3
       X-Runtime:
-      - '0.007582'
+      - '0.011052'
       Vary:
       - Origin
       Content-Length:
-      - '697'
+      - '736'
     body:
       encoding: UTF-8
-      string: '{"id":"837519d1-71bf-4d56-9a26-af96a9054e59","gid":"gid://calendar-api/Task/837519d1-71bf-4d56-9a26-af96a9054e59","title":"old","description":"Meaningful
-        description with many details","location":"04179 Leipzig Leutzsch","due_date":"2019-01-25T11:48:08Z","editable":true,"status":"open","result":null,"type":null,"user_id":"712a480c-623b-4f65-b80d-9cf74b438046","reference_ids":["5bba4aa6-5a6c-4cf8-870b-504ce7561e39","95737d4b-9479-4128-9e01-90f676056a8b","07ae6b8e-e901-45e0-a331-4d25e87871d1","7ced6d5e-a047-4f48-8fa9-2b407af87222"],"created_at":"2019-01-23T11:48:08Z","updated_at":"2019-01-23T11:48:08Z","alarms":[],"metadata":{"add_1":true,"add_2":"2019-01-24
-        12:48:08 +0100","add_3":"Info"}}'
+      string: '{"id":"18d7d839-0732-4092-a05d-8567874ee15e","gid":"gid://calendar-api/Task/18d7d839-0732-4092-a05d-8567874ee15e","title":"old","description":"Meaningful
+        description with many details","location":"04179 Leipzig Leutzsch","due_date":"2019-01-25T14:09:43Z","editable":true,"status":"open","result":null,"type":null,"user_id":"32f68474-d7f5-4ead-97d5-50d13344d738","reference_ids":["d9ca8255-c433-4d48-9af3-b56c0186492b","133ed64a-8528-4474-97f7-98c5a4a3db84","4fc086e3-7812-493f-be23-47a73994d762","538ea7c0-d0bc-40a7-a407-089b01fe6b7a","36bceb9e-6fa3-4205-8f9a-60e41faaa3f4"],"created_at":"2019-01-23T14:09:43Z","updated_at":"2019-01-23T14:09:43Z","alarms":[],"metadata":{"add_1":true,"add_2":"2019-01-24
+        15:09:43 +0100","add_3":"Info"}}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:08 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:43 GMT
 - request:
     method: put
-    uri: http://calendar-api.local/v1/tasks/837519d1-71bf-4d56-9a26-af96a9054e59
+    uri: http://calendar-api.local/v1/tasks/18d7d839-0732-4092-a05d-8567874ee15e
     body:
       encoding: UTF-8
       string: '{"title":"new"}'
@@ -57,7 +57,7 @@ http_interactions:
       User-Agent:
       - HausgoldSDK/0.1.0 test-client
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
       Content-Type:
       - application/json
       Accept:
@@ -72,22 +72,22 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"91f9e9e490222c5ff90fcce33f0fa26c"
+      - W/"fa092ea9d1555a310aa43bf4f99e3480"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1c700338-6f67-4861-be6d-625adc966627
+      - 9de32a61-ada6-4f6e-97db-c1c76a688d8d
       X-Runtime:
-      - '0.006924'
+      - '0.009031'
       Vary:
       - Origin
       Content-Length:
-      - '697'
+      - '736'
     body:
       encoding: UTF-8
-      string: '{"id":"837519d1-71bf-4d56-9a26-af96a9054e59","gid":"gid://calendar-api/Task/837519d1-71bf-4d56-9a26-af96a9054e59","title":"new","description":"Meaningful
-        description with many details","location":"04179 Leipzig Leutzsch","due_date":"2019-01-25T11:48:08Z","editable":true,"status":"open","result":null,"type":null,"user_id":"712a480c-623b-4f65-b80d-9cf74b438046","reference_ids":["5bba4aa6-5a6c-4cf8-870b-504ce7561e39","95737d4b-9479-4128-9e01-90f676056a8b","07ae6b8e-e901-45e0-a331-4d25e87871d1","7ced6d5e-a047-4f48-8fa9-2b407af87222"],"created_at":"2019-01-23T11:48:08Z","updated_at":"2019-01-23T11:48:08Z","alarms":[],"metadata":{"add_1":true,"add_2":"2019-01-24
-        12:48:08 +0100","add_3":"Info"}}'
+      string: '{"id":"18d7d839-0732-4092-a05d-8567874ee15e","gid":"gid://calendar-api/Task/18d7d839-0732-4092-a05d-8567874ee15e","title":"new","description":"Meaningful
+        description with many details","location":"04179 Leipzig Leutzsch","due_date":"2019-01-25T14:09:43Z","editable":true,"status":"open","result":null,"type":null,"user_id":"32f68474-d7f5-4ead-97d5-50d13344d738","reference_ids":["d9ca8255-c433-4d48-9af3-b56c0186492b","133ed64a-8528-4474-97f7-98c5a4a3db84","4fc086e3-7812-493f-be23-47a73994d762","538ea7c0-d0bc-40a7-a407-089b01fe6b7a","36bceb9e-6fa3-4205-8f9a-60e41faaa3f4"],"created_at":"2019-01-23T14:09:43Z","updated_at":"2019-01-23T14:09:43Z","alarms":[],"metadata":{"add_1":true,"add_2":"2019-01-24
+        15:09:43 +0100","add_3":"Info"}}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:08 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:43 GMT
 recorded_with: VCR 3.0.3

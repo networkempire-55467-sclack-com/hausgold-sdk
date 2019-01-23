@@ -5,12 +5,12 @@ http_interactions:
     uri: http://identity-api.local/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"shawanna_trantow8@damorestokes.ca","type":"employee","status":"active","password":"peEVGd4z1zX0","password_confirmation":"peEVGd4z1zX0"}'
+      string: '{"email":"lita8@buckridgefranecki.us","type":"employee","status":"active","password":"CsKU5wjg2KZGkAjn","password_confirmation":"CsKU5wjg2KZGkAjn"}'
     headers:
       User-Agent:
       - HausgoldSDK/0.1.0 test-client
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
       Content-Type:
       - application/json
       Accept:
@@ -23,37 +23,37 @@ http_interactions:
       message: Created
     headers:
       Location:
-      - "/v1/users/e59de615-3ec9-47f7-b545-d20ec0d22072"
+      - "/v1/users/823ebacb-59cc-4cc1-9bb3-194990df01b1"
       Content-Type:
       - application/json
       Etag:
-      - W/"3cbe1d22f340d3988694efd483f39117"
+      - W/"87793ac792589931a95857977fa3f036"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 244aab7e-8a25-424e-87e4-810fc3ba4af4
+      - '00138107-81d6-4402-b7ee-a792c8cf1546'
       X-Runtime:
-      - '0.073164'
+      - '0.068037'
       Vary:
       - Origin
       Content-Length:
-      - '343'
+      - '336'
     body:
       encoding: UTF-8
-      string: '{"id":"e59de615-3ec9-47f7-b545-d20ec0d22072","gid":"gid://identity-api/User/e59de615-3ec9-47f7-b545-d20ec0d22072","email":"shawanna_trantow8@damorestokes.ca","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T11:48:10Z","updated_at":"2019-01-23T11:48:10Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
+      string: '{"id":"823ebacb-59cc-4cc1-9bb3-194990df01b1","gid":"gid://identity-api/User/823ebacb-59cc-4cc1-9bb3-194990df01b1","email":"lita8@buckridgefranecki.us","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:46Z","updated_at":"2019-01-23T14:09:46Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:10 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:46 GMT
 - request:
     method: post
     uri: http://identity-api.local/v1/users/workflows/recover
     body:
       encoding: UTF-8
-      string: '{"email":"shawanna_trantow8@damorestokes.ca"}'
+      string: '{"email":"lita8@buckridgefranecki.us"}'
     headers:
       User-Agent:
       - HausgoldSDK/0.1.0 test-client
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
       Content-Type:
       - application/json
       Accept:
@@ -68,20 +68,20 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"b8ad84852e34c2030b428a1ce044bfe2"
+      - W/"3381704f9eeba8df72a92ea22e95f5c6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 52904a8a-fedc-4bae-bf7a-501dcd169e5c
+      - 1488ca0d-c25e-4636-bc63-4405bdd6b7f3
       X-Runtime:
-      - '0.011903'
+      - '0.012019'
       Vary:
       - Origin
       Content-Length:
-      - '361'
+      - '354'
     body:
       encoding: UTF-8
-      string: '{"id":"e59de615-3ec9-47f7-b545-d20ec0d22072","gid":"gid://identity-api/User/e59de615-3ec9-47f7-b545-d20ec0d22072","email":"shawanna_trantow8@damorestokes.ca","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T11:48:10Z","updated_at":"2019-01-23T11:48:10Z","confirmed_at":null,"locked_at":null,"recovery_at":"2019-01-23T11:48:10Z"}'
+      string: '{"id":"823ebacb-59cc-4cc1-9bb3-194990df01b1","gid":"gid://identity-api/User/823ebacb-59cc-4cc1-9bb3-194990df01b1","email":"lita8@buckridgefranecki.us","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:46Z","updated_at":"2019-01-23T14:09:46Z","confirmed_at":null,"locked_at":null,"recovery_at":"2019-01-23T14:09:46Z"}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:10 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:46 GMT
 recorded_with: VCR 3.0.3

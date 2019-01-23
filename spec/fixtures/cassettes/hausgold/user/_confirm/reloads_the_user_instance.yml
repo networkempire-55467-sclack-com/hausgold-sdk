@@ -5,12 +5,12 @@ http_interactions:
     uri: http://identity-api.local/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"chantelle.ferry5@casper.biz","type":"employee","status":"active","password":"RHHQkO5U","password_confirmation":"RHHQkO5U"}'
+      string: '{"email":"libby_yundt5@larsoneffertz.co.uk","type":"employee","status":"active","password":"5DrXoaaaCMDp","password_confirmation":"5DrXoaaaCMDp"}'
     headers:
       User-Agent:
       - HausgoldSDK/0.1.0 test-client
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
       Content-Type:
       - application/json
       Accept:
@@ -23,37 +23,37 @@ http_interactions:
       message: Created
     headers:
       Location:
-      - "/v1/users/c638a449-3f75-478f-b1f6-f47ad240bd78"
+      - "/v1/users/2dba3fef-4c83-4719-9fd4-d981ce95eb5e"
       Content-Type:
       - application/json
       Etag:
-      - W/"fcbbbc0ff89f7870159bdabb748ab1a2"
+      - W/"b136ecc967ed41a102835e56da03ecc4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 325b4a34-388b-4133-b09a-ee49cc1fc840
+      - b1ff47bb-e046-4b17-b5d7-842f766c671f
       X-Runtime:
-      - '0.066714'
+      - '0.069967'
       Vary:
       - Origin
       Content-Length:
-      - '337'
+      - '342'
     body:
       encoding: UTF-8
-      string: '{"id":"c638a449-3f75-478f-b1f6-f47ad240bd78","gid":"gid://identity-api/User/c638a449-3f75-478f-b1f6-f47ad240bd78","email":"chantelle.ferry5@casper.biz","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T11:48:10Z","updated_at":"2019-01-23T11:48:10Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
+      string: '{"id":"2dba3fef-4c83-4719-9fd4-d981ce95eb5e","gid":"gid://identity-api/User/2dba3fef-4c83-4719-9fd4-d981ce95eb5e","email":"libby_yundt5@larsoneffertz.co.uk","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:46Z","updated_at":"2019-01-23T14:09:46Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:10 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:46 GMT
 - request:
     method: post
     uri: http://identity-api.local/v1/users/workflows/confirm
     body:
       encoding: UTF-8
-      string: '{"email":"chantelle.ferry5@casper.biz"}'
+      string: '{"email":"libby_yundt5@larsoneffertz.co.uk"}'
     headers:
       User-Agent:
       - HausgoldSDK/0.1.0 test-client
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
       Content-Type:
       - application/json
       Accept:
@@ -68,20 +68,20 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"664a42173a44b1d153d2985b959a2bad"
+      - W/"bfee0273a68a061527464cb736e4908c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3e547222-efd7-47b6-8684-b79446c90dd2
+      - 9383a89d-5c69-408c-8a08-37aa3bb9b17c
       X-Runtime:
-      - '0.013237'
+      - '0.012851'
       Vary:
       - Origin
       Content-Length:
-      - '355'
+      - '360'
     body:
       encoding: UTF-8
-      string: '{"id":"c638a449-3f75-478f-b1f6-f47ad240bd78","gid":"gid://identity-api/User/c638a449-3f75-478f-b1f6-f47ad240bd78","email":"chantelle.ferry5@casper.biz","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T11:48:10Z","updated_at":"2019-01-23T11:48:10Z","confirmed_at":"2019-01-23T11:48:10Z","locked_at":null,"recovery_at":null}'
+      string: '{"id":"2dba3fef-4c83-4719-9fd4-d981ce95eb5e","gid":"gid://identity-api/User/2dba3fef-4c83-4719-9fd4-d981ce95eb5e","email":"libby_yundt5@larsoneffertz.co.uk","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:46Z","updated_at":"2019-01-23T14:09:46Z","confirmed_at":"2019-01-23T14:09:46Z","locked_at":null,"recovery_at":null}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 11:48:10 GMT
+  recorded_at: Wed, 23 Jan 2019 14:09:46 GMT
 recorded_with: VCR 3.0.3

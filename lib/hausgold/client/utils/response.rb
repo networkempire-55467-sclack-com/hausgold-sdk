@@ -84,7 +84,7 @@ module Hausgold
         def assign_entity(entity, res, &block)
           lambda do
             entity.assign_attributes(res.body.to_h)
-            entity.changes_applied
+            entity.send(:changes_applied)
             # We need to call +#changed?+ - the +@mutations_from_database+ is
             # unset and this causes issues on subsequent calls to +#changed?+
             # after a freeze (eg. when deleted)
