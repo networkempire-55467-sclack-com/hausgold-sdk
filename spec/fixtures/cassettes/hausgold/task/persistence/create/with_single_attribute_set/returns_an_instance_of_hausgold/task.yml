@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://calendar-api.local/v1/tasks
+    body:
+      encoding: UTF-8
+      string: '{"title":"Do something meaningful","description":"Meaningful description
+        with many details","location":"04179 Leipzig Leutzsch","due_date":"2019-01-25
+        12:48:08 +0100","user_id":"7366a4ab-ba1b-458c-98f7-74d91a1e2578","reference_ids":["d88627f9-f3cf-45eb-8fc6-8c265a0ca71f","ffcb17f0-eb95-4392-a5fa-b9a233521caf","4821f945-b8b8-4e2e-bf39-ec0ab75dd203","d171b280-33ff-4054-a873-05a275c41015"],"metadata":{"add_1":true,"add_2":"2019-01-24
+        12:48:08 +0100","add_3":"Info"}}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.1.0 test-client
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/v1/tasks/5294881b-a50a-46cf-90a6-60a795223518"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"839feddbb0ca85edf52876210d989346"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 45c80528-f61e-4d94-b759-8c2d38b1ce44
+      X-Runtime:
+      - '0.007795'
+      Vary:
+      - Origin
+      Content-Length:
+      - '717'
+    body:
+      encoding: UTF-8
+      string: '{"id":"5294881b-a50a-46cf-90a6-60a795223518","gid":"gid://calendar-api/Task/5294881b-a50a-46cf-90a6-60a795223518","title":"Do
+        something meaningful","description":"Meaningful description with many details","location":"04179
+        Leipzig Leutzsch","due_date":"2019-01-25T11:48:08Z","editable":true,"status":"open","result":null,"type":null,"user_id":"7366a4ab-ba1b-458c-98f7-74d91a1e2578","reference_ids":["d88627f9-f3cf-45eb-8fc6-8c265a0ca71f","ffcb17f0-eb95-4392-a5fa-b9a233521caf","4821f945-b8b8-4e2e-bf39-ec0ab75dd203","d171b280-33ff-4054-a873-05a275c41015"],"created_at":"2019-01-23T11:48:08Z","updated_at":"2019-01-23T11:48:08Z","alarms":[],"metadata":{"add_1":true,"add_2":"2019-01-24
+        12:48:08 +0100","add_3":"Info"}}'
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 11:48:08 GMT
+recorded_with: VCR 3.0.3

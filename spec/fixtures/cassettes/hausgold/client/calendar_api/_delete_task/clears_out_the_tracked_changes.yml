@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://calendar-api.local/v1/tasks
+    body:
+      encoding: UTF-8
+      string: '{"title":"test","user_id":"blub"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.1.0 test-client
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/v1/tasks/d8eee335-1d4f-4736-8aa3-b017f1940cab"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"32b531534b2660d3ee8bd28dea1b5872"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2a36f230-a084-4149-b87e-0f5a38f82522
+      X-Runtime:
+      - '0.009732'
+      Vary:
+      - Origin
+      Content-Length:
+      - '372'
+    body:
+      encoding: UTF-8
+      string: '{"id":"d8eee335-1d4f-4736-8aa3-b017f1940cab","gid":"gid://calendar-api/Task/d8eee335-1d4f-4736-8aa3-b017f1940cab","title":"test","description":null,"location":null,"due_date":null,"editable":true,"status":"open","result":null,"type":null,"user_id":"blub","reference_ids":[],"created_at":"2019-01-23T11:48:04Z","updated_at":"2019-01-23T11:48:04Z","alarms":[],"metadata":{}}'
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 11:48:04 GMT
+- request:
+    method: delete
+    uri: http://calendar-api.local/v1/tasks/d8eee335-1d4f-4736-8aa3-b017f1940cab
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.1.0 test-client
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwODMsImV4cCI6MTU0ODg0ODg4MywianRpIjoiZmVmMTFmMGJjNzI1IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.NWVTcFc7paxBGeNGnMEEPC3_-IkFNmlKPSU4bta0RvfxIvcdePvb1cQZwaURK340TygNX0jFD_uJIHd_zVLhCXcvkG0HjLddp3_Tg6PEedcFnIAmR1jPPPcuiQhXc3bCz4A34X0-CqavBh5ojnZo5UQV2htmcRBTTbY3Cv0ER--Z60jS91L9vv4xS0fqoV1CekW_77PlthT5BpibOKUbKFdD9kYIS-ORdzwljXOvTk8jGxWw5o4sCLHxn2zPdd_11P2AfYS4AvSuBYrMgdMP9K3jSMGtfgSryC0eu_jW_pRVNBpZ3X4Gy8z70o6rVxc-puAIhdMmSkJqePyxfNUTjA
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"32b531534b2660d3ee8bd28dea1b5872"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 434ccf51-95ed-49a7-867d-d0c627d3a927
+      X-Runtime:
+      - '0.006657'
+      Vary:
+      - Origin
+      Content-Length:
+      - '372'
+    body:
+      encoding: UTF-8
+      string: '{"id":"d8eee335-1d4f-4736-8aa3-b017f1940cab","gid":"gid://calendar-api/Task/d8eee335-1d4f-4736-8aa3-b017f1940cab","title":"test","description":null,"location":null,"due_date":null,"editable":true,"status":"open","result":null,"type":null,"user_id":"blub","reference_ids":[],"created_at":"2019-01-23T11:48:04Z","updated_at":"2019-01-23T11:48:04Z","alarms":[],"metadata":{}}'
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 11:48:04 GMT
+recorded_with: VCR 3.0.3

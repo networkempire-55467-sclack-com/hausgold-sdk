@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/refresh
+    body:
+      encoding: UTF-8
+      string: '{"refresh_token":"b.a.d"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.1.0 test-client
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 35cc1c55-0de2-4c2d-9bc1-18acae789aab
+      X-Runtime:
+      - '0.004243'
+      Vary:
+      - Origin
+      Content-Length:
+      - '47'
+    body:
+      encoding: UTF-8
+      string: '{"code":200,"message":"Authentication failed."}'
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 11:48:05 GMT
+recorded_with: VCR 3.0.3

@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","masquerade":{"id":"bf136aed-0259-4458-8cf7-762553eebfc2"},"bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.1.0 test-client
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"cad43e1eaeadca660a4ca74764f46c16"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 307ea175-d254-4582-bd83-9cba4e253c37
+      X-Runtime:
+      - '0.082981'
+      Vary:
+      - Origin
+      Content-Length:
+      - '1205'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNDQwOTIsImV4cCI6MTU0ODg0ODg5MiwianRpIjoiZDEzNTQxYzliMTlhIiwidHlwIjoiYWNjZXNzIiwic3ViIjoiYmYxMzZhZWQtMDI1OS00NDU4LThjZjctNzYyNTUzZWViZmMyIiwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUuY29tIn0.EARn1cNhMs9aVrNah8FnY4mm3MlWsTSlQECj8dJqmOPo6JUIokykHDAPWkSH4Q1iKWRngzTNW5cvPnLxEB86vOiPQEQpB5TfouWQddFQMX8CaVugzXk19VMXtCc_KZAYscrO75FbeVRH_oBMAey10yYmWcvc0LI0MvvSF32Xo14Nojq97zfCziSdR8yp-j4WkrEkp0azdeNDp9MZm_GTsn0jzsdDSqYbePmXRI-BOGZGeASjE9u4bltHCt5aLKd57d2EmFWDTkGEmJVtLIPsDWn6zRaCL9NWsMTPyMJOXecWxGJQRmJm97qKkPeFdEebImCqdIt8IX2fEmplRraghQ","expires_in":604800,"refresh_token":null,"user":{"id":"bf136aed-0259-4458-8cf7-762553eebfc2","gid":"gid://identity-api/User/bf136aed-0259-4458-8cf7-762553eebfc2","email":"test@example.com","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-22T11:40:05Z","updated_at":"2019-01-22T11:40:05Z","confirmed_at":"2019-01-22T11:40:05Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 11:48:12 GMT
+recorded_with: VCR 3.0.3

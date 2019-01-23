@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"wrong"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.1.0 test-client
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - a1ba82c3-2732-4f69-bb5d-dee49b81768e
+      X-Runtime:
+      - '0.061496'
+      Vary:
+      - Origin
+      Content-Length:
+      - '72'
+    body:
+      encoding: UTF-8
+      string: '{"code":200,"message":"Authentication failed. (user/password mismatch)"}'
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 11:48:04 GMT
+recorded_with: VCR 3.0.3

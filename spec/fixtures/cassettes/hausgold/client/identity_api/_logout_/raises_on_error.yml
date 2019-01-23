@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: http://identity-api.local/v1/jwt
+    body:
+      encoding: UTF-8
+      string: '{"refresh_token":"b.a.d","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.1.0 test-client
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 4ff19571-8911-4531-85a2-8b64dca0bc7e
+      X-Runtime:
+      - '0.012336'
+      Vary:
+      - Origin
+      Content-Length:
+      - '84'
+    body:
+      encoding: UTF-8
+      string: '{"code":3,"message":"Validation failed: Token not a JWT, Token not
+        a refresh token"}'
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 11:48:05 GMT
+recorded_with: VCR 3.0.3
