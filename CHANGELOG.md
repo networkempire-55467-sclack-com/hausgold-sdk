@@ -1,3 +1,15 @@
+### 0.2.0
+
+* Implemented initial entity callbacks (just `after_initialize` for now)
+* Track when the JWT identity was issued (`created_at`)
+  and allow to query for expiration (`Hausgold::Jwt#expired?`) in a safe way
+* Added a configuration for request logging which is enabled by default now
+* Added the possibility to configure the logger instance to use
+* Added an automatical and implicit identity renewal when expired
+* Implemented a generic instrumentation facility for the SDK
+  based on ActiveSupport::Notifications
+* Added a request/response logging functionality
+
 ### 0.1.0
 
 * Implemented a simple association and dirty attribute mapping and tracking
