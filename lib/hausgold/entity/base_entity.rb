@@ -6,9 +6,9 @@ module Hausgold
     include ActiveModel::Model
     include ActiveModel::Dirty
     include ActiveModel::Serialization
-    extend ActiveModel::Callbacks
 
     include Hausgold::Utils::Bangers
+    include Hausgold::EntityConcern::Callbacks
     include Hausgold::EntityConcern::Attributes
     include Hausgold::EntityConcern::Associations
     include Hausgold::EntityConcern::Client
@@ -43,6 +43,8 @@ module Hausgold
       super(known)
       # Follow the ActiveRecord API
       yield self if block_given?
+      # Run the initializer callbacks
+      _run_initialize_callbacks
     end
 
     # Initialize the class we were inherited to. We trigger all our methods

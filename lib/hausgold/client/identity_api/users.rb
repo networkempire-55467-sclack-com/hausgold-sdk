@@ -40,6 +40,7 @@ module Hausgold
           res = connection.post do |req|
             req.path = "/v1/users/workflows/#{workflow}"
             req.body = identifier.merge(args)
+            use_default_context(req)
             use_jwt(req)
           end
           decision(bang: args.fetch(:bang, false)) do |result|

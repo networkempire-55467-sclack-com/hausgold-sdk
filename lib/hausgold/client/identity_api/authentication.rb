@@ -6,6 +6,7 @@ module Hausgold
     module Authentication
       extend ActiveSupport::Concern
 
+      # rubocop:disable Metrics/BlockLength because of ActiveSupport::Concern
       included do
         # Perform a login request while sending the passed credentials. We
         # dynamically support all authentication schemes of the Identity API.
@@ -31,10 +32,10 @@ module Hausgold
           res = connection.post do |req|
             req.path = "/v1/jwt/#{scheme}"
             req.body = args
+            use_default_context(req)
           end
           decision(bang: args.fetch(:bang, false)) do |result|
-            result.bang \
-              { Hausgold::AuthenticationError.new(nil, res) }
+            result.bang { Hausgold::AuthenticationError.new(nil, res) }
             result.good { Hausgold::Jwt.new(res.body).clear_changes }
             successful?(res)
           end
@@ -51,10 +52,13 @@ module Hausgold
         #
         # @param args [Hash{Symbol => Mixed}] the options
         # @return [Boolean] whenever the logout was successful
+        #
+        # rubocop:disable Metrics/MethodLength because thats the bare minimum
         def logout(**args)
           res = connection.delete do |req|
             req.path = '/v1/jwt'
             req.body = args
+            use_default_context(req)
           end
           decision(bang: args.fetch(:bang, false)) do |result|
             result.bang { Hausgold::RequestError.new(nil, res) }
@@ -63,10 +67,12 @@ module Hausgold
             successful?(res, code: 204)
           end
         end
+        # rubocop:enable Metrics/MethodLength
 
         # Generate bang method variants
         bangers :login, :logout
       end
+      # rubocop:enable Metrics/BlockLength
     end
   end
 end

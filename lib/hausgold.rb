@@ -5,6 +5,7 @@ require 'active_support/concern'
 require 'active_support/configurable'
 require 'active_support/cache'
 require 'active_support/core_ext/hash'
+require 'active_support/core_ext/string'
 require 'active_support/time'
 require 'active_support/time_with_zone'
 require 'active_support/string_inquirer'
@@ -27,6 +28,7 @@ module Hausgold
   autoload :Client, 'hausgold/client'
   autoload :Identity, 'hausgold/identity'
   autoload :GlobalId, 'hausgold/global_id'
+  autoload :Instrumentation, 'hausgold/instrumentation'
   autoload :ClientCriteria, 'hausgold/client_criteria'
 
   # Entities
@@ -51,6 +53,7 @@ module Hausgold
 
   # Faraday response middlewares
   module Response
+    autoload :Logger, 'hausgold/client/response/logger'
     autoload :RecursiveOpenStruct,
              'hausgold/client/response/recursive_open_struct'
   end
@@ -84,6 +87,7 @@ module Hausgold
 
   # Separated features of an entity instance
   module EntityConcern
+    autoload :Callbacks, 'hausgold/entity/concern/callbacks'
     autoload :Attributes, 'hausgold/entity/concern/attributes'
     autoload :Associations, 'hausgold/entity/concern/associations'
     autoload :Client, 'hausgold/entity/concern/client'
@@ -102,4 +106,5 @@ module Hausgold
   include Hausgold::Client
   include Hausgold::Identity
   include Hausgold::GlobalId
+  include Hausgold::Instrumentation
 end

@@ -39,13 +39,13 @@ module Hausgold
       #
       # @param con [Faraday::Connection] the connection object
       def configure(con)
+        con.use :instrumentation
         con.request :json
         con.request :hgsdk_default_headers
         con.response :hgsdk_recursive_open_struct
         con.response :dates
         con.response :json, content_type: /\bjson$/
         con.response :follow_redirects
-        # con.response :logger
         con.adapter Faraday.default_adapter
       end
 

@@ -44,9 +44,13 @@ module Hausgold
           # Set the JWT instance
           return @@identity = jwt
         end
-        # Pass back the JWT instance, or fetch a new one with the
-        # configured identity settings from the Gem configuration
+        # Fetch a new identity with the configured identity settings from the
+        # Gem configuration
         @@identity ||= auth_by_config
+        # Take care of an expired identity
+        @@identity = auth_by_config if @@identity.expired?
+        # Pass back the actual identity instance
+        @@identity
       end
 
       # Switch the current identity/JWT instance for the runtime of the given

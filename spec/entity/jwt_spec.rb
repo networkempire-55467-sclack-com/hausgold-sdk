@@ -7,16 +7,22 @@ RSpec.describe Hausgold::Jwt do
     end
   end
 
-  describe '#entity_name' do
-    it 'returns the correct entity name' do
-      expect(instance.entity_name).to be_eql('Jwt')
-    end
-  end
-
   describe 'client' do
     it 'sets the client class as module accessor' do
       expect(described_class.client_class).to \
         be_eql(Hausgold::Client::IdentityApi)
+    end
+  end
+
+  describe 'callbacks' do
+    describe 'after_initialize' do
+      before { Timecop.freeze }
+
+      after { Timecop.return }
+
+      it 'sets the created_at time correctly' do
+        expect(described_class.new.created_at).to be_eql(Time.current)
+      end
     end
   end
 
@@ -152,6 +158,58 @@ RSpec.describe Hausgold::Jwt do
         it 'sets the unknown attributes' do
           expect(instance.user._unmapped.unknown).to be(true)
         end
+      end
+    end
+  end
+
+  describe '#entity_name' do
+    it 'returns the correct entity name' do
+      expect(instance.entity_name).to be_eql('Jwt')
+    end
+  end
+
+  describe '#expired?' do
+    before { Timecop.freeze }
+
+    after { Timecop.return }
+
+    context 'without near expiration' do
+      let(:token) { described_class.new(expires_in: 1.day.to_i) }
+
+      it 'detects as non-expired' do
+        expect(token.expired?).to be(false)
+      end
+    end
+
+    context 'with near expiration' do
+      let(:token) do
+        described_class.new(expires_in: 1.hour.to_i).tap do |token|
+          token.instance_variable_set(:@created_at, 56.minutes.ago)
+        end
+      end
+
+      it 'detects as expired' do
+        expect(token.expired?).to be(true)
+      end
+    end
+
+    context 'with expiration overdue' do
+      let(:token) do
+        described_class.new(expires_in: 1.hour.to_i).tap do |token|
+          token.instance_variable_set(:@created_at, 65.minutes.ago)
+        end
+      end
+
+      it 'detects as expired' do
+        expect(token.expired?).to be(true)
+      end
+    end
+
+    context 'without expiration time set' do
+      let(:token) { described_class.new }
+
+      it 'detects as non-expired' do
+        expect(token.expired?).to be(false)
       end
     end
   end

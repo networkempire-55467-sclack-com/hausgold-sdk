@@ -39,6 +39,11 @@ module Hausgold
           if @env.to_s != configuration.env.to_s
         @@env
       end
+
+      # Retrieve the current configured logger instance.
+      #
+      # @return [Logger] the logger instance
+      delegate :logger, to: :configuration
     end
   end
   # rubocop:enable Style/ClassVars

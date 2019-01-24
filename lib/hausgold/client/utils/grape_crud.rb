@@ -22,6 +22,7 @@ module Hausgold
 
           connection.get do |req|
             req.path = "#{path}/#{id}"
+            use_default_context(req)
             use_jwt(req)
           end
         end
@@ -36,6 +37,7 @@ module Hausgold
           connection.post do |req|
             req.path = path.to_s
             req.body = attributes.compact
+            use_default_context(req)
             use_jwt(req)
           end
         end
@@ -54,6 +56,7 @@ module Hausgold
           connection.put do |req|
             req.path = "#{path}/#{id}"
             req.body = attributes
+            use_default_context(req)
             use_jwt(req)
           end
         end
@@ -70,6 +73,7 @@ module Hausgold
 
           connection.delete do |req|
             req.path = "#{path}/#{id}"
+            use_default_context(req)
             use_jwt(req)
           end
         end

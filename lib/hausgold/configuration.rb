@@ -17,7 +17,13 @@ module Hausgold
     config_accessor(:env) { :canary }
 
     # Allow to set the SDK identity credentials
+    config_accessor(:identity_renewal) { true }
     config_accessor(:identity_scheme) { :password }
     config_accessor(:identity_params) { { email: '', password: '' } }
+
+    # General logging facility
+    config_accessor(:logger) { Logger.new($stdout) }
+    # Enable request logging or not
+    config_accessor(:request_logging) { true }
   end
 end

@@ -110,6 +110,30 @@ RSpec.describe Hausgold::Identity do
         expect(described_class.identity).to be(jwt)
       end
     end
+
+    context 'with expired JWT instance' do
+      let(:expired_jwt) do
+        Hausgold::Jwt.new(expires_in: 1.hour.to_i).tap do |jwt|
+          jwt.instance_variable_set(:@created_at, 56.minutes.ago)
+        end
+      end
+
+      it 'performs a new authentication when the identity is expired' do
+        Hausgold.identity(expired_jwt)
+        expect(described_class.identity).not_to be(expired_jwt)
+      end
+
+      it 'returns an unexpired identity' do
+        Hausgold.identity(expired_jwt)
+        expect(described_class.identity.expired?).to be(false)
+      end
+
+      it 'returns the expected identity' do
+        Hausgold.identity(expired_jwt)
+        expect(described_class.identity.user.email).to \
+          be_eql('identity-api@hausgold.de')
+      end
+    end
   end
 
   describe '#switch_identity' do
