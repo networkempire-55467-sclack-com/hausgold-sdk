@@ -55,6 +55,7 @@ RSpec.describe Hausgold::Jwt do
           be_eql('access_token' => 'old',
                  'expires_in' => nil,
                  'refresh_token' => nil,
+                 'bare_access_token' => nil,
                  'token_type' => nil)
       end
     end
@@ -62,7 +63,8 @@ RSpec.describe Hausgold::Jwt do
     describe '#attribute_names' do
       it 'collects all registed attribute names as symbols' do
         expect(described_class.attribute_names).to \
-          be_eql(%i[token_type access_token refresh_token expires_in])
+          be_eql(%i[token_type access_token refresh_token bare_access_token
+                    expires_in])
       end
     end
 
