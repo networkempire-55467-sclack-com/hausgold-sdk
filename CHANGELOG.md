@@ -1,3 +1,9 @@
+### 0.3.0
+
+* Added the `bare_access_token` attribute to the JWT entity (which can be
+  used in size limited contexts like HTTP cookies, not supported on every
+  application)
+
 ### 0.2.0
 
 * Implemented initial entity callbacks (just `after_initialize` for now)
