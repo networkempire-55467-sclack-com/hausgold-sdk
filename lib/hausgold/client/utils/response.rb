@@ -109,6 +109,34 @@ module Hausgold
           env.response = res
           res.finish(env)
         end
+
+        # Create/use a file and write the contents of the yielded block to it.
+        # This is a simple helper to deal with various file destination types
+        # and can be reused for download actions.
+        #
+        # @param dest [File, Pathname, nil] the file destination,
+        #   a file/IO instance, or when +nil+ we create a temporary file
+        # @param stream [Boolean] whenever to yield the file for manual writes,
+        #   or when to write the yielded value
+        # @yieldreturn [Mixed] the data which is written to the file
+        #   (in binary mode, to keep encodings)
+        # @return [File] the given entity, but reloaded
+        def write_to_file(dest, stream: false)
+          # Setup the file handle
+          file = dest if dest.is_a? File
+          file = File.open(dest.to_s, 'w+') \
+            if [String, Pathname].member? dest.class
+          file ||= Tempfile.new('asset')
+          # Switch to binary mode for the download
+          file.binmode
+          # Write the data to the given/opened file handle,
+          # or yield the file handle itself for manual writes
+          stream ? yield(file) : file.write(yield)
+          # Put the cursor back to the beginning
+          file.rewind
+          # Return the downloaded file handle
+          file
+        end
       end
     end
     # rubocop:enable Metrics/BlockLength

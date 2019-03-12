@@ -70,8 +70,8 @@ module Hausgold
 
       # Format the request duration.
       #
-      # @param [Integer] the timestamp when the request was started
-      # @param [Integer] the timestamp when the request was finished
+      # @param started_at [Integer] the timestamp when the request was started
+      # @param ended_at [Integer] the timestamp when the request was finished
       # @return [String] the formatted request duration
       def req_duration(started_at, ended_at)
         format('(%.1fms)', (ended_at - started_at) * 1000)

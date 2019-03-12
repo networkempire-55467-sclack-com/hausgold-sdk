@@ -2,6 +2,7 @@
 
 # Set the gem configuration according to the test suite.
 def reset_test_configuration!
+  Hausgold.reset_identity!
   Hausgold.reset_configuration!
   Hausgold.configure do |conf|
     conf.app_name = 'test-client'

@@ -10,8 +10,11 @@ module Hausgold
       def call(env)
         env[:request_headers].merge! \
           'User-Agent' => user_agent,
-          'Content-Type' => 'application/json',
           'Accept' => 'application/json'
+
+        # Set request content type to JSON as fallback
+        env[:request_headers]['Content-Type'] = 'application/json' \
+          if env[:request_headers]['Content-Type'].blank?
 
         @app.call(env)
       end

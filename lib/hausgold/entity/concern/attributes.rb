@@ -47,7 +47,42 @@ module Hausgold
           self
         end
 
+        # A wrapper for the +ActiveModel#assign_attributes+ method with support
+        # for unmapped attributes. These attributes are put into the
+        # +_unmapped+ struct and all the known attributes are assigned like
+        # normal. This allows the client to be forward compatible with changing
+        # APIs.
+        #
+        # @param struct [Hash{Mixed => Mixed}, RecursiveOpenStruct] the data
+        #   to assign
+        # @return [Mixed] the input data which was assigned
+        def assign_attributes(struct = {})
+          # Build a RecursiveOpenStruct and a simple hash from the given data
+          struct, hash = sanitize_data(struct)
+          # Initialize attributes and map unknown ones and pass back the known
+          known = initialize_attributes(struct, hash)
+          # Mass assign the known attributes via ActiveModel
+          super(known)
+        end
+
         private
+
+        # Explicitly convert the given struct to an +RecursiveOpenStruct+ and a
+        # deep symbolized key copy for further usage.
+        #
+        # @param data [Hash{Mixed => Mixed}, RecursiveOpenStruct] the initial
+        #   data
+        # @return [Array<RecursiveOpenStruct, Hash{Symbol => Mixed}>] the
+        #   left over data
+        def sanitize_data(data = {})
+          # Convert the given arguments to a recursive open struct,
+          # when not already done
+          data = ::RecursiveOpenStruct.new(data, recurse_over_arrays: true) \
+            unless data.is_a? ::RecursiveOpenStruct
+          # Symbolize all keys in deep (including hashes in arrays), while
+          # converting back to an ordinary hash
+          [data, data.to_h]
+        end
 
         # Process the given data by separating the known from the unknown
         # attributes. The unknown attributes are collected on the +_unmapped+
@@ -61,7 +96,10 @@ module Hausgold
         def initialize_attributes(struct, hash)
           # Substract known keys, to move them to the +_unmapped+ variable
           attribute_names.each { |key| struct.delete_field(key) }
-          self._unmapped = struct
+          # Merge the previous unmapped struct and the given data
+          self._unmapped = \
+            ::RecursiveOpenStruct.new(_unmapped.to_h.merge(struct.to_h),
+                                      recurse_over_arrays: true)
           # Allow mass assignment of known attributes
           hash.slice(*attribute_names)
         end
@@ -95,6 +133,80 @@ module Hausgold
           end
           # Register the attributes for ActiveModel
           define_attribute_methods(*args)
+        end
+
+        # (Re-)Register attributes with strict type casts. This adds additional
+        # reader methods as well as a writer with casted type.
+        #
+        # @param name [Symbol, String] the name of the attribute
+        # @param type [Symbol] the type of the attribute
+        # @param args [Hash{Symbol => Mixed}] additional options for the type
+        def typed_attr(name, type, **args)
+          typed_attr_boolean(name, **args) if type == :boolean
+          typed_attr_symbol(name, **args) if type == :symbol
+          typed_attr_string_inquirer(name, **args) if type == :string_inquirer
+        end
+
+        # rubocop:disable Lint/UselessAccessModifier because the first one
+        #   is in the +included+ block, which is separated from the
+        #   +class_methods+ block - looks like a rubocop bug
+        private
+
+        # rubocop:enable Lint/UselessAccessModifier
+
+        # Register a casted boolean attribute, which allows +name?+ queries.
+        # When you specify the +opposite+ argument, a negative checked reader
+        # method is also added. (eg. public - private)
+        #
+        # @param name [Symbol, String] the name of the attribute
+        # @param opposite [Symbol, String] the name of the opposite reader
+        # @param _args [Hash{Symbol => Mixed}] additional options
+        def typed_attr_boolean(name, opposite: nil, **_args)
+          class_eval <<-RUBY, __FILE__, __LINE__ + 1
+            def #{name}=(value)
+              #{name}_will_change!
+              @#{name} = ActiveModel::Type::Boolean.new.cast(value)
+            end
+
+            def #{name}?
+              @#{name} == true
+            end
+          RUBY
+
+          # When no opposite was specified, we dont generate a method for it
+          return if opposite.nil?
+
+          class_eval <<-RUBY, __FILE__, __LINE__ + 1
+            def #{opposite}?
+              !#{name}?
+            end
+          RUBY
+        end
+
+        # Register a casted symbol attribute.
+        #
+        # @param name [Symbol, String] the name of the attribute
+        # @param _args [Hash{Symbol => Mixed}] additional options
+        def typed_attr_symbol(name, **_args)
+          class_eval <<-RUBY, __FILE__, __LINE__ + 1
+            def #{name}=(value)
+              #{name}_will_change!
+              @#{name} = value.to_sym
+            end
+          RUBY
+        end
+
+        # Register a casted string inquirer attribute.
+        #
+        # @param name [Symbol, String] the name of the attribute
+        # @param _args [Hash{Symbol => Mixed}] additional options
+        def typed_attr_string_inquirer(name, **_args)
+          class_eval <<-RUBY, __FILE__, __LINE__ + 1
+            def #{name}=(value)
+              #{name}_will_change!
+              @#{name} = ActiveSupport::StringInquirer.new(value.to_s)
+            end
+          RUBY
         end
       end
     end

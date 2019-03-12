@@ -2,61 +2,16 @@
 http_interactions:
 - request:
     method: post
-    uri: http://identity-api.local/v1/users
+    uri: http://identity-api.local/v1/jwt/password
     body:
       encoding: UTF-8
-      string: '{"email":"kendrick_konopelski1@boehm.name","type":"employee","status":"active","password":"yw6zzFpQCNcFEy","password_confirmation":"yw6zzFpQCNcFEy"}'
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
     headers:
       User-Agent:
-      - HausgoldSDK/0.1.0 test-client
-      Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
-      Content-Type:
-      - application/json
+      - HausgoldSDK/0.3.0 test-client
       Accept:
       - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Location:
-      - "/v1/users/c823d0cd-f6aa-4d0f-b4d7-3dae2efdfc6d"
       Content-Type:
-      - application/json
-      Etag:
-      - W/"234f8f8e67c3aebaf537a484694d7364"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 80cf2d27-8803-4165-880a-b85934ffd595
-      X-Runtime:
-      - '0.075731'
-      Vary:
-      - Origin
-      Content-Length:
-      - '341'
-    body:
-      encoding: UTF-8
-      string: '{"id":"c823d0cd-f6aa-4d0f-b4d7-3dae2efdfc6d","gid":"gid://identity-api/User/c823d0cd-f6aa-4d0f-b4d7-3dae2efdfc6d","email":"kendrick_konopelski1@boehm.name","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:41Z","updated_at":"2019-01-23T14:09:41Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
-    http_version: 
-  recorded_at: Wed, 23 Jan 2019 14:09:41 GMT
-- request:
-    method: post
-    uri: http://identity-api.local/v1/users/workflows/confirm
-    body:
-      encoding: UTF-8
-      string: '{"id":"c823d0cd-f6aa-4d0f-b4d7-3dae2efdfc6d"}'
-    headers:
-      User-Agent:
-      - HausgoldSDK/0.1.0 test-client
-      Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
-      Content-Type:
-      - application/json
-      Accept:
       - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -68,20 +23,104 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"c9e5408265eb11b94d9416ec1220e7b1"
+      - W/"e6f882f1ffb5bb0d65303b75c99d5caa"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 44bb5f17-71f7-485f-86ca-22470e1ebeda
+      - '08129120-aa85-4484-aa01-f7fbee2debcd'
       X-Runtime:
-      - '0.011629'
+      - '0.076881'
       Vary:
       - Origin
       Content-Length:
-      - '359'
+      - '2840'
     body:
       encoding: UTF-8
-      string: '{"id":"c823d0cd-f6aa-4d0f-b4d7-3dae2efdfc6d","gid":"gid://identity-api/User/c823d0cd-f6aa-4d0f-b4d7-3dae2efdfc6d","email":"kendrick_konopelski1@boehm.name","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:41Z","updated_at":"2019-01-23T14:09:41Z","confirmed_at":"2019-01-23T14:09:41Z","locked_at":null,"recovery_at":null}'
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTYsImV4cCI6MTU1MjkxNjYxNiwianRpIjoiYjRhNzAwZjM3NGQ0IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.haDbajvYhMGNwo30TduwGQIOGRSIUDURtQnv7ERDCwNO57XcfAb8xkk2eko0ru5CQDJfPtYv3FJ-Rp3wR96pCLBC0LJcyYlr7efKmyMpHrcfaY7D1Jby-Y6U8eL2jMhGHPKyJJgNwYv8g6VrqbXmq1q5zpL_5F55nKnNvIhytW1cOY2az6YeTFge55lxfXZ9ZjCSeYFhxYAJadgSEVBj8um4mDejoDn-f-HBDDn7VkujMgBgxiQ_OoUp8gsLVsZ7v-nXOO_W8O3AlXygP0aOc26XOOGXiNLWqUyBP4q4Ty8gVwPpy1JeI7kDW8m0tdhzco78nu2G-wgOWzFSO0O8Tg","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTYsImV4cCI6MTU1MzUyMTQxNiwianRpIjoiYTU1OGUzNTQ0MzAzIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.RqB125bLcsVX1dmTG7RaML-RxErB-ClIJ47Q4urfd1Cm4K1Zos_WvhWj0PSRQJmej9tC40mqkcFOUdmMXUBMU6LBrGxsXQwh875Z5HKDsyKbbx_nicpZOgnrT1YW0lKOaFH6MDG-lDjutCpiVMY8NiIV__b1OG1gT0GE3xabLYXrbFdvWk2SmkHX72dKYDf5KYO0CAnuPSmQUgS4opUIMg-IXuTiWWpn1VWh3oc3Fkkp7eUoPmBNlPu0L6o0hUnISjrG5q_xEBbgpySMBBTtcjBgi_ozsA_2BqDcHitsWr0fUuJmDfqpqwIL82ixaJHUTuWjSj00no6vb_RtBIMtWg","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTYsImV4cCI6MTU1MjkxNjYxNiwianRpIjoiNDI5YzM3MmIxMjRiIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.yhiMZNJijZsZ_AA8rWRcDi-wjkVzlf7PJmpslHhADpoq7fdkwAh1kYnAXN8UUEU1wr2DfS8V6glwX-tyruoST4Vz1JtR8PwqDkWFoYDee7A8_ZxVYteXnhgShe2ZXBY2HMmcjmTeusjNXy0xXQ6mnKRLxOu9YJlCzTgmHQ6hG17mt2mCQcoPQavSjjwppHqlcVnHWZfcZHWmch-N_HLBY8DlcMdiJvvkIeHBYzxvMvNYyCCNHkEJgG20mLGrMEx7aB3P8tFR1T8TqOxfGCLwPQ5ioTGHLEZ2HlI33hZxvOw0tFD-7DeiLqPYCbTUJn2Y0c5dYcPszPcRN1BW9nXniQ","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-11T13:43:36Z","created_at":"2019-03-11T08:18:29Z","updated_at":"2019-03-11T08:18:29Z","confirmed_at":"2019-03-11T08:18:29Z","locked_at":null,"recovery_at":null}}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 14:09:41 GMT
+  recorded_at: Mon, 11 Mar 2019 13:43:36 GMT
+- request:
+    method: post
+    uri: http://identity-api.local/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"javier_walker1@halvorson.name","type":"employee","status":"active","password":"vteEDnIjTQGZN","password_confirmation":"vteEDnIjTQGZN"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.3.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTYsImV4cCI6MTU1MjkxNjYxNiwianRpIjoiYjRhNzAwZjM3NGQ0IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.haDbajvYhMGNwo30TduwGQIOGRSIUDURtQnv7ERDCwNO57XcfAb8xkk2eko0ru5CQDJfPtYv3FJ-Rp3wR96pCLBC0LJcyYlr7efKmyMpHrcfaY7D1Jby-Y6U8eL2jMhGHPKyJJgNwYv8g6VrqbXmq1q5zpL_5F55nKnNvIhytW1cOY2az6YeTFge55lxfXZ9ZjCSeYFhxYAJadgSEVBj8um4mDejoDn-f-HBDDn7VkujMgBgxiQ_OoUp8gsLVsZ7v-nXOO_W8O3AlXygP0aOc26XOOGXiNLWqUyBP4q4Ty8gVwPpy1JeI7kDW8m0tdhzco78nu2G-wgOWzFSO0O8Tg
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/v1/users/532939e8-aefc-44cd-aa98-1049b6908eab"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"224e957fe367e7beab4cc6b6d2268c3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 85d7b886-fc64-4e47-890f-89eb1c9c597e
+      X-Runtime:
+      - '0.140296'
+      Vary:
+      - Origin
+      Content-Length:
+      - '339'
+    body:
+      encoding: UTF-8
+      string: '{"id":"532939e8-aefc-44cd-aa98-1049b6908eab","gid":"gid://identity-api/User/532939e8-aefc-44cd-aa98-1049b6908eab","email":"javier_walker1@halvorson.name","type":"employee","status":"active","last_login_at":null,"created_at":"2019-03-11T13:43:36Z","updated_at":"2019-03-11T13:43:36Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
+    http_version: 
+  recorded_at: Mon, 11 Mar 2019 13:43:36 GMT
+- request:
+    method: post
+    uri: http://identity-api.local/v1/users/workflows/confirm
+    body:
+      encoding: UTF-8
+      string: '{"id":"532939e8-aefc-44cd-aa98-1049b6908eab"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.3.0 test-client
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTYsImV4cCI6MTU1MjkxNjYxNiwianRpIjoiYjRhNzAwZjM3NGQ0IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.haDbajvYhMGNwo30TduwGQIOGRSIUDURtQnv7ERDCwNO57XcfAb8xkk2eko0ru5CQDJfPtYv3FJ-Rp3wR96pCLBC0LJcyYlr7efKmyMpHrcfaY7D1Jby-Y6U8eL2jMhGHPKyJJgNwYv8g6VrqbXmq1q5zpL_5F55nKnNvIhytW1cOY2az6YeTFge55lxfXZ9ZjCSeYFhxYAJadgSEVBj8um4mDejoDn-f-HBDDn7VkujMgBgxiQ_OoUp8gsLVsZ7v-nXOO_W8O3AlXygP0aOc26XOOGXiNLWqUyBP4q4Ty8gVwPpy1JeI7kDW8m0tdhzco78nu2G-wgOWzFSO0O8Tg
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"0ff95620dc250af0b31aba644682cfbb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0d100c0a-fe9f-41f0-b231-a476812c7676
+      X-Runtime:
+      - '0.019406'
+      Vary:
+      - Origin
+      Content-Length:
+      - '357'
+    body:
+      encoding: UTF-8
+      string: '{"id":"532939e8-aefc-44cd-aa98-1049b6908eab","gid":"gid://identity-api/User/532939e8-aefc-44cd-aa98-1049b6908eab","email":"javier_walker1@halvorson.name","type":"employee","status":"active","last_login_at":null,"created_at":"2019-03-11T13:43:36Z","updated_at":"2019-03-11T13:43:36Z","confirmed_at":"2019-03-11T13:43:36Z","locked_at":null,"recovery_at":null}'
+    http_version: 
+  recorded_at: Mon, 11 Mar 2019 13:43:36 GMT
 recorded_with: VCR 3.0.3

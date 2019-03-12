@@ -8,10 +8,10 @@ http_interactions:
       string: '{"refresh_token":"b.a.d","bang":true}'
     headers:
       User-Agent:
-      - HausgoldSDK/0.1.0 test-client
-      Content-Type:
-      - application/json
+      - HausgoldSDK/0.3.0 test-client
       Accept:
+      - application/json
+      Content-Type:
       - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - ad87af76-f518-4bfd-af7f-4f28f59d5ad8
+      - fee9685f-a056-4dd1-b936-458dfd0fface
       X-Runtime:
-      - '0.012957'
+      - '0.008631'
       Vary:
       - Origin
       Content-Length:
@@ -37,5 +37,5 @@ http_interactions:
       string: '{"code":3,"message":"Validation failed: Token not a JWT, Token not
         a refresh token"}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 14:09:41 GMT
+  recorded_at: Mon, 11 Mar 2019 13:43:36 GMT
 recorded_with: VCR 3.0.3

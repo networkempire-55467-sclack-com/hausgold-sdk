@@ -4,6 +4,7 @@ require 'active_support'
 require 'active_support/concern'
 require 'active_support/configurable'
 require 'active_support/cache'
+require 'active_support/core_ext/object'
 require 'active_support/core_ext/hash'
 require 'active_support/core_ext/string'
 require 'active_support/time'
@@ -14,6 +15,8 @@ require 'global_id'
 require 'recursive-open-struct'
 require 'faraday'
 require 'faraday_middleware'
+require 'http-cookie'
+require 'tempfile'
 require 'pp'
 
 # Load polyfills if needed
@@ -38,6 +41,7 @@ module Hausgold
   autoload :Task, 'hausgold/entity/task'
   autoload :Appointment, 'hausgold/entity/appointment'
   autoload :Timeframe, 'hausgold/entity/timeframe'
+  autoload :Asset, 'hausgold/entity/asset'
 
   # Some general purpose utilities
   module Utils
@@ -69,6 +73,11 @@ module Hausgold
   module IdentityApi
     autoload :Authentication, 'hausgold/client/identity_api/authentication'
     autoload :Users, 'hausgold/client/identity_api/users'
+  end
+
+  # All the separated features of the Asset API client
+  module AssetApi
+    autoload :Downloads, 'hausgold/client/asset_api/downloads'
   end
 
   # Dedicated application HTTP (low level) clients

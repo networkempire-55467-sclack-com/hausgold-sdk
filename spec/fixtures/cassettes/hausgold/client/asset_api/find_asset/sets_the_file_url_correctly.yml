@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.3.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"da8b63ef9b20def7c9d7678f69fb7f1b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6a5cf399-d7bd-4731-ab74-88891da0f5b2
+      X-Runtime:
+      - '0.084072'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTEsImV4cCI6MTU1MjkxNjYxMSwianRpIjoiM2MwMDk3MThjNGQ5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.Uuk96svJaBEKXmba_Bh0NkD5HW_kQoEWyNywCpIGL0CXuNPdwaWxRxgbbODDYanRZTJ_zqVMk1IBM4kILf1G_DzZhZApjzmmj2f3cw4E7h91oIpaS3RiIhc2TjMJU4_K4ZcMy_LTCwfU_Ygt4jwiS59Vfh7W8L4_dIDwFEhBXj50fLhsinNgVzHbePwl1x0mqigLjUNgOrmuN0NQs-ySp0JnQP7XrpwP986r_wkDbvDJBcQVJIsXDWW4YW3C_DrCyV8GK7folze2qHyq2yp3Jk5JhQ-Ncj9BDD_1u3L0WWNGwf1v-v5iwd6gQYI93BjCguAev5uJBbovfRqhTAOn-w","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTEsImV4cCI6MTU1MzUyMTQxMSwianRpIjoiZTQxNmFiMzkzMGFmIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.gOqk1WBUTWTL6SI86Gyms03ZOYpZV04S-jGZJ10EHKvVW3pThyhGHqcLCF6Ix0Gp6j4wvCOdXe7-bMIrYoghW6qUpSNTioCw1TjDihPbjlYyX40J3bM8rkG2VqTLwjUBDcYIPTUFJAF8AbOKn7-CJjyg1FuNYuzonQnThI3q2PzrcxEMgfalRHc45yRB8WHoBEu6Ovl-rmmnvudOwko3EHeuVMoZ1FHttPHP1Degcp_ox9SuvzOe6K5On4OvcgUEotx4WDMWSMcy9hqYZ_HF9s_VWXw30Mx9oApMXpywZZbQTeqCr0ZlDCe90glCtZ6Jutktf7WzIf77e-BD-kjBqg","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTEsImV4cCI6MTU1MjkxNjYxMSwianRpIjoiM2IxODkzZTdkMDk5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.f7K2tHaWH-BSNURYUyxEqxUXZtssPK-boYqgv1IkhGqVD9NjLV2_JP-282P4_uIqjXHpkraFFPEOBounCAG1BdTL8p7rUfTKFF1vmh_QhJMByVOyajsdbieU2BdJ-RwkP_1P26meqaz7JUwQAuvLu8JW2dRmQmY06tBDlg-X7MGzxYChEmO8rcrDsm4kOme-w659FYI7UD1H1yGSbByeZMGmKKu7sL8iNWovS__EAMHWjvmPXQ-QrlnI0jsbRBNKf_MneWzUHUl8KIf0Szc2CvPsQI0b7tQ535lC-fjDUJF7ZxmYWo5ssUakaC0yZHc737HtLD_FyezTWPi96Fk-RA","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-11T13:43:31Z","created_at":"2019-03-11T08:18:29Z","updated_at":"2019-03-11T08:18:29Z","confirmed_at":"2019-03-11T08:18:29Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Mon, 11 Mar 2019 13:43:31 GMT
+- request:
+    method: get
+    uri: http://asset-api.local/v1/assets/4530919a-3868-405e-8a84-001c7b9bb6b8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.3.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTEsImV4cCI6MTU1MjkxNjYxMSwianRpIjoiM2MwMDk3MThjNGQ5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.Uuk96svJaBEKXmba_Bh0NkD5HW_kQoEWyNywCpIGL0CXuNPdwaWxRxgbbODDYanRZTJ_zqVMk1IBM4kILf1G_DzZhZApjzmmj2f3cw4E7h91oIpaS3RiIhc2TjMJU4_K4ZcMy_LTCwfU_Ygt4jwiS59Vfh7W8L4_dIDwFEhBXj50fLhsinNgVzHbePwl1x0mqigLjUNgOrmuN0NQs-ySp0JnQP7XrpwP986r_wkDbvDJBcQVJIsXDWW4YW3C_DrCyV8GK7folze2qHyq2yp3Jk5JhQ-Ncj9BDD_1u3L0WWNGwf1v-v5iwd6gQYI93BjCguAev5uJBbovfRqhTAOn-w
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - user=Vg14YvlzTvzHgEVKScHHJlA%2BeZVtdpcqnEFwigTB6OubGPZmk%2BVndnjym4U6lg%3D%3D--d9YqPZq3pGEH6ja6--U%2FemOSJPEd14fEHd0VMIGA%3D%3D;
+        path=/; secure; HttpOnly
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"964bc0311164fedeba542062c9e5147c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3930d506-10ea-4c47-b216-aaf94faa1e26
+      X-Runtime:
+      - '0.013867'
+      Vary:
+      - Origin
+      Content-Length:
+      - '526'
+    body:
+      encoding: UTF-8
+      string: '{"id":"4530919a-3868-405e-8a84-001c7b9bb6b8","title":"Curse of the
+        Forbidden Man","description":"My very personal avatar image","attachable":"gid://identity-api/User/bf136aed-0259-4458-8cf7-762553eebfc2","category":"avatar","public":true,"permissions":{"bf136aed-0259-4458-8cf7-762553eebfc2":"x"},"metadata":{"some_key":"value","categories":["foo","bar","baz"]},"file_url":"http://asset-api.local/v1/assets/4530919a-3868-405e-8a84-001c7b9bb6b8/download","created_at":"2019-03-11T09:09:36Z","updated_at":"2019-03-11T09:09:36Z"}'
+    http_version: 
+  recorded_at: Mon, 11 Mar 2019 13:43:31 GMT
+recorded_with: VCR 3.0.3

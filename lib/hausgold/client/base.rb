@@ -12,8 +12,16 @@ module Hausgold
       include Hausgold::Utils::Decision
       include Hausgold::Utils::Bangers
 
+      # List of all regular client/CRUD actions
+      ACTIONS = %i[find find_by update create delete].freeze
+
       # Allow the client to be configured
       class_attribute :app_name
+
+      # Allow request/response formats to be configured directly. Direct usage
+      # of the writer is not recommended without a client specialization like
+      # +Hausgold::ClientUtils::GrapeCrud+.
+      class_attribute :action_formats
 
       # Create a new client instance with the charme of mass assigning all
       # options at once.  We support the following options as a base client:
@@ -40,12 +48,19 @@ module Hausgold
       # @param con [Faraday::Connection] the connection object
       def configure(con)
         con.use :instrumentation
-        con.request :json
+
+        # The definition order is execution order
         con.request :hgsdk_default_headers
+        con.request :json
+        con.request :multipart
+        con.request :url_encoded
+
+        # The definition order is reverse to the execution order
         con.response :hgsdk_recursive_open_struct
         con.response :dates
         con.response :json, content_type: /\bjson$/
         con.response :follow_redirects
+
         con.adapter Faraday.default_adapter
       end
 
@@ -100,12 +115,22 @@ module Hausgold
         raise NotImplementedError.new(self, :delete)
       end
 
+      # A shorthand for the +.format+ class method.
+      #
+      # @param args [Array<Symbol>] the path to the config
+      #   (eg. +:task, :create+)
+      # @return [Symbol] the request format
+      def format(*args)
+        self.class.format(*args)
+      end
+
       class << self
         # Initialize the class we were inherited to.
         #
         # @param child_class [Class] the child class which inherits us
         def inherited(child_class)
           child_class.app_name = ''
+          child_class.action_formats = {}
         end
 
         # Allow a nice interface for the application name setting.
@@ -113,6 +138,25 @@ module Hausgold
         # @param name [String] the application name
         def app(name)
           self.app_name = name
+        end
+
+        # Fetch the configured action request and response formats.
+        #
+        # @param args [Array<Symbol>] the path to the config
+        #   (eg. +:task, :create+)
+        # @return [Symbol] the request formats
+        def format(*args)
+          (action_formats || {}).dig(*args) || :json
+        end
+
+        # Get a hash for all action methods with their respective default
+        # request format configurations.
+        #
+        # @return [Hash{Symbol => Symbol}] the default action format
+        def default_formats
+          ACTIONS.each_with_object({}) do |method, memo|
+            memo[method] = :json
+          end
         end
       end
     end

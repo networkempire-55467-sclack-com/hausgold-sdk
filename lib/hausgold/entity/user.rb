@@ -16,6 +16,10 @@ module Hausgold
                  :created_at, :updated_at, :confirmed_at, :locked_at,
                  :recovery_at, :password, :password_confirmation
 
+    # Define attribute types for casting
+    typed_attr :type, :string_inquirer
+    typed_attr :status, :string_inquirer
+
     # Confirm the current user instance.
     # No additional options required for this, but you can pass in a +metadata+
     # argument as hash with additional workflow data.

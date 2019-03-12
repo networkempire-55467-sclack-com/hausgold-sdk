@@ -11,5 +11,9 @@ module Hausgold
     tracked_attr :id, :gid, :title, :description, :location, :start_at,
                  :end_at, :editable, :status, :user_id, :reference_ids,
                  :attendee_ids, :created_at, :updated_at, :alarms, :metadata
+
+    # Define attribute types for casting
+    typed_attr :editable, :boolean, opposite: :uneditable
+    typed_attr :status, :string_inquirer
   end
 end

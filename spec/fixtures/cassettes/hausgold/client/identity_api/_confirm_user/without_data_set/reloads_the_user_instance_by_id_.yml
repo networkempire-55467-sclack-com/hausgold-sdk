@@ -2,61 +2,16 @@
 http_interactions:
 - request:
     method: post
-    uri: http://identity-api.local/v1/users
+    uri: http://identity-api.local/v1/jwt/password
     body:
       encoding: UTF-8
-      string: '{"email":"ailene.prohaska2@green.us","type":"employee","status":"active","password":"GN0Shgfn6","password_confirmation":"GN0Shgfn6"}'
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
     headers:
       User-Agent:
-      - HausgoldSDK/0.1.0 test-client
-      Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
-      Content-Type:
-      - application/json
+      - HausgoldSDK/0.3.0 test-client
       Accept:
       - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Location:
-      - "/v1/users/c3ec4ef6-de65-489d-8f05-455599a5af21"
       Content-Type:
-      - application/json
-      Etag:
-      - W/"aeb2005878bfc8cc5182b04304d155c9"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - '0587294b-ed78-49d7-b2c8-9ecb8bfacd35'
-      X-Runtime:
-      - '0.068617'
-      Vary:
-      - Origin
-      Content-Length:
-      - '335'
-    body:
-      encoding: UTF-8
-      string: '{"id":"c3ec4ef6-de65-489d-8f05-455599a5af21","gid":"gid://identity-api/User/c3ec4ef6-de65-489d-8f05-455599a5af21","email":"ailene.prohaska2@green.us","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:41Z","updated_at":"2019-01-23T14:09:41Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
-    http_version: 
-  recorded_at: Wed, 23 Jan 2019 14:09:41 GMT
-- request:
-    method: post
-    uri: http://identity-api.local/v1/users/workflows/confirm
-    body:
-      encoding: UTF-8
-      string: '{"id":"c3ec4ef6-de65-489d-8f05-455599a5af21"}'
-    headers:
-      User-Agent:
-      - HausgoldSDK/0.1.0 test-client
-      Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
-      Content-Type:
-      - application/json
-      Accept:
       - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -68,20 +23,104 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"c5d89a2567d6c52df7d22d532289d981"
+      - W/"e3412f7ccd06be502b3a1e09f9f1cdd6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fb47d444-992b-4d6a-b1e4-5901d75ea759
+      - a4b8d4e1-6f02-4897-832f-48a523024159
       X-Runtime:
-      - '0.011099'
+      - '0.079033'
       Vary:
       - Origin
       Content-Length:
-      - '353'
+      - '2840'
     body:
       encoding: UTF-8
-      string: '{"id":"c3ec4ef6-de65-489d-8f05-455599a5af21","gid":"gid://identity-api/User/c3ec4ef6-de65-489d-8f05-455599a5af21","email":"ailene.prohaska2@green.us","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:41Z","updated_at":"2019-01-23T14:09:41Z","confirmed_at":"2019-01-23T14:09:41Z","locked_at":null,"recovery_at":null}'
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTYsImV4cCI6MTU1MjkxNjYxNiwianRpIjoiN2QzMzYzOTljMjgzIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.DIs2f0zULeyX8k90owFp0AzMcgkhxShUpqo-TbVL5v6wFRrN6an0zOCRDSZKzs4VAFl2as6LC9hLx0XWEVx6ipqzCrUjuIyazHc3tZ6jVdgezxBxcFPoJX8d9rXxOpsvLm1tS5M803vRIqw4EVhOk7GFOB3VgL3jIOroUQpEj0rw2XvBkT3X-lM7IIRjMSOweWb1G0VGqpQyiTXeIpA3BBtBRfPRKlp4SnuvMQrmJZ9_XXJDPw65CrPWIAah9EiJ0NARs_TjUaIIXPo52I7UHYWPBhKC2pE6tP2yP_VqxWDiUz4qQWiF7H4geknx3Xnl1JjYzFgTHF4401pb4S9CiA","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTYsImV4cCI6MTU1MzUyMTQxNiwianRpIjoiMzhjOTliZjliYzE1IiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.RFzfCHK8qkWK4U7oFbosZAKLzFLCtjguTJjtyCjvml9_S4R6tyo3P_Fm9ULPpl4oRpjoiYB-4MA13qTCPO9nWwyIlo_jB07_upFIJIsbA_HXyKuFtIfzdAx1ASU92odlXO9kASrHQFMhbpCW1NhXvIj1o2Ekr3-eUlts3ea5UHND_I33nHP0QOGddaQvxwXJkBCSgPAYvCf8LiIi14Urwtsv7Rv2hcb_dW3yGfHzrsRINMzo-9pyDxc_DunboyHSrmIntqCvCPIZ2jZoPZPJK7Ssb__rSxNpoMVaKFGKPsu8L2_xB3CgdMSeO73Yj41MGLUJ0znn9R6DN1FsrB4oQA","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTYsImV4cCI6MTU1MjkxNjYxNiwianRpIjoiMDVmNDI5MDAwNzNhIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.rEAnTrkb8HER0zHfGZTS3U7h7HEHgEgKqAhz22KojEn9sH-DUDQBx-9gp21esrv6j1jCEps_vrOZXjCL9rR8NA-ldIOzQGfs6PeIjdkjlKGyXDE1m_c6muWP-33m_f7oShqTgj3b1_w3SVL4umZe8FQGqalwuqjwg_AkVMe9lBUrTBNbdtOrjvI4og-YJ2dyjGNXK9fmMxzJHA6kJaXEJnarZpSvTFRNACkX0QKpXGXjOssnMXFDO71NY6ixnf0rk_5FzQKnL9HRmtmpNgEl1A4kUUJtJ3aJLv2h3TM58Vwk23PCRBuwNYJHBaVqiil4YTCC_WVTPNPhzBxKvIHl2w","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-11T13:43:36Z","created_at":"2019-03-11T08:18:29Z","updated_at":"2019-03-11T08:18:29Z","confirmed_at":"2019-03-11T08:18:29Z","locked_at":null,"recovery_at":null}}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 14:09:41 GMT
+  recorded_at: Mon, 11 Mar 2019 13:43:36 GMT
+- request:
+    method: post
+    uri: http://identity-api.local/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"teresita2@terrybradtke.com","type":"employee","status":"active","password":"fTBBNdPivcAjhVFu","password_confirmation":"fTBBNdPivcAjhVFu"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.3.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTYsImV4cCI6MTU1MjkxNjYxNiwianRpIjoiN2QzMzYzOTljMjgzIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.DIs2f0zULeyX8k90owFp0AzMcgkhxShUpqo-TbVL5v6wFRrN6an0zOCRDSZKzs4VAFl2as6LC9hLx0XWEVx6ipqzCrUjuIyazHc3tZ6jVdgezxBxcFPoJX8d9rXxOpsvLm1tS5M803vRIqw4EVhOk7GFOB3VgL3jIOroUQpEj0rw2XvBkT3X-lM7IIRjMSOweWb1G0VGqpQyiTXeIpA3BBtBRfPRKlp4SnuvMQrmJZ9_XXJDPw65CrPWIAah9EiJ0NARs_TjUaIIXPo52I7UHYWPBhKC2pE6tP2yP_VqxWDiUz4qQWiF7H4geknx3Xnl1JjYzFgTHF4401pb4S9CiA
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/v1/users/799d7fdf-e6b4-4fd6-a543-f6986b65949f"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"79a714743eabde2957494d77881934f8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a74c4e6f-16b9-4d0f-86f2-498cecbd763c
+      X-Runtime:
+      - '0.068522'
+      Vary:
+      - Origin
+      Content-Length:
+      - '336'
+    body:
+      encoding: UTF-8
+      string: '{"id":"799d7fdf-e6b4-4fd6-a543-f6986b65949f","gid":"gid://identity-api/User/799d7fdf-e6b4-4fd6-a543-f6986b65949f","email":"teresita2@terrybradtke.com","type":"employee","status":"active","last_login_at":null,"created_at":"2019-03-11T13:43:36Z","updated_at":"2019-03-11T13:43:36Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
+    http_version: 
+  recorded_at: Mon, 11 Mar 2019 13:43:36 GMT
+- request:
+    method: post
+    uri: http://identity-api.local/v1/users/workflows/confirm
+    body:
+      encoding: UTF-8
+      string: '{"id":"799d7fdf-e6b4-4fd6-a543-f6986b65949f"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.3.0 test-client
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTYsImV4cCI6MTU1MjkxNjYxNiwianRpIjoiN2QzMzYzOTljMjgzIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.DIs2f0zULeyX8k90owFp0AzMcgkhxShUpqo-TbVL5v6wFRrN6an0zOCRDSZKzs4VAFl2as6LC9hLx0XWEVx6ipqzCrUjuIyazHc3tZ6jVdgezxBxcFPoJX8d9rXxOpsvLm1tS5M803vRIqw4EVhOk7GFOB3VgL3jIOroUQpEj0rw2XvBkT3X-lM7IIRjMSOweWb1G0VGqpQyiTXeIpA3BBtBRfPRKlp4SnuvMQrmJZ9_XXJDPw65CrPWIAah9EiJ0NARs_TjUaIIXPo52I7UHYWPBhKC2pE6tP2yP_VqxWDiUz4qQWiF7H4geknx3Xnl1JjYzFgTHF4401pb4S9CiA
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"d4af1669b9781e06b857412c06e32af5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f63dfdb9-4dee-412b-b0f5-4f871c369990
+      X-Runtime:
+      - '0.011472'
+      Vary:
+      - Origin
+      Content-Length:
+      - '354'
+    body:
+      encoding: UTF-8
+      string: '{"id":"799d7fdf-e6b4-4fd6-a543-f6986b65949f","gid":"gid://identity-api/User/799d7fdf-e6b4-4fd6-a543-f6986b65949f","email":"teresita2@terrybradtke.com","type":"employee","status":"active","last_login_at":null,"created_at":"2019-03-11T13:43:36Z","updated_at":"2019-03-11T13:43:36Z","confirmed_at":"2019-03-11T13:43:36Z","locked_at":null,"recovery_at":null}'
+    http_version: 
+  recorded_at: Mon, 11 Mar 2019 13:43:36 GMT
 recorded_with: VCR 3.0.3

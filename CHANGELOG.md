@@ -1,3 +1,11 @@
+### 0.4.0
+
+* Added support for the Asset API (#3)
+* Added the `Hausgold::Asset` entity with CRUD support
+* Added support to download Asset files (`Hausgold::Asset.find('..').download`)
+* Implemented an initial type-casted attribute system (writers and readers)
+  and added it to all entities (booleans, symbols, string inquirers)
+
 ### 0.3.0
 
 * Added the `bare_access_token` attribute to the JWT entity (which can be

@@ -8,10 +8,10 @@ http_interactions:
       string: '{"refresh_token":"b.a.d"}'
     headers:
       User-Agent:
-      - HausgoldSDK/0.1.0 test-client
-      Content-Type:
-      - application/json
+      - HausgoldSDK/0.3.0 test-client
       Accept:
+      - application/json
+      Content-Type:
       - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - abb11039-63fe-4c45-aab4-a3d9d2236dec
+      - 4b7d545f-ab2c-42c7-9478-d1f722812baa
       X-Runtime:
-      - '0.004664'
+      - '0.003458'
       Vary:
       - Origin
       Content-Length:
@@ -36,5 +36,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"code":200,"message":"Authentication failed."}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 14:09:40 GMT
+  recorded_at: Mon, 11 Mar 2019 13:43:36 GMT
 recorded_with: VCR 3.0.3

@@ -13,8 +13,11 @@ module Hausgold
     client :identity_api
 
     # Mapped and tracked attributes
-    tracked_attr :token_type, :access_token, :refresh_token, :bare_access_token,
-                 :expires_in
+    tracked_attr :token_type, :access_token, :bare_access_token,
+                 :refresh_token, :expires_in
+
+    # Define attribute types for casting
+    typed_attr :token_type, :string_inquirer
 
     # Add some runtime attributes
     attr_reader :created_at

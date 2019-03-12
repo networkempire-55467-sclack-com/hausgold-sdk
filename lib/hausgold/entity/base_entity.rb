@@ -28,13 +28,10 @@ module Hausgold
     # @return [Hausgold::BaseEntity] a compatible instance
     # @yield [Hausgold::BaseEntity] the entity itself in the end
     def initialize(struct = {})
-      # Convert the given arguments to a recursive open struct,
-      # when not already done
-      struct = ::RecursiveOpenStruct.new(struct, recurse_over_arrays: true) \
-        unless struct.is_a? ::RecursiveOpenStruct
-      # Symbolize all keys in deep (including hashes in arrays), while
-      # converting back to an ordinary hash
-      hash = struct.to_h
+      # Set the initial unmapped struct
+      self._unmapped = RecursiveOpenStruct.new
+      # Build a RecursiveOpenStruct and a simple hash from the given data
+      struct, hash = sanitize_data(struct)
       # Initialize associations and map them accordingly
       struct, hash = initialize_associations(struct, hash)
       # Initialize attributes and map unknown ones and pass back the known

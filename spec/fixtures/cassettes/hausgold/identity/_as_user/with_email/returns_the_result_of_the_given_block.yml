@@ -8,10 +8,10 @@ http_interactions:
       string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","masquerade":{"email":"test@example.com"},"bang":true}'
     headers:
       User-Agent:
-      - HausgoldSDK/0.1.0 test-client
-      Content-Type:
-      - application/json
+      - HausgoldSDK/0.3.0 test-client
       Accept:
+      - application/json
+      Content-Type:
       - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -23,20 +23,20 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"eca407379ad2cee4129dc36d9ffdd7c3"
+      - W/"20440976b2ad3bb09de416f4b0131593"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 53173f62-337f-4d5f-a595-1f86d93a438e
+      - 4d167b18-743a-4956-ad60-f5092389b1e5
       X-Runtime:
-      - '0.083983'
+      - '0.088370'
       Vary:
       - Origin
       Content-Length:
-      - '1205'
+      - '2135'
     body:
       encoding: UTF-8
-      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1ODgsImV4cCI6MTU0ODg1NzM4OCwianRpIjoiM2Y5YzEwMTMxMTYwIiwidHlwIjoiYWNjZXNzIiwic3ViIjoiYmYxMzZhZWQtMDI1OS00NDU4LThjZjctNzYyNTUzZWViZmMyIiwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUuY29tIn0.bYzh-aOGafMR6wXX3qN1xBcK2K3Jvcl7dd1kqCLdnjxpJD8mQq6xfOr1_xdtBmIxrsiqexzpuhradpDC6pB_Y9AMdCskJ_8KhX6BPJbksdlDCwfFZcsOo0SBu6EUL7TKsgpwRovcHj4yaUJNf-4Xo8y8jLibj9iK_UixUacQeT4Tau77ADYuxDggEzGIVZA8VpeJJNbpZb2rmAeqOd3wfUR40G_2D8Bm52t3Mn8ev9xbIWdXjGe5jb5es74RV3UuyEvdeYd3ZPHFmBe0fmREUAvvpmGIf-9MyODzKXubRM2V7fUA1xOgmM0gOowYO44IoUhUneNYZHJ19CtjQzoBlQ","expires_in":604800,"refresh_token":null,"user":{"id":"bf136aed-0259-4458-8cf7-762553eebfc2","gid":"gid://identity-api/User/bf136aed-0259-4458-8cf7-762553eebfc2","email":"test@example.com","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-22T11:40:05Z","updated_at":"2019-01-22T11:40:05Z","confirmed_at":"2019-01-22T11:40:05Z","locked_at":null,"recovery_at":null}}'
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MzUsImV4cCI6MTU1MjkxNjYzNSwianRpIjoiYTFjZDkxYWUyMzA2IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6ImJmMTM2YWVkLTAyNTktNDQ1OC04Y2Y3LTc2MjU1M2VlYmZjMiIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInVzZXJfdHlwZSI6ImVtcGxveWVlIn0.aAUSB1dYswpsphQPYKE96yaOMFcrBR8uW5wGRapFoivz658dcAzWRuONmZH-9u9VwdETtvB23cajeIMk6KFDxL6bayHZzWbxwsmpsgUz7DR_d7q3YGskRiA1H6MIX25jGvIyyOG-MqQt0Pgq2OZMhwmcsBvm2vjr92wfqb0nZzGS3F3cGo0hz_D93s1Dz8fGrFBNXVLiuuHRzAVQ1g-TgVWEHAoD4OhR-OTD8gU1hF8jmnBA8ODDVUPDR8nB5eJ2n4Im0n4bdotNzKu3ZqJ6gBXXqkv2azO_FxPt0-ALK7SO1pHrIikbP1x-gMllOXnUlDlywGoRydcicJJI5ejK-A","expires_in":604800,"refresh_token":null,"bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MzUsImV4cCI6MTU1MjkxNjYzNSwianRpIjoiMTcyOTQzZjc3MDZjIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6ImJmMTM2YWVkLTAyNTktNDQ1OC04Y2Y3LTc2MjU1M2VlYmZjMiIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInVzZXJfdHlwZSI6ImVtcGxveWVlIn0.YcdWBKunoCLu7nTjiehyYYRPi61AK7zm36BY4B4-b0qa9GCZj_NhRoTpDz9I-tlC8m6mFdaumFrPqLQXKEYvEt8Q2payebmB0GEUlQA859CLTV5QMNxAEvQzDXmW-1p6fU_hEs5fGWWaxRmdHzyCcQ-iVTMkYbpi-yMuWxwYZ9qEEiSgkJAjHO0sKXlQ2pEz2kssot2lEyhjP70JA2F9q3vu0xtiGMF2dwn1PqtTJPWWhY3gNTbgsFmI9lCz_siLLj9gAq38RAxJjAuneOZQcIbxxgruJBK9DuSJk5th77_ZCpBJhWzxEEx9Xkavl2O4YOWFrPL2CDk245d5XC9TTg","user":{"id":"bf136aed-0259-4458-8cf7-762553eebfc2","gid":"gid://identity-api/User/bf136aed-0259-4458-8cf7-762553eebfc2","email":"test@example.com","type":"employee","status":"active","last_login_at":null,"created_at":"2019-03-11T08:18:29Z","updated_at":"2019-03-11T08:18:29Z","confirmed_at":"2019-03-11T08:18:29Z","locked_at":null,"recovery_at":null}}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 14:09:48 GMT
+  recorded_at: Mon, 11 Mar 2019 13:43:55 GMT
 recorded_with: VCR 3.0.3

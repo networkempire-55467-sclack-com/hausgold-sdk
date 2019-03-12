@@ -60,4 +60,50 @@ RSpec.describe Hausgold::Client::Base do
       end
     end
   end
+
+  describe '#format' do
+    before { described_class.action_formats = nil }
+
+    after { described_class.action_formats = nil }
+
+    it 'returns the default for unconfigured actions' do
+      expect(described_class.new.format(:test)).to be_eql(:json)
+    end
+
+    it 'returns the configured format' do
+      described_class.action_formats = { test: :multipart }
+      expect(described_class.new.format(:test)).to be_eql(:multipart)
+    end
+  end
+
+  describe '.format' do
+    before { described_class.action_formats = nil }
+
+    after { described_class.action_formats = nil }
+
+    it 'returns the default for unconfigured actions' do
+      expect(described_class.format(:test)).to be_eql(:json)
+    end
+
+    it 'returns the configured format' do
+      described_class.action_formats = { test: :multipart }
+      expect(described_class.format(:test)).to be_eql(:multipart)
+    end
+  end
+
+  describe '.default_formats' do
+    let(:expected) do
+      {
+        create: :json,
+        delete: :json,
+        find: :json,
+        find_by: :json,
+        update: :json
+      }
+    end
+
+    it 'returns a reusable action format hash' do
+      expect(described_class.default_formats).to match(expected)
+    end
+  end
 end

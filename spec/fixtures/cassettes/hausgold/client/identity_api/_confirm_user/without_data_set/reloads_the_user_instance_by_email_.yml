@@ -2,61 +2,16 @@
 http_interactions:
 - request:
     method: post
-    uri: http://identity-api.local/v1/users
+    uri: http://identity-api.local/v1/jwt/password
     body:
       encoding: UTF-8
-      string: '{"email":"antonia.mante3@jast.biz","type":"employee","status":"active","password":"0ESnnQxWIgUcv","password_confirmation":"0ESnnQxWIgUcv"}'
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
     headers:
       User-Agent:
-      - HausgoldSDK/0.1.0 test-client
-      Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
-      Content-Type:
-      - application/json
+      - HausgoldSDK/0.3.0 test-client
       Accept:
       - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Location:
-      - "/v1/users/bc95a413-0252-4e1c-a5ee-ab08aac48dec"
       Content-Type:
-      - application/json
-      Etag:
-      - W/"ed271be511870396fded75f8f7c0310d"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - dcffe630-61d3-4f29-a722-e11dd44e6398
-      X-Runtime:
-      - '0.067445'
-      Vary:
-      - Origin
-      Content-Length:
-      - '333'
-    body:
-      encoding: UTF-8
-      string: '{"id":"bc95a413-0252-4e1c-a5ee-ab08aac48dec","gid":"gid://identity-api/User/bc95a413-0252-4e1c-a5ee-ab08aac48dec","email":"antonia.mante3@jast.biz","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:41Z","updated_at":"2019-01-23T14:09:41Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
-    http_version: 
-  recorded_at: Wed, 23 Jan 2019 14:09:41 GMT
-- request:
-    method: post
-    uri: http://identity-api.local/v1/users/workflows/confirm
-    body:
-      encoding: UTF-8
-      string: '{"email":"antonia.mante3@jast.biz"}'
-    headers:
-      User-Agent:
-      - HausgoldSDK/0.1.0 test-client
-      Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
-      Content-Type:
-      - application/json
-      Accept:
       - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -68,20 +23,104 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"e5dd0091d4b649cc2bae45119d037899"
+      - W/"31c9864805e28aa537c00bfc042bbe1e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 80846f28-88cf-487b-b805-9c5e3579936e
+      - f888178f-40a9-4dd3-85fb-df2c873f7685
       X-Runtime:
-      - '0.012864'
+      - '0.078195'
       Vary:
       - Origin
       Content-Length:
-      - '351'
+      - '2840'
     body:
       encoding: UTF-8
-      string: '{"id":"bc95a413-0252-4e1c-a5ee-ab08aac48dec","gid":"gid://identity-api/User/bc95a413-0252-4e1c-a5ee-ab08aac48dec","email":"antonia.mante3@jast.biz","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:41Z","updated_at":"2019-01-23T14:09:41Z","confirmed_at":"2019-01-23T14:09:41Z","locked_at":null,"recovery_at":null}'
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTcsImV4cCI6MTU1MjkxNjYxNywianRpIjoiNDQ4OThlZTVlNGIxIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.Nz77nrfqLgr3Tr-FR7zgxPT-Z3cnOAgi5r_LzxF-g-jZKp7jdm8jiy0-UxjcAbHW7ei8-4UK4BpJ3mNX1wteAEpedKAKVBF-lVQzprUNa6DUD3GOGDtWhmkIZZ_wF-EbA-0UMg28tcOU-ME0GvKo9I6PN7Pnml2_QV-P3DjGa-W-rhXz19B32PKsM0al0sJbfBSdlNLjAznbf6YQqaCjk_cR3Himm_QdwzywS2v_n3C51Oy-_a45RtFLWErtBSWBiWeAanYhVm27Po6o4nY78vhWBxRtCLqmc7d_yszG-tfMrv97Aahos8UMSZnSc76xIeFesoMS2m-26nO42jZO_w","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTcsImV4cCI6MTU1MzUyMTQxNywianRpIjoiMjllOTRjN2E4OTRhIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.QS2ofCkvWJrBjRlkaN4rqMSix6K_eJNyxCeYnX553Co1e0qa_58dEjYYvBbTooLDCG2rkxOJiXndoTpmJlyqdrqoNSjPqcdiFQXd-ps109Jjqgifb4dpVcZOXacLOZi2fBjhqxTXe8kx_VU7ZjB-rahOqV6oK8ETvRq7TpiEGvmSwUIP9I86whIvUMmkWi9OmXUJKSXVhijgLdoPu0bGtOTSTm3lSGKI2RxKCGc7vfh4fAryU1xKpa4ROFPJUC_Nu6bScpp-INapBp4Sv8JqPHoJFGG2v0qbk15VRrkjzEzpk8MRnR3dx74Axkv1WfR_VCRAKL-0GG2vmNc0gEj5_g","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTcsImV4cCI6MTU1MjkxNjYxNywianRpIjoiYmFjYmRhMTVlMzRmIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.YRMljv3uC5cPuhx52vA2pGK0ekm3Mb53GN3si4P_P1IwEdmWgl0u6TX1mSa00B-sxP8mj0k30wJwcNcULk5lEJtftTmNJE6pQG77GOeaOQsoisEAMxn_oKiyhtoFW7gMzGq-M8-xGd5JFT2zbdmrUHfIx284wwem8mAjPML9UwdM2wWiPP6NQlaLqjovncKVQAwp7Q-DSaz6cVpVPRT_OvXp7ySkIwFriqt-RvBLkELlOCAQFZuSrj5BTx9wEM9aQtuLliu-cr6ojwKO6KZKOMGFwLP4DQWQ3jNN_j5JD1ltgg2xonjv0NdR35NfvAJ-FuBY5DV6f2ZbAAwv5kjjUA","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-11T13:43:37Z","created_at":"2019-03-11T08:18:29Z","updated_at":"2019-03-11T08:18:29Z","confirmed_at":"2019-03-11T08:18:29Z","locked_at":null,"recovery_at":null}}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 14:09:41 GMT
+  recorded_at: Mon, 11 Mar 2019 13:43:37 GMT
+- request:
+    method: post
+    uri: http://identity-api.local/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"dania_nicolas3@kassulke.co.uk","type":"employee","status":"active","password":"8EfEQnkUMfPijUU","password_confirmation":"8EfEQnkUMfPijUU"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.3.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTcsImV4cCI6MTU1MjkxNjYxNywianRpIjoiNDQ4OThlZTVlNGIxIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.Nz77nrfqLgr3Tr-FR7zgxPT-Z3cnOAgi5r_LzxF-g-jZKp7jdm8jiy0-UxjcAbHW7ei8-4UK4BpJ3mNX1wteAEpedKAKVBF-lVQzprUNa6DUD3GOGDtWhmkIZZ_wF-EbA-0UMg28tcOU-ME0GvKo9I6PN7Pnml2_QV-P3DjGa-W-rhXz19B32PKsM0al0sJbfBSdlNLjAznbf6YQqaCjk_cR3Himm_QdwzywS2v_n3C51Oy-_a45RtFLWErtBSWBiWeAanYhVm27Po6o4nY78vhWBxRtCLqmc7d_yszG-tfMrv97Aahos8UMSZnSc76xIeFesoMS2m-26nO42jZO_w
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/v1/users/678b3a6f-e3fb-4030-9249-1403adda8570"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"bb9885399d838435106a4e50072440ed"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e63c4607-9519-47bf-bdf6-b7ec0a00f345
+      X-Runtime:
+      - '0.066320'
+      Vary:
+      - Origin
+      Content-Length:
+      - '339'
+    body:
+      encoding: UTF-8
+      string: '{"id":"678b3a6f-e3fb-4030-9249-1403adda8570","gid":"gid://identity-api/User/678b3a6f-e3fb-4030-9249-1403adda8570","email":"dania_nicolas3@kassulke.co.uk","type":"employee","status":"active","last_login_at":null,"created_at":"2019-03-11T13:43:37Z","updated_at":"2019-03-11T13:43:37Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
+    http_version: 
+  recorded_at: Mon, 11 Mar 2019 13:43:37 GMT
+- request:
+    method: post
+    uri: http://identity-api.local/v1/users/workflows/confirm
+    body:
+      encoding: UTF-8
+      string: '{"email":"dania_nicolas3@kassulke.co.uk"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.3.0 test-client
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTcsImV4cCI6MTU1MjkxNjYxNywianRpIjoiNDQ4OThlZTVlNGIxIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.Nz77nrfqLgr3Tr-FR7zgxPT-Z3cnOAgi5r_LzxF-g-jZKp7jdm8jiy0-UxjcAbHW7ei8-4UK4BpJ3mNX1wteAEpedKAKVBF-lVQzprUNa6DUD3GOGDtWhmkIZZ_wF-EbA-0UMg28tcOU-ME0GvKo9I6PN7Pnml2_QV-P3DjGa-W-rhXz19B32PKsM0al0sJbfBSdlNLjAznbf6YQqaCjk_cR3Himm_QdwzywS2v_n3C51Oy-_a45RtFLWErtBSWBiWeAanYhVm27Po6o4nY78vhWBxRtCLqmc7d_yszG-tfMrv97Aahos8UMSZnSc76xIeFesoMS2m-26nO42jZO_w
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"0871fb17b98b7c0a4753964f8d0e0cac"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 55264a7d-fb27-4948-86b5-43711d22891d
+      X-Runtime:
+      - '0.011867'
+      Vary:
+      - Origin
+      Content-Length:
+      - '357'
+    body:
+      encoding: UTF-8
+      string: '{"id":"678b3a6f-e3fb-4030-9249-1403adda8570","gid":"gid://identity-api/User/678b3a6f-e3fb-4030-9249-1403adda8570","email":"dania_nicolas3@kassulke.co.uk","type":"employee","status":"active","last_login_at":null,"created_at":"2019-03-11T13:43:37Z","updated_at":"2019-03-11T13:43:37Z","confirmed_at":"2019-03-11T13:43:37Z","locked_at":null,"recovery_at":null}'
+    http_version: 
+  recorded_at: Mon, 11 Mar 2019 13:43:37 GMT
 recorded_with: VCR 3.0.3

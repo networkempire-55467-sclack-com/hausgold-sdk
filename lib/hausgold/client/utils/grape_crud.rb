@@ -15,13 +15,15 @@ module Hausgold
         #
         # @param path [String] the path to use for the URL
         # @param id [String] the identifier (eg. UUID/Gid)
+        # @param format [Symbol] the request format to use
         # @return [Faraday::Response] the response
-        def find(path, id)
+        def find(path, id, format = :json)
           id = Hausgold::Utils::Matchers.uuid(id)
           return not_found unless Hausgold::Utils::Matchers.uuid? id
 
           connection.get do |req|
             req.path = "#{path}/#{id}"
+            use_format(req, format)
             use_default_context(req)
             use_jwt(req)
           end
@@ -32,11 +34,13 @@ module Hausgold
         #
         # @param path [String] the path to use for the URL
         # @param attributes [Hash{String => Mixed}] the attributes to send
+        # @param format [Symbol] the request format to use
         # @return [Faraday::Response] the response
-        def create(path, attributes = {})
+        def create(path, attributes = {}, format = :json)
           connection.post do |req|
             req.path = path.to_s
             req.body = attributes.compact
+            use_format(req, format)
             use_default_context(req)
             use_jwt(req)
           end
@@ -48,14 +52,16 @@ module Hausgold
         # @param path [String] the path to use for the URL
         # @param id [String] the entity identifier
         # @param attributes [Hash{String => Mixed}] the attributes to send
+        # @param format [Symbol] the request format to use
         # @return [Faraday::Response] the response
-        def update(path, id, attributes = {})
+        def update(path, id, attributes = {}, format = :json)
           id = Hausgold::Utils::Matchers.uuid(id)
           return not_found unless Hausgold::Utils::Matchers.uuid? id
 
           connection.put do |req|
             req.path = "#{path}/#{id}"
             req.body = attributes
+            use_format(req, format)
             use_default_context(req)
             use_jwt(req)
           end
@@ -66,13 +72,15 @@ module Hausgold
         #
         # @param path [String] the path to use for the URL
         # @param id [String] the entity identifier
+        # @param format [Symbol] the request format to use
         # @return [Faraday::Response] the response
-        def delete(path, id)
+        def delete(path, id, format = :json)
           id = Hausgold::Utils::Matchers.uuid(id)
           return not_found unless Hausgold::Utils::Matchers.uuid? id
 
           connection.delete do |req|
             req.path = "#{path}/#{id}"
+            use_format(req, format)
             use_default_context(req)
             use_jwt(req)
           end
@@ -85,9 +93,16 @@ module Hausgold
         # @param name [String, Symbol] the singular entity name
         # @param path [String] the API path of the entity
         # @param args [Hash{Symbol => Mixed}] additional options
+        #
+        # rubocop:disable Metrics/AbcSize because this is the bare
+        #   core of the DSL method
         def entity(name, path, **args)
+          # Use the given class name, or guess by name
           class_name = args.fetch(:class_name, nil)
           class_name ||= name.to_s.camelcase.prepend('Hausgold::').constantize
+          # Assemble the request/response formats configuration, and save it
+          self.action_formats = action_formats.merge \
+            name.to_sym => default_formats.merge(args.fetch(:formats, {}))
           # Define all the CRUD methods on the class
           define_entity_find(name, path, class_name)
           define_entity_reload(name, path)
@@ -95,6 +110,7 @@ module Hausgold
           define_entity_update(name, path)
           define_entity_delete(name, path)
         end
+        # rubocop:enable Metrics/AbcSize
 
         private
 
@@ -111,7 +127,7 @@ module Hausgold
             # @param args [Hash{Symbol => Mixed}] additional options
             # @return [#{class_name}, nil] the task entity, or +nil+ on error
             def find_#{name}(id, **args)
-              res = find('#{path}', id)
+              res = find('#{path}', id, format(:#{name}, :find))
               decision(bang: args.fetch(:bang, false)) do |result|
                 result.bang(&bang_entity(#{class_name}, res, id: id))
                 result.good { #{class_name}.new(res.body).clear_changes }
@@ -136,7 +152,7 @@ module Hausgold
             # @param args [Hash{Symbol => Mixed}] additional options
             # @return [Hausgold::BaseEntity, nil] the entity, or +nil+ on error
             def reload_#{name}(entity, **args)
-              res = find('#{path}', entity.id)
+              res = find('#{path}', entity.id, format(:#{name}, :find))
               decision(bang: args.fetch(:bang, false)) do |result|
                 result.bang(&bang_entity(entity, res, id: entity.id))
                 result.good(&assign_entity(entity, res))
@@ -161,7 +177,8 @@ module Hausgold
             # @param args [Hash{Symbol => Mixed}] additional options
             # @return [Hausgold::BaseEntity, nil] the entity, or +nil+ on error
             def create_#{name}(entity, **args)
-              res = create('#{path}', entity.attributes)
+              res = create('#{path}', entity.attributes,
+                           format(:#{name}, :create))
               decision(bang: args.fetch(:bang, false)) do |result|
                 result.bang(&bang_entity(entity, res, id: entity.id))
                 result.good(&assign_entity(entity, res) do |entity|
@@ -190,7 +207,8 @@ module Hausgold
             def update_#{name}(entity, **args)
               changes = entity.attributes.slice(*entity.changed)
               return entity if changes.empty?
-              res = update('#{path}', entity.id, changes)
+              res = update('#{path}', entity.id, changes,
+                           format(:#{name}, :update))
               decision(bang: args.fetch(:bang, false)) do |result|
                 result.bang(&bang_entity(entity, res, id: entity.id))
                 result.good(&assign_entity(entity, res))
@@ -215,7 +233,7 @@ module Hausgold
             # @param args [Hash{Symbol => Mixed}] additional options
             # @return [Hausgold::BaseEntity, nil] the entity, or +nil+ on error
             def delete_#{name}(entity, **args)
-              res = delete('#{path}', entity.id)
+              res = delete('#{path}', entity.id, format(:#{name}, :delete))
               decision(bang: args.fetch(:bang, false)) do |result|
                 result.bang(&bang_entity(entity, res, id: entity.id))
                 result.good(&assign_entity(entity, res) do |entity|

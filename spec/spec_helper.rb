@@ -33,6 +33,12 @@ RSpec.configure do |config|
     reset_test_configuration!
   end
 
+  # Clear and recreate the tmp directory before each test case
+  config.before do
+    FileUtils.rm_rf(tmp_path)
+    FileUtils.mkdir_p(tmp_path)
+  end
+
   # Add VCR to all tests
   unless ENV.fetch('VCR', 'true') == 'false'
     config.around do |example|

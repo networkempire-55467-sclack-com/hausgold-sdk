@@ -26,6 +26,7 @@ BUNDLE ?= bundle
 APPRAISAL ?= appraisal
 RAKE ?= rake
 YARD ?= yard
+RAKE ?= rake
 RUBOCOP ?= rubocop
 
 # Files
@@ -52,8 +53,16 @@ all:
 	# HAUSGOLD SDK
 	#
 	# install            Install the dependencies
-	# test               Run the whole test suite
+	# update             Update the local Gemset dependencies
 	# clean              Clean the dependencies
+	#
+	# test               Run the whole test suite
+	# test-style         Test the code styles
+	#
+	# docs               Generate the Ruby documentation of the library
+	# stats              Print the code statistics (library and test suite)
+	# notes              Print all the notes from the code
+	# release            Release a new Gem version (maintainers only)
 	#
 	# shell              Run an interactive shell on the container
 	# shell-irb          Run an interactive IRB shell on the container
@@ -109,6 +118,14 @@ docs: install
 	# Build the API documentation
 	@$(call run-shell,$(BUNDLE) exec $(YARD) -q && \
 		$(BUNDLE) exec $(YARD) stats --list-undoc --compact)
+
+notes: install
+	# Print the code statistics (library and test suite)
+	@$(call run-shell,$(BUNDLE) exec $(RAKE) notes)
+
+stats: install
+	# Print all the notes from the code
+	@$(call run-shell,$(BUNDLE) exec $(RAKE) stats)
 
 release:
 	# Release a new gem version

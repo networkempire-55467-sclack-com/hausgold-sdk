@@ -2,61 +2,16 @@
 http_interactions:
 - request:
     method: post
-    uri: http://identity-api.local/v1/users
+    uri: http://identity-api.local/v1/jwt/password
     body:
       encoding: UTF-8
-      string: '{"email":"anastasia4@ritchiehilpert.ca","type":"employee","status":"active","password":"fdH9ZYgWwS7EsQNA","password_confirmation":"fdH9ZYgWwS7EsQNA"}'
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
     headers:
       User-Agent:
-      - HausgoldSDK/0.1.0 test-client
-      Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
-      Content-Type:
-      - application/json
+      - HausgoldSDK/0.3.0 test-client
       Accept:
       - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Location:
-      - "/v1/users/757d84d1-fa0d-48b1-81ca-2ede95dfe0ea"
       Content-Type:
-      - application/json
-      Etag:
-      - W/"dca9c56fd182f01e8eb81767313e327f"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - b8c1d2bf-e313-49cd-afea-9ddbb649ca53
-      X-Runtime:
-      - '0.066553'
-      Vary:
-      - Origin
-      Content-Length:
-      - '338'
-    body:
-      encoding: UTF-8
-      string: '{"id":"757d84d1-fa0d-48b1-81ca-2ede95dfe0ea","gid":"gid://identity-api/User/757d84d1-fa0d-48b1-81ca-2ede95dfe0ea","email":"anastasia4@ritchiehilpert.ca","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:45Z","updated_at":"2019-01-23T14:09:45Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
-    http_version: 
-  recorded_at: Wed, 23 Jan 2019 14:09:45 GMT
-- request:
-    method: post
-    uri: http://identity-api.local/v1/users/workflows/confirm
-    body:
-      encoding: UTF-8
-      string: '{"email":"anastasia4@ritchiehilpert.ca"}'
-    headers:
-      User-Agent:
-      - HausgoldSDK/0.1.0 test-client
-      Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NDgyNTI1NzksImV4cCI6MTU0ODg1NzM3OSwianRpIjoiZjYwNWE5ZTk2YmU2IiwidHlwIjoiYWNjZXNzIiwic3ViIjoiODdhNTMxN2YtMThhNC00ZmEzLTk4ZDMtYjk3YTcwNzYxMDJlIiwiZW1haWwiOiJpZGVudGl0eS1hcGlAaGF1c2dvbGQuZGUifQ.GXmvtbiCm9SKuxX2BJc1_ser2gyYdFBgZ8250KQaC7bRdoAVlxrWEJuZR7k1lp_BcG9Q_0R1Tz4szp4t8QkRb3qHpl2ESFj2CiY_UqDL6o2G5eIrwJ3aRob6R6iJwvbIgkbOw0j4rH3fhgtW9NSwct0dzlp5R87_XGT7DwO33W5kjNQJe_ig7GMo03u7mMKoLRXTP-IdT7MqD1urL_oWzozrENb1ymLnNh538X9iV6JDTJcnmPjfF_pS71FHV2jyiR6R6HZmaCdXFjiU1pWZG1MaR-rhO-Fea4yDP2iIyHzmVoDNeeunS1pndueqJV_JnDP-jRLY4TGCv5XzQxpC2A
-      Content-Type:
-      - application/json
-      Accept:
       - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -68,20 +23,104 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"9292dde9dc1d6344d78b255a6e1a1849"
+      - W/"79e6861594ca44dca3cd929736c1811f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8dd101c0-900e-4e85-b60d-f2afc067663e
+      - f2571e32-2f5a-4919-95da-69c1c48ffb32
       X-Runtime:
-      - '0.011070'
+      - '0.079999'
       Vary:
       - Origin
       Content-Length:
-      - '356'
+      - '2840'
     body:
       encoding: UTF-8
-      string: '{"id":"757d84d1-fa0d-48b1-81ca-2ede95dfe0ea","gid":"gid://identity-api/User/757d84d1-fa0d-48b1-81ca-2ede95dfe0ea","email":"anastasia4@ritchiehilpert.ca","type":"employee","status":"active","last_login_at":null,"created_at":"2019-01-23T14:09:45Z","updated_at":"2019-01-23T14:09:45Z","confirmed_at":"2019-01-23T14:09:45Z","locked_at":null,"recovery_at":null}'
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MzEsImV4cCI6MTU1MjkxNjYzMSwianRpIjoiNDJjYThiY2RiOWI5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.FgCeEn1T5FwuPHmdRvnRa8psmvlYxHjT9d3dEpsEgdordVvC1W6UtGs6mISAJeMmmgJ2Q3QvM8yzNza0o2dUvcn-9OlOF2qFwM1pxYPI5Yj-NahznBSjf2xYAo31LG41Se5R2EMZi4Graq5UHTl4ScAcNhebo322wlCYKA5JBtOUT5_0GAy0AU-ZOtHSyWzHY6SzrB8jF3LhDEAAGVk2HF4q3GHcuMht2QZ_xp3_z8Kzi7kcEqGo-cNELoFfCdHJA_1KqB36kJOTgtu3_BI_-jXfrVgx1wr-90YCV1cFAyYFqo05nsO4p_cpjHb70VxYbCDf4i-TRGbIaiC58gHy4g","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MzEsImV4cCI6MTU1MzUyMTQzMSwianRpIjoiMTNiMTI5NmFhMWU5IiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.U4El1iFhOwo3Feih7moKBs7suCbMh-v7i56vhG40Bio8y1xZWPmGsPTyi3z20dsut5YBVNbctWJdDC2bTLIsiXdK6dWoGs6_beMRWhSzXU5ltbnAuKx005D4G7dRAuU4ka7DnR2czKnsV9EpxP5JHNe8P-B3S41WmT_nUP3-S2bh4zCUgPcGy2bekDZpLrVt9iMbRoVtx2x-6eeTK_hy06G4chOMNEcCY9JjdXy6agIZk0CGZr42U3uApHvhKRFVmR6c-E994Rkv1BdxQReBhEqEe7UUkkvRFTkYjsfR4oTNrIzqx_2Z58AMAF3ksww_6cFpvWzkOBfJsQzUljK6yQ","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MzEsImV4cCI6MTU1MjkxNjYzMSwianRpIjoiNGMxNzIzZTJiZTBlIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.RldIF9ezPSP0IVwBjupvBmJRmK3ihSgfINWkFz3uFeuCP6THEe43bLiP_L8Y01tL1Jq9DCXzmCixHtzjYK2c3xuJzOHOYRYxnHyUDvFcEOUfEIcv_S9Q-719PPHHwO0C47lvf_96c-5HllCoRfDJkdycxWin9S0Nm4i2zGsiUG-hh9AtW6ECW02hoh5y66WU2iwQ8nLOE8b_dS_GPisAO_T4_1a7Tt1sPDhyKyHyt8HdjkV30z0Hfx882y8pw7C2VrvvyLEhYqS751l2cTJHxY8gI0OZUqEsJZpAKc5aS-Na4dbx4rTL8izg0ZQ16RyTu95hzruaKyZnL-9uK_b98A","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-11T13:43:51Z","created_at":"2019-03-11T08:18:29Z","updated_at":"2019-03-11T08:18:29Z","confirmed_at":"2019-03-11T08:18:29Z","locked_at":null,"recovery_at":null}}'
     http_version: 
-  recorded_at: Wed, 23 Jan 2019 14:09:45 GMT
+  recorded_at: Mon, 11 Mar 2019 13:43:51 GMT
+- request:
+    method: post
+    uri: http://identity-api.local/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"raina_ferry4@vandervort.ca","type":"employee","status":"active","password":"AaUmV6VBP7t","password_confirmation":"AaUmV6VBP7t"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.3.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MzEsImV4cCI6MTU1MjkxNjYzMSwianRpIjoiNDJjYThiY2RiOWI5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.FgCeEn1T5FwuPHmdRvnRa8psmvlYxHjT9d3dEpsEgdordVvC1W6UtGs6mISAJeMmmgJ2Q3QvM8yzNza0o2dUvcn-9OlOF2qFwM1pxYPI5Yj-NahznBSjf2xYAo31LG41Se5R2EMZi4Graq5UHTl4ScAcNhebo322wlCYKA5JBtOUT5_0GAy0AU-ZOtHSyWzHY6SzrB8jF3LhDEAAGVk2HF4q3GHcuMht2QZ_xp3_z8Kzi7kcEqGo-cNELoFfCdHJA_1KqB36kJOTgtu3_BI_-jXfrVgx1wr-90YCV1cFAyYFqo05nsO4p_cpjHb70VxYbCDf4i-TRGbIaiC58gHy4g
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/v1/users/47e0bd62-9cce-4b1b-9e6a-7c2702cd050b"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"3175eb8cb923e32abc4d70ecf9dfb500"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 990a9707-38b8-45ee-88af-5ab554e2f2f2
+      X-Runtime:
+      - '0.065983'
+      Vary:
+      - Origin
+      Content-Length:
+      - '336'
+    body:
+      encoding: UTF-8
+      string: '{"id":"47e0bd62-9cce-4b1b-9e6a-7c2702cd050b","gid":"gid://identity-api/User/47e0bd62-9cce-4b1b-9e6a-7c2702cd050b","email":"raina_ferry4@vandervort.ca","type":"employee","status":"active","last_login_at":null,"created_at":"2019-03-11T13:43:51Z","updated_at":"2019-03-11T13:43:51Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
+    http_version: 
+  recorded_at: Mon, 11 Mar 2019 13:43:51 GMT
+- request:
+    method: post
+    uri: http://identity-api.local/v1/users/workflows/confirm
+    body:
+      encoding: UTF-8
+      string: '{"email":"raina_ferry4@vandervort.ca"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.3.0 test-client
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MzEsImV4cCI6MTU1MjkxNjYzMSwianRpIjoiNDJjYThiY2RiOWI5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.FgCeEn1T5FwuPHmdRvnRa8psmvlYxHjT9d3dEpsEgdordVvC1W6UtGs6mISAJeMmmgJ2Q3QvM8yzNza0o2dUvcn-9OlOF2qFwM1pxYPI5Yj-NahznBSjf2xYAo31LG41Se5R2EMZi4Graq5UHTl4ScAcNhebo322wlCYKA5JBtOUT5_0GAy0AU-ZOtHSyWzHY6SzrB8jF3LhDEAAGVk2HF4q3GHcuMht2QZ_xp3_z8Kzi7kcEqGo-cNELoFfCdHJA_1KqB36kJOTgtu3_BI_-jXfrVgx1wr-90YCV1cFAyYFqo05nsO4p_cpjHb70VxYbCDf4i-TRGbIaiC58gHy4g
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"9785f0b628a226ad7117338fe1a3bdef"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 32f759a8-d693-4632-9615-38a2d11d1eb9
+      X-Runtime:
+      - '0.012553'
+      Vary:
+      - Origin
+      Content-Length:
+      - '354'
+    body:
+      encoding: UTF-8
+      string: '{"id":"47e0bd62-9cce-4b1b-9e6a-7c2702cd050b","gid":"gid://identity-api/User/47e0bd62-9cce-4b1b-9e6a-7c2702cd050b","email":"raina_ferry4@vandervort.ca","type":"employee","status":"active","last_login_at":null,"created_at":"2019-03-11T13:43:51Z","updated_at":"2019-03-11T13:43:51Z","confirmed_at":"2019-03-11T13:43:51Z","locked_at":null,"recovery_at":null}'
+    http_version: 
+  recorded_at: Mon, 11 Mar 2019 13:43:51 GMT
 recorded_with: VCR 3.0.3

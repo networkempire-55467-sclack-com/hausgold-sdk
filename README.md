@@ -193,6 +193,38 @@ task.title = 'Something new'
 task.reload
 task.title
 # => 'Buy milk'
+
+# Create a new asset with direct file upload. (Heads up, we just support
+# uploading the asset file while creating it) Afterwards you can access the
+# file URL via the +file_url+ attribute. (Heads up, the file URL is not stable
+# for private assets)
+#
+# @see http://bit.ly/2UvSoq6 for +UploadIO+ usage
+asset_upload = UploadIO.new('/path/to/file.png', 'image/png')
+asset = Hausgold::Asset.new(title: 'A great thing',
+                            public: true,
+                            file: asset_upload)
+asset.file_url
+# => 'https://asset-api..'
+
+# You can also create new assets for which the file is fetched from a given
+# URL. The download is performed by the Asset API while creating the new asset
+# instance, not on your local machine.
+asset = Hausgold::Asset.new(title: 'A great thing',
+                            public: true,
+                            file_from_url: 'https://domain.tld/image.png')
+asset.file_url
+# => 'https://asset-api..'
+
+# Download an asset file to the local disk. Without any argument a temporary
+# file is created. Keep in mind a +Tempfile+ object is automatically deleted
+# when the Ruby interpreter exits or the object is garbage collected.
+Hausgold::Asset.find('uuid|gid').download
+# => #<Tempfile:/tmp/asset20190307-21314-5aw7ay>
+
+# Download an asset to a persistent file by providing the destination path.
+Hausgold::Asset.find('uuid|gid').download('/your/path')
+# => #<File:/your/path>
 ```
 
 For all the persistence/dirty tracking methods which are available you can

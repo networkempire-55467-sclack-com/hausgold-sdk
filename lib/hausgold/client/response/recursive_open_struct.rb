@@ -10,10 +10,16 @@ module Hausgold
       # @param env [Hash{Symbol => Mixed}] the request
       def call(env)
         @app.call(env).on_complete do |res|
-          body = {}
+          body = res[:body]
 
-          body = res[:body] unless res[:status] == 204 || res[:body].empty?
+          # Skip string bodies, they are unparsed or contain binary data
+          next if body.is_a? String
 
+          # By definition empty responses (HTTP status 204)
+          # or actual empty bodies should be an empty hash
+          body = {} if res[:status] == 204 || res[:body].empty?
+
+          # Looks like we have some actual data we can wrap
           res[:body] = \
             ::RecursiveOpenStruct.new(body, recurse_over_arrays: true)
         end
