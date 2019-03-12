@@ -40,6 +40,41 @@ module Hausgold
         @@env
       end
 
+      # Pass back the local application name. When we are loaded together with
+      # a Rails application we use the application class name. This
+      # application name is URI/GID compatible. When no local application is
+      # available, we just pass back +nil+.
+      #
+      # @return [String, nil] the Rails application name, or +nil+
+      def local_app_name
+        # Check for non-Rails integration
+        return unless defined? Rails
+        # Check if a application is defined
+        return if Rails.application.nil?
+
+        # Pass back the URI compatible application name
+        Rails.application.class.parent_name.underscore.dasherize
+      end
+
+      # Return all the APIs/apps we support within the HAUSGOLD SDK. This list
+      # can exclude APIs/apps which are named like the local app we are loaded
+      # with to close down conflicts.
+      #
+      # @param exclude_local_app [Boolean] whenever to exclude
+      #   local/Hausgold name conflicts
+      # @return [Array<Symbol>] the APIs/apps we support
+      def api_names(exclude_local_app: true)
+        # Keep the content for the check and the actual exclusion
+        local_app = configuration.app_name
+        # Return the full list when we should not exclude,
+        # or no local app name is available
+        return Configuration::API_NAMES unless exclude_local_app && local_app
+
+        # Return the partial list (which may be the full list, when the local
+        # application name does not conflict)
+        Configuration::API_NAMES - [local_app.to_sym]
+      end
+
       # Retrieve the current configured logger instance.
       #
       # @return [Logger] the logger instance

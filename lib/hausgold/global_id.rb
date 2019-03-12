@@ -3,8 +3,8 @@
 # We have to monkey patch the GlobalID gem to allow namespaced model classes.
 # The original idea, that the model is 1:1 the same on the remote and local
 # application is just not always true. With the new +namespace: Module+ option
-# while parsing an Global Id URI you can embed an optionl model namespace which
-# is evaluated on the +#model_class+ call.
+# while parsing an Global Id URI you can embed an optional model namespace
+# which is evaluated on the +#model_class+ call.
 #
 # So we stay a) compatible to the regular GlobalID gem API and b) allow the
 # local application to work directly with HAUSGOLD ecosystem Global Id URIs
@@ -59,14 +59,13 @@ module Hausgold
     extend ActiveSupport::Concern
 
     included do
-      Hausgold::Configuration::API_NAMES.each do |app|
-        # Resolve API name into its client class
-        client = app.to_s.tr('-', '_')
-                    .camelcase
-                    .prepend('Hausgold::Client::')
-                    .constantize
-        # Register the Gid locator for the application
-        GlobalID::Locator.use(app, client.new)
+      # Fetch the configuration whenever we should exclude the GID locator
+      # which may be named like the local app
+      exclude_conf = Hausgold.configuration.exclude_local_app_gid_locator
+      # Register all configured GID locators
+      Hausgold.api_names(exclude_local_app: exclude_conf).each do |app|
+        # Register the GID locator for the application
+        GlobalID::Locator.use(app, Hausgold.app(app))
       end
     end
 
