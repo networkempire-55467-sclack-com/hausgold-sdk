@@ -5,9 +5,12 @@
 * Added support to download Asset files (`Hausgold::Asset.find('..').download`)
 * Implemented an initial type-casted attribute system (writers and readers)
   and added it to all entities (booleans, symbols, string inquirers)
-* Added an automatic `app_name` configuration guessing (Rails apps only)
+* Added an automatic `app_name` configuration guessing which is set by a Rails
+  Railtie right before initialization
 * Added a configuration (`exclude_local_app_gid_locator`) to toggle the
   exclusion of same named local application and Hausgold GID locators
+* Allow `Hausgold.locate` to work with local/remote Global Ids the same way by
+  autodetecting the responsible locator
 
 ### 0.3.0
 

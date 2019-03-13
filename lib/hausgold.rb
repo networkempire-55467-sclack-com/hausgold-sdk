@@ -108,6 +108,7 @@ module Hausgold
   require 'hausgold/version'
   require 'hausgold/errors'
   require 'hausgold/faraday'
+  require 'hausgold/railtie' if defined? Rails
 
   # Include top-level features
   include Hausgold::ConfigurationHandling

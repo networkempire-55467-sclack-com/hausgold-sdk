@@ -50,6 +50,23 @@ class GlobalID
       locator_for(gid).locate gid \
         if find_allowed?(gid.model_class, options[:only])
     end
+
+    # Unregister a given application GID locator. This allows the library to
+    # re-register GID locators on configuration changes which happen later in
+    # the boot process.
+    #
+    # @param app [String, Symbol] the registered application locator name
+    # @return [Mixed, nil] the unregistered application locator instance,
+    #   or +nil+ when not found
+    def self.unregister(app)
+      URI::GID.validate_app(app)
+      @locators.delete(normalize_app(app))
+    end
+
+    # We use this internally to check for a namespaced model requirement. There
+    # is nothing bad at telling which locator is responsible for the given gid
+    # instance.
+    public_class_method :locator_for
   end
 end
 
@@ -59,25 +76,49 @@ module Hausgold
     extend ActiveSupport::Concern
 
     included do
-      # Fetch the configuration whenever we should exclude the GID locator
-      # which may be named like the local app
-      exclude_conf = Hausgold.configuration.exclude_local_app_gid_locator
-      # Register all configured GID locators
-      Hausgold.api_names(exclude_local_app: exclude_conf).each do |app|
-        # Register the GID locator for the application
-        GlobalID::Locator.use(app, Hausgold.app(app))
-      end
+      # Register all application GID locators when this concern is included. On
+      # configuration changes this method can be called again to refresh the
+      # registered locators.
+      register_gid_locators
     end
 
     class_methods do
-      # Just a simple adapter to the +GlobalID::Locator+.
+      # Re-register all configured application GID locators.
+      def register_gid_locators
+        # Fetch the configuration whenever we should exclude the GID locator
+        # which may be named like the local app
+        exclude_conf = Hausgold.configuration.exclude_local_app_gid_locator
+        # Unregister all Hausgold known application GID locators first
+        Hausgold.api_names(exclude_local_app: false).each do |app|
+          GlobalID::Locator.unregister(app)
+        end
+        # Register all configured GID locators
+        Hausgold.api_names(exclude_local_app: exclude_conf).each do |app|
+          # Register the GID locator for the application
+          GlobalID::Locator.use(app, Hausgold.app(app))
+        end
+      end
+
+      # Just a simple adapter to the +GlobalID::Locator+. It allows to fetch
+      # local-GIDs with the default locator as well as remote GIDs with the
+      # help of the HAUSGOLD SDK. The global id to entity namespacing is done
+      # according to the registered GID locators.
       #
       # @param gid [GlobalID, String] the Global Id to locate
       # @return [Hausgold::BaseEntity] the resulting entity
       # @raise [Hausgold::EntityNotFound] in case it was not found
       def locate(gid)
-        gid = GlobalID.parse(gid, namespace: Hausgold)
-        GlobalID::Locator.locate(gid)
+        # By default we dont set options for the global id
+        opts = {}
+        # Get the responsible application GID locator instance
+        locator = GlobalID::Locator.locator_for(GlobalID.parse(gid))
+        # When the global id should be located by the HAUSGOLD SDK,
+        # just add the namespace for the entity
+        opts[:namespace] = Hausgold \
+          if locator.class.parent_name == 'Hausgold::Client'
+        # Reset the global id instance with the corresponding options and
+        # do the locating rain dance
+        GlobalID::Locator.locate(GlobalID.parse(gid, **opts))
       end
 
       # Build a new Global Id URI string from the given components.

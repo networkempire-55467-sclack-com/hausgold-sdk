@@ -8,7 +8,10 @@ RSpec.describe Hausgold::GlobalId do
   describe 'initialization' do
     let(:all_locators_count) { Hausgold::Configuration::API_NAMES.count }
 
-    before { allow(GlobalID::Locator).to receive(:use) }
+    before do
+      allow(GlobalID::Locator).to receive(:use)
+      allow(GlobalID::Locator).to receive(:unregister)
+    end
 
     after { Class.new { include Hausgold::GlobalId } }
 
@@ -89,6 +92,37 @@ RSpec.describe Hausgold::GlobalId do
     end
   end
 
+  describe '.register_gid_locators' do
+    before do
+      Hausgold.configuration.app_name = nil
+      described_class.register_gid_locators
+    end
+
+    after do
+      Hausgold.configuration.app_name = nil
+      described_class.register_gid_locators
+    end
+
+    context 'with local name conflict' do
+      before { Hausgold.configuration.app_name = 'identity-api' }
+
+      it 'unregisters the conflicting locator' do
+        expect { described_class.register_gid_locators }.to \
+          change { GlobalID::Locator.instance_variable_get(:@locators).count }
+          .by(-1)
+      end
+    end
+
+    context 'without local name conflict' do
+      before { Hausgold.configuration.app_name = nil }
+
+      it 'does not drop locators' do
+        expect { described_class.register_gid_locators }.not_to \
+          change { GlobalID::Locator.instance_variable_get(:@locators).count }
+      end
+    end
+  end
+
   describe '.locate' do
     let(:user_uuid) { 'bf136aed-0259-4458-8cf7-762553eebfc2' }
     let(:gid_raw) { "gid://calendar-api/Task/#{uuid}" }
@@ -111,6 +145,17 @@ RSpec.describe Hausgold::GlobalId do
     it 'raises Hausgold::EntityNotFound when not found' do
       expect { described_class.locate(other_gid_raw) }.to \
         raise_error(Hausgold::EntityNotFound)
+    end
+
+    context 'with a local-GID' do
+      let(:gid) { 'gid://never-existing-api/Unicorn/1' }
+
+      it 'raises when the entity is not defined' do
+        # This also checks implicitly that no +Hausgold+ namespace was applied
+        # to non-Hausgold GIDs
+        expect { described_class.locate(gid) }.to \
+          raise_error(NameError, /uninitialized constant Unicorn/)
+      end
     end
   end
 
