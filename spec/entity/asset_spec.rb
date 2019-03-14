@@ -77,21 +77,55 @@ RSpec.describe Hausgold::Asset do
   describe '#download' do
     let(:asset) { described_class.create(params) }
 
-    context 'with direct file upload' do
-      let(:params) { attributes_for :asset }
+    context 'with public asset' do
+      context 'with direct file upload' do
+        let(:params) { attributes_for :asset }
 
-      it 'downloads the expected file' do
-        expect(Digest::MD5.hexdigest(asset.download.read)).to \
-          be_eql('f5ca75b99f72f4d35a75e6d4924d8d33')
+        it 'downloads the expected file' do
+          expect(Digest::MD5.hexdigest(asset.download.read)).to \
+            be_eql('f5ca75b99f72f4d35a75e6d4924d8d33')
+        end
+      end
+
+      context 'with file from URL' do
+        let(:params) { attributes_for :asset, :with_file_from_url }
+
+        it 'downloads the expected file' do
+          expect(Digest::MD5.hexdigest(asset.download.read)).to \
+            be_eql('f5ca75b99f72f4d35a75e6d4924d8d33')
+        end
       end
     end
 
-    context 'with file from URL' do
-      let(:params) { attributes_for :asset, :with_file_from_url }
+    context 'with private asset' do
+      context 'with direct file upload' do
+        let(:params) { attributes_for :asset, :private }
 
-      it 'downloads the expected file' do
-        expect(Digest::MD5.hexdigest(asset.download.read)).to \
-          be_eql('f5ca75b99f72f4d35a75e6d4924d8d33')
+        it 'downloads the expected file' do
+          expect(Digest::MD5.hexdigest(asset.download.read)).to \
+            be_eql('f5ca75b99f72f4d35a75e6d4924d8d33')
+        end
+      end
+
+      context 'with file from URL' do
+        let(:params) { attributes_for :asset, :private, :with_file_from_url }
+
+        it 'downloads the expected file' do
+          expect(Digest::MD5.hexdigest(asset.download.read)).to \
+            be_eql('f5ca75b99f72f4d35a75e6d4924d8d33')
+        end
+      end
+    end
+  end
+
+  describe '#download!' do
+    context 'with private asset and wrong identity' do
+      let(:params) { attributes_for :asset, :private }
+
+      it 'raises' do
+        asset = described_class.create(params)
+        Hausgold.identity(bare_access_token: 'invalid')
+        expect { asset.download! }.to raise_error(Hausgold::EntityNotFound)
       end
     end
   end

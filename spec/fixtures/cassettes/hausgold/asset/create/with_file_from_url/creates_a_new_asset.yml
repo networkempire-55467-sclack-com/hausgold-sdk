@@ -23,44 +23,44 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"7c6377495ac0c97533e3ec1008afa509"
+      - W/"83117fd1554e032ee08273b95ca8cf75"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ed8bb9fb-6b78-43a6-a16e-45945ef18402
+      - 66b89559-054b-4e4e-b0c6-0091beaf91f9
       X-Runtime:
-      - '0.077608'
+      - '0.079704'
       Vary:
       - Origin
       Content-Length:
       - '2840'
     body:
       encoding: UTF-8
-      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTcsImV4cCI6MTU1MjkxNjYxNywianRpIjoiMWIxYjU1ZDJjOTM5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.gM5ZnnwMWxgDSBsEOHI1T3VhjG2n5c6cCPF5hpL9SXkCGheKvK1GHlTYQgEmPbDfVfCmvwmRBtgk193tnisN2UWH8Ju9jufKyevBI1n3f4YF_2qYR_PqhCobxoqBTJVgpENGOelEN7fuisCojbb7oq6ogOV_6A9Gim2lRrrE5-IaAZ-rgbmE5aRD5muNkJYEMCAYeJUyz_3nS6ZefMC2bRZSoxRBY3ZJSaIY5cc4ajt-D70rtHlwt_Yce2V68BSVAYW0GQAEdgfpkrtgdIBSwnXrP51E2DFcecXRcAvAaJUgL9vLyf4ttawZk0twB203ViOjOsIoiK--s9oLqG_yrw","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTcsImV4cCI6MTU1MzUyMTQxNywianRpIjoiN2NiMGIwMTEyZTRhIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.CyGx1H6DTnqvpeO2fJDiCUCIOh9XMYf9kW7DOeZHXtyjdUMhJlcOOsCtO001u7qM4WY39U4U7M1HyaqZcwNq60MtGhZf5jQBGrUXww2kvhxj1wU8MM7LOQp4DBmmKzU_29iV9O9uTe-5xVSoqInAcPzbMtTPdjf3Gtdx4d7iRtXYGIAicEtldylk-PfxfsFrPtCMPtMRPmT2dA3mLi6CeYwIbYn5OQQ7l9Jia1m-xmkX2ueO2Tk57Qovw81SAWnDoc_ml2yiZ_b0j_KpFOMbMA1q4Fu3vybY65G-nBA4p6KzP4QrRFC4lonceUhVrYGEMwe17fG8lCjhQ26fUUAiIg","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTcsImV4cCI6MTU1MjkxNjYxNywianRpIjoiZDg5MzI4Zjg5NGY0IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.aVUwMi6dMZSskNFBKWk8yHB5gtyT5p7qzwii3U55myOIGPqUPDar3yfkrv50VUfSXD18mVt2dgEEAUVXFztQcKAcSwR4DRw_oanlslhLKfVTBlZ2-mEB1mdk1PJqhavWhQwzfe9eN5k6YuJ9prjZ_NSZuL8u2uddl_ZuA_R029oTRcgvnBK7f3N1EnhTlfwIZ5CeOF0MwkjQ35_O8uxDbc36sH4AKkLhYA_zvDOuBXytGGPR2a5T-GYvsH92GmFN5EWNuq6tWyTGYWofYkkea-s2y5FMef9s4JMtkShc8ZgHy10niOh3T-HcDcm5YojlIpHeAJSD00Q7fjAuyHZi9w","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-11T13:43:37Z","created_at":"2019-03-11T08:18:29Z","updated_at":"2019-03-11T08:18:29Z","confirmed_at":"2019-03-11T08:18:29Z","locked_at":null,"recovery_at":null}}'
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTI1NTIwOTIsImV4cCI6MTU1MzE1Njg5MiwianRpIjoiYWE4M2NjODZiYjA1IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.e2QQZl9H60THEtTQFbRG8JxrONNaIOkWwUkH0SIUbvhiz5mUJb2p_fUIqWOj69wVPl9sRhMymDYsMprxIdlclK810SQWQ-qKFZJ3Bkr5aBGf6OpuR1VgbF0eyxcHGcYLq0KvPOQPlrms6EB_i2JWPYIUXy_kYNOYV1EHIQcQSrhNNMZFRO_5rJVSXo_zaPOp7f42byhgkf0R2BLHBaDLpdrB7kTCZQ0blsyI8EFmahk8oAz3wOtXoMJZPTW1_SOjKXXWArz4WLYQi7fgga_eEIfyCx3RHKY43ttlShjsme_AONe4KQ0iasJRAMxSCuLS3SWZ_dfKpZY2-jZSteh_uw","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTI1NTIwOTIsImV4cCI6MTU1Mzc2MTY5MiwianRpIjoiODUyMzY0MDVjOTkzIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.t9PCJ9ca-_F4a_M2DFFx33Ro3p9YZW5Srbcs2gICfe_7vZj091KKJTos7pgPJdPgEM0X6YNOlvlawGFQ6zSDSvQBLVceGe_hb8lyBtM4ePrZtit7LQGX-fjNjAYqaAkATifMwltfgmlvV8p9zVjmpG-B0uCl87X3C2SM4MLnjAG6H5pnhZLLOvyIosbrJ505bPbFEG_YUy5SETaqTUHjzTVFMW5vyhMO8-BvU9cw68SgZAo_zVmmBPwolZhmQdZ4BeGmCugGD27_5LPEONdp69aHxXXzBrBNlU5qg0PU85umBcgFRhBpmrs6fE4AR9GbssxEILNZoHv_1TGuUb8VqQ","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTI1NTIwOTIsImV4cCI6MTU1MzE1Njg5MiwianRpIjoiYzYyYjdhZmY2Y2RkIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.dSC1QIZKn0lk4O_9UtD5275yBWlsI4KM20u07d6x40xdDX3ZJL87xB4g6N2ifhXXZaUMu9mS6LMSPXjlCfstqAlPfBB_D1rASei3Ms46r1M12rMhAJpOFRgXGG-qMdJQ0BO8SBpPJYuLczBSYO_mu4iMWf3hbGfgaKZoaiVZrhp62-DEyEItkC6tn1uPn0q38OJ4w8itQjgJziqRT52lb7LGkUE0Zeca9R_jz1RNHWusYCOnJxVuARGPxVC926AsaIlmCsy4YuAkE-jK2qsyd_WkUuckEIxS3W87LqegnKh4nCMhZpruRpV9bJ0wg02it_P5_TK1fJM-fnIBk33Xjg","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-14T08:28:12Z","created_at":"2019-03-14T07:52:16Z","updated_at":"2019-03-14T07:52:16Z","confirmed_at":"2019-03-14T07:52:16Z","locked_at":null,"recovery_at":null}}'
     http_version: 
-  recorded_at: Mon, 11 Mar 2019 13:43:37 GMT
+  recorded_at: Thu, 14 Mar 2019 08:28:12 GMT
 - request:
     method: post
     uri: http://asset-api.local/v1/assets
     body:
       encoding: UTF-8
-      string: "-------------RubyMultipartPost-88db47c7b0e97ec7f8b23f5ef72905eb\r\nContent-Disposition:
-        form-data; name=\"title\"\r\n\r\nMy avatar\r\n-------------RubyMultipartPost-88db47c7b0e97ec7f8b23f5ef72905eb\r\nContent-Disposition:
-        form-data; name=\"description\"\r\n\r\nThe best avatar I ever had\r\n-------------RubyMultipartPost-88db47c7b0e97ec7f8b23f5ef72905eb\r\nContent-Disposition:
-        form-data; name=\"public\"\r\n\r\ntrue\r\n-------------RubyMultipartPost-88db47c7b0e97ec7f8b23f5ef72905eb\r\nContent-Disposition:
-        form-data; name=\"attachable\"\r\n\r\ngid://identify-api/User/d7052199-2489-47fa-9867-95f959bb16b2\r\n-------------RubyMultipartPost-88db47c7b0e97ec7f8b23f5ef72905eb\r\nContent-Disposition:
-        form-data; name=\"permissions[d7052199-2489-47fa-9867-95f959bb16b2]\"\r\n\r\nx\r\n-------------RubyMultipartPost-88db47c7b0e97ec7f8b23f5ef72905eb\r\nContent-Disposition:
-        form-data; name=\"metadata[add_1]\"\r\n\r\ntrue\r\n-------------RubyMultipartPost-88db47c7b0e97ec7f8b23f5ef72905eb\r\nContent-Disposition:
-        form-data; name=\"metadata[add_2]\"\r\n\r\n2019-03-12 14:43:37 +0100\r\n-------------RubyMultipartPost-88db47c7b0e97ec7f8b23f5ef72905eb\r\nContent-Disposition:
-        form-data; name=\"metadata[add_3]\"\r\n\r\nInfo\r\n-------------RubyMultipartPost-88db47c7b0e97ec7f8b23f5ef72905eb\r\nContent-Disposition:
-        form-data; name=\"file_from_url\"\r\n\r\nhttps://s3-eu-west-1.amazonaws.com/asset-api-test/avatar.jpg\r\n-------------RubyMultipartPost-88db47c7b0e97ec7f8b23f5ef72905eb--\r\n\r\n"
+      string: "-------------RubyMultipartPost-f51204f334711a978f233fbb1fd7b89f\r\nContent-Disposition:
+        form-data; name=\"title\"\r\n\r\nMy avatar\r\n-------------RubyMultipartPost-f51204f334711a978f233fbb1fd7b89f\r\nContent-Disposition:
+        form-data; name=\"description\"\r\n\r\nThe best avatar I ever had\r\n-------------RubyMultipartPost-f51204f334711a978f233fbb1fd7b89f\r\nContent-Disposition:
+        form-data; name=\"public\"\r\n\r\ntrue\r\n-------------RubyMultipartPost-f51204f334711a978f233fbb1fd7b89f\r\nContent-Disposition:
+        form-data; name=\"attachable\"\r\n\r\ngid://identify-api/User/03e46823-de74-424f-ad51-353d16f4b247\r\n-------------RubyMultipartPost-f51204f334711a978f233fbb1fd7b89f\r\nContent-Disposition:
+        form-data; name=\"permissions[03e46823-de74-424f-ad51-353d16f4b247]\"\r\n\r\nx\r\n-------------RubyMultipartPost-f51204f334711a978f233fbb1fd7b89f\r\nContent-Disposition:
+        form-data; name=\"metadata[add_1]\"\r\n\r\ntrue\r\n-------------RubyMultipartPost-f51204f334711a978f233fbb1fd7b89f\r\nContent-Disposition:
+        form-data; name=\"metadata[add_2]\"\r\n\r\n2019-03-15 09:28:12 +0100\r\n-------------RubyMultipartPost-f51204f334711a978f233fbb1fd7b89f\r\nContent-Disposition:
+        form-data; name=\"metadata[add_3]\"\r\n\r\nInfo\r\n-------------RubyMultipartPost-f51204f334711a978f233fbb1fd7b89f\r\nContent-Disposition:
+        form-data; name=\"file_from_url\"\r\n\r\nhttps://s3-eu-west-1.amazonaws.com/asset-api-test/avatar.jpg\r\n-------------RubyMultipartPost-f51204f334711a978f233fbb1fd7b89f--\r\n\r\n"
     headers:
       User-Agent:
       - HausgoldSDK/0.3.0 test-client
       Content-Type:
-      - multipart/form-data; boundary=-----------RubyMultipartPost-88db47c7b0e97ec7f8b23f5ef72905eb
+      - multipart/form-data; boundary=-----------RubyMultipartPost-f51204f334711a978f233fbb1fd7b89f
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTIzMTE4MTcsImV4cCI6MTU1MjkxNjYxNywianRpIjoiMWIxYjU1ZDJjOTM5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.gM5ZnnwMWxgDSBsEOHI1T3VhjG2n5c6cCPF5hpL9SXkCGheKvK1GHlTYQgEmPbDfVfCmvwmRBtgk193tnisN2UWH8Ju9jufKyevBI1n3f4YF_2qYR_PqhCobxoqBTJVgpENGOelEN7fuisCojbb7oq6ogOV_6A9Gim2lRrrE5-IaAZ-rgbmE5aRD5muNkJYEMCAYeJUyz_3nS6ZefMC2bRZSoxRBY3ZJSaIY5cc4ajt-D70rtHlwt_Yce2V68BSVAYW0GQAEdgfpkrtgdIBSwnXrP51E2DFcecXRcAvAaJUgL9vLyf4ttawZk0twB203ViOjOsIoiK--s9oLqG_yrw
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTI1NTIwOTIsImV4cCI6MTU1MzE1Njg5MiwianRpIjoiYWE4M2NjODZiYjA1IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.e2QQZl9H60THEtTQFbRG8JxrONNaIOkWwUkH0SIUbvhiz5mUJb2p_fUIqWOj69wVPl9sRhMymDYsMprxIdlclK810SQWQ-qKFZJ3Bkr5aBGf6OpuR1VgbF0eyxcHGcYLq0KvPOQPlrms6EB_i2JWPYIUXy_kYNOYV1EHIQcQSrhNNMZFRO_5rJVSXo_zaPOp7f42byhgkf0R2BLHBaDLpdrB7kTCZQ0blsyI8EFmahk8oAz3wOtXoMJZPTW1_SOjKXXWArz4WLYQi7fgga_eEIfyCx3RHKY43ttlShjsme_AONe4KQ0iasJRAMxSCuLS3SWZ_dfKpZY2-jZSteh_uw
       Accept:
       - application/json
       Content-Length:
@@ -73,29 +73,29 @@ http_interactions:
       message: Created
     headers:
       Location:
-      - "/v1/assets/5707b4d7-88a2-4890-9543-35bf1828f54b"
+      - "/v1/assets/31a3f645-dd27-4d0c-a4cd-af98c6ce974d"
       Set-Cookie:
-      - user=gOydoA3XVLPOTax72wqIhEiJh5uFakEjChaz99UkMM0B3MaXdF%2Fm2mbz8cxzrw%3D%3D--iG11QBaGnnQ2BkwX--hkOnHYgyxxgx9OH7lvT9%2FQ%3D%3D;
-        path=/; secure; HttpOnly
+      - bare_access_token=eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTI1NTIwOTIsImV4cCI6MTU1MzE1Njg5MiwianRpIjoiZGRiODg5NjgyMDRhIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.wqIUYrAEGcVuS1ln2kORybavtCi6qPU9h1OUpJ1iKKRWXm__-OMfLbvDH1IFPIcZt3vLTlMeDji_Ode0VhMNPpwB-q6cdp-fK_1r12-NIwU_dNl4UP4EEVkoORzWWF5-BL0gsvsRsGLyRRDzAjcqxtbZrddji6beW7fG5fmZ_E0q67lnSllWA3s-FE0bdvFZszXHMOyyOdLCcpTJw-HUP6qHytdveweoLFaWL5dcrwnx_E5U-EIj7kXNR5vwIAK4GYp60RQbc5tFHkuzre6wcEsLudOhX4UH-bL6bszmwu9eo8KpfjDSwdrQZpnf2F7d0Jhwt_HhWHRYovMryZzj1w;
+        domain=asset-api.local; path=/; secure; HttpOnly
       Content-Type:
       - application/json
       Etag:
-      - W/"880577200db045d5a20916813f29ebc5"
+      - W/"3ba3e9a9f14930fb8eebd2b0c6ac04f9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4951526b-d7f3-421a-91ad-87d45e031774
+      - 90b954cb-e002-4744-8891-52c1e3847617
       X-Runtime:
-      - '0.342995'
+      - '0.524205'
       Vary:
       - Origin
       Content-Length:
       - '559'
     body:
       encoding: UTF-8
-      string: '{"id":"5707b4d7-88a2-4890-9543-35bf1828f54b","title":"My avatar","description":"The
-        best avatar I ever had","attachable":"gid://identify-api/User/d7052199-2489-47fa-9867-95f959bb16b2","category":null,"public":true,"permissions":{"d7052199-2489-47fa-9867-95f959bb16b2":"x","87a5317f-18a4-4fa3-98d3-b97a7076102e":"x"},"metadata":{"add_1":"true","add_2":"2019-03-12
-        14:43:37 +0100","add_3":"Info"},"file_url":"http://asset-api.local/v1/assets/5707b4d7-88a2-4890-9543-35bf1828f54b/download","created_at":"2019-03-11T13:43:37Z","updated_at":"2019-03-11T13:43:37Z"}'
+      string: '{"id":"31a3f645-dd27-4d0c-a4cd-af98c6ce974d","title":"My avatar","description":"The
+        best avatar I ever had","attachable":"gid://identify-api/User/03e46823-de74-424f-ad51-353d16f4b247","category":null,"public":true,"permissions":{"03e46823-de74-424f-ad51-353d16f4b247":"x","87a5317f-18a4-4fa3-98d3-b97a7076102e":"x"},"metadata":{"add_1":"true","add_2":"2019-03-15
+        09:28:12 +0100","add_3":"Info"},"file_url":"http://asset-api.local/v1/assets/31a3f645-dd27-4d0c-a4cd-af98c6ce974d/download","created_at":"2019-03-14T08:28:12Z","updated_at":"2019-03-14T08:28:13Z"}'
     http_version: 
-  recorded_at: Mon, 11 Mar 2019 13:43:37 GMT
+  recorded_at: Thu, 14 Mar 2019 08:28:13 GMT
 recorded_with: VCR 3.0.3

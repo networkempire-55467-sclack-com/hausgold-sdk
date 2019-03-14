@@ -201,18 +201,20 @@ task.title
 #
 # @see http://bit.ly/2UvSoq6 for +UploadIO+ usage
 asset_upload = UploadIO.new('/path/to/file.png', 'image/png')
-asset = Hausgold::Asset.new(title: 'A great thing',
-                            public: true,
-                            file: asset_upload)
+asset = Hausgold::Asset.create!(title: 'A great thing',
+                                attachable: 'gid://..',
+                                public: true,
+                                file: asset_upload)
 asset.file_url
 # => 'https://asset-api..'
 
 # You can also create new assets for which the file is fetched from a given
 # URL. The download is performed by the Asset API while creating the new asset
 # instance, not on your local machine.
-asset = Hausgold::Asset.new(title: 'A great thing',
-                            public: true,
-                            file_from_url: 'https://domain.tld/image.png')
+asset = Hausgold::Asset.create!(title: 'A great thing',
+                                attachable: 'gid://..',
+                                public: true,
+                                file_from_url: 'https://domain.tld/image.png')
 asset.file_url
 # => 'https://asset-api..'
 
