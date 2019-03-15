@@ -1,3 +1,7 @@
+### 0.5.0
+
+* Added `content_type` and `byte_size` to the Asset entity attributes
+
 ### 0.4.0
 
 * Added support for the Asset API (#3)

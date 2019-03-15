@@ -111,6 +111,7 @@ ready to use. Here comes a list of them:
 * [Hausgold::Task](lib/hausgold/entity/task.rb)
 * [Hausgold::Appointment](lib/hausgold/entity/appointment.rb)
 * [Hausgold::Timeframe](lib/hausgold/entity/timeframe.rb)
+* [Hausgold::Asset](lib/hausgold/entity/asset.rb)
 
 #### Locating entities
 

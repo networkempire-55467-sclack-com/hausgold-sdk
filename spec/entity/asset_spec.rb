@@ -50,6 +50,20 @@ RSpec.describe Hausgold::Asset do
         expect(asset.category.avatar?).to be(true)
       end
     end
+
+    describe 'content_type' do
+      it 'sets content type correctly' do
+        expect { asset.save }.to \
+          change(asset, :content_type).from(nil).to('image/jpeg')
+      end
+    end
+
+    describe 'byte_size' do
+      it 'sets file size correctly' do
+        expect { asset.save }.to \
+          change(asset, :byte_size).from(nil).to(27_103)
+      end
+    end
   end
 
   describe '.create' do
