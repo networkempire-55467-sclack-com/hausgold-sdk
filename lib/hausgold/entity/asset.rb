@@ -13,7 +13,8 @@ module Hausgold
     # Mapped and tracked attributes
     tracked_attr :id, :gid, :title, :description, :public, :attachable,
                  :category, :permissions, :metadata, :file_url, :content_type,
-                 :byte_size, :file, :file_from_url
+                 :byte_size, :file, :file_from_url, :created_at, :updated_at,
+                 :filename
 
     # Define attribute types for casting
     typed_attr :public, :boolean, opposite: :private

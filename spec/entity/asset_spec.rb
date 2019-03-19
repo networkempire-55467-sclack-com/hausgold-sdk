@@ -64,6 +64,13 @@ RSpec.describe Hausgold::Asset do
           change(asset, :byte_size).from(nil).to(27_103)
       end
     end
+
+    describe 'filename' do
+      it 'sets filename correctly' do
+        expect { asset.save }.to \
+          change(asset, :filename).from(nil).to('avatar.jpg')
+      end
+    end
   end
 
   describe '.create' do
