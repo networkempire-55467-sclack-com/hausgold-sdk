@@ -42,6 +42,11 @@ module Hausgold
   autoload :Appointment, 'hausgold/entity/appointment'
   autoload :Timeframe, 'hausgold/entity/timeframe'
   autoload :Asset, 'hausgold/entity/asset'
+  autoload :DataPoint, 'hausgold/entity/data_point'
+  autoload :DataPointsResult, 'hausgold/entity/data_points_result'
+  autoload :DataPointEntity, 'hausgold/entity/data_point_entity'
+  autoload :NotificationToken, 'hausgold/entity/notification_token'
+  autoload :Pdf, 'hausgold/entity/pdf'
 
   # Some general purpose utilities
   module Utils
@@ -64,6 +69,7 @@ module Hausgold
 
   # All the client helpers, ready to use
   module ClientUtils
+    autoload :Dsl, 'hausgold/client/utils/dsl'
     autoload :Request, 'hausgold/client/utils/request'
     autoload :Response, 'hausgold/client/utils/response'
     autoload :GrapeCrud, 'hausgold/client/utils/grape_crud'
@@ -75,14 +81,25 @@ module Hausgold
     autoload :Users, 'hausgold/client/identity_api/users'
   end
 
+  # All the separated features of the Analytic API client
+  module AnalyticApi
+    autoload :Query, 'hausgold/client/analytic_api/query'
+  end
+
   # All the separated features of the Asset API client
   module AssetApi
     autoload :Downloads, 'hausgold/client/asset_api/downloads'
   end
 
+  # All the separated features of the Pdf API client
+  module PdfApi
+    autoload :Downloads, 'hausgold/client/pdf_api/downloads'
+  end
+
   # Dedicated application HTTP (low level) clients
   module Client
     autoload :Base, 'hausgold/client/base'
+    autoload :AnalyticApi, 'hausgold/client/analytic_api'
     autoload :AssetApi, 'hausgold/client/asset_api'
     autoload :CalendarApi, 'hausgold/client/calendar_api'
     autoload :IdentityApi, 'hausgold/client/identity_api'

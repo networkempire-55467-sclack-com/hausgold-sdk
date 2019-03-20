@@ -1,6 +1,13 @@
 ### 0.5.0
 
 * Added `content_type` and `byte_size` to the Asset entity attributes
+* Added support for the PDF API client and the `Hausgold::Pdf` entity
+  (generation and download)
+* Added the `Hausgold::NotificationToken` entity via the Identity API
+  (full CRUD support)
+* Added the Analytic API client and the `Hausgold::DataPoint` and
+  `Hausgold::DataPointEntity` entities (with partial CRUD support,
+  based on the API features)
 
 ### 0.4.0
 

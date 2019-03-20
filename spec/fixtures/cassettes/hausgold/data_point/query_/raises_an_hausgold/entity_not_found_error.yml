@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"06a3a2363218b1d61827237b40fdcb00"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 80bd01e1-c360-4c24-98f3-c0d4ab2c262e
+      X-Runtime:
+      - '0.076418'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTMwMDAwNjAsImV4cCI6MTU1MzYwNDg2MCwianRpIjoiYTFkZWUyODM3YWFlIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.WtHL8qdPR3nimOdTZ1jjThWFLoP0LmQmrXBGxJkCJYAYGZ-goAjVXSg_ZBIMx59zvh8-l3Iw3cCTeyquanXsXVRcMLzfnjMUD2jZ5lCtucSTCNmV-ijVxEO7ZaIs0j8vY1qpWOm1IifYJn3pk7slxfF2mfQPRjk1UuTNoE0HOtZBQ9kXSiQ_srIZqka-_vC-HAaB8KVNaQsTdFM5Qb-qUWHHMY7XrrVCzHTphO3xdavCuatXW8yvnixJKV0jgpMek23mGd6M6zf65zFRi9gOOwLIug_yzcflZYJLU12bNBPBquhsy212z4PvaMVHk-ciLX21u206SPxzZtgwr7I4OQ","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTMwMDAwNjAsImV4cCI6MTU1NDIwOTY2MCwianRpIjoiYzAwYjljZDY1YzU2IiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.GetGrXJP4vH6tvj6zmDwrmFcV4NChYXm4fn34EBkKtOHmWJDIHBOr54mlmMC0p4n62RYVDUjcETgvi06lsItXO4Fod79C9HJF8YF9FoFLxf4am8BrsDeGCUR1o7Hu6hXRG1-keaZMkpwI12j54x-HpKDsYKvdq3_O6CRoI54wndWH8mBMqh0bx3ZMn9tKyERJywSJIuKtUnSrNBWb_i-i5oBP67FdG1sc_1s_K7kzGU6M14n2avCLNWGQ0eI8Es43trtIYxnGHeBS7TLueDyxYeyfJUg0vV6QL_wT2x9qYJ6mEXFU40JRDjpXmsFAZA1x1stVHyE5TJSvkw0ZAzXLQ","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTMwMDAwNjAsImV4cCI6MTU1MzYwNDg2MCwianRpIjoiZTM0OTdhOWYxMWE5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.bl1dgWuP1T0C4cU3Q3vtRTVJLJC7A-gB5-iJwqBsokLBKLoV3z6ghzheJbCsv5V-WO1414-uxqTd9P2YcGznY60JsmpyyqBB-ZfJZPok1Osoqu4OENVLQuqQyZx5PEy-9t9gy6VYVThtEX_rrAxMMHh8UIAP6ssGrsu5T2NXU9_YcSmX4Jk92F3yss8-tEu2p0nMBF6FnQc3OPUw4eMa57m44ux-tV5TwqujQ58vfChwqwh0vRVciafr9_cz8RAHo0-9biE-F8FN-EgtcwxyBA4cxNH4ls1KNPK9sHEnYlwHo_SN6e6uYqnWkZITD_P60j-6RqLuByYuGi0UGS2BgA","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-19T12:54:20Z","created_at":"2019-03-18T10:04:33Z","updated_at":"2019-03-18T10:04:33Z","confirmed_at":"2019-03-18T10:04:33Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Tue, 19 Mar 2019 12:54:20 GMT
+- request:
+    method: get
+    uri: http://analytic-api.local/v1/data_points?bang=true&context=user&entity=gid://maklerportal-api/User/99ef6d07-7a19-45c0-9be4-daed2147eb6e&metric=login
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTMwMDAwNjAsImV4cCI6MTU1MzYwNDg2MCwianRpIjoiYTFkZWUyODM3YWFlIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.WtHL8qdPR3nimOdTZ1jjThWFLoP0LmQmrXBGxJkCJYAYGZ-goAjVXSg_ZBIMx59zvh8-l3Iw3cCTeyquanXsXVRcMLzfnjMUD2jZ5lCtucSTCNmV-ijVxEO7ZaIs0j8vY1qpWOm1IifYJn3pk7slxfF2mfQPRjk1UuTNoE0HOtZBQ9kXSiQ_srIZqka-_vC-HAaB8KVNaQsTdFM5Qb-qUWHHMY7XrrVCzHTphO3xdavCuatXW8yvnixJKV0jgpMek23mGd6M6zf65zFRi9gOOwLIug_yzcflZYJLU12bNBPBquhsy212z4PvaMVHk-ciLX21u206SPxzZtgwr7I4OQ
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - a1039cf2-1919-4ebc-96c4-e6200f31dc80
+      X-Runtime:
+      - '0.005803'
+      Vary:
+      - Origin
+      Content-Length:
+      - '121'
+    body:
+      encoding: UTF-8
+      string: '{"code":201,"message":"No entity with GID ''gid://maklerportal-api/User/99ef6d07-7a19-45c0-9be4-daed2147eb6e''
+        was found."}'
+    http_version: 
+  recorded_at: Tue, 19 Mar 2019 12:54:20 GMT
+recorded_with: VCR 3.0.3

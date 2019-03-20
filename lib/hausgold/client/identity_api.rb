@@ -14,6 +14,7 @@ module Hausgold
 
       # Define all the CRUD resources
       entity :user, '/v1/users'
+      entity :notification_token, '/v1/notification_tokens'
     end
   end
 end

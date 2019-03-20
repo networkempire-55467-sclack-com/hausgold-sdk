@@ -142,9 +142,7 @@ module Hausgold
         # @param type [Symbol] the type of the attribute
         # @param args [Hash{Symbol => Mixed}] additional options for the type
         def typed_attr(name, type, **args)
-          typed_attr_boolean(name, **args) if type == :boolean
-          typed_attr_symbol(name, **args) if type == :symbol
-          typed_attr_string_inquirer(name, **args) if type == :string_inquirer
+          send("typed_attr_#{type}", name, **args)
         end
 
         # rubocop:disable Lint/UselessAccessModifier because the first one
@@ -205,6 +203,22 @@ module Hausgold
             def #{name}=(value)
               #{name}_will_change!
               @#{name} = ActiveSupport::StringInquirer.new(value.to_s)
+            end
+          RUBY
+        end
+
+        # Register a casted array with +RecursiveOpenStruct+ elements.
+        #
+        # @param name [Symbol, String] the name of the attribute
+        # @param _args [Hash{Symbol => Mixed}] additional options
+        def typed_attr_recursive_open_struct_array(name, **_args)
+          class_eval <<-RUBY, __FILE__, __LINE__ + 1
+            def #{name}=(value)
+              #{name}_will_change!
+              value = [value] unless value.is_a? Array
+              @#{name} = value.map do |item|
+                RecursiveOpenStruct.new(item, recurse_over_arrays: true)
+              end
             end
           RUBY
         end

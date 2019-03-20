@@ -32,7 +32,7 @@ module Hausgold
         def new_record?
           return id.nil? if respond_to? :id
 
-          false
+          true
         end
 
         # Mark the entity instance as destroyed.

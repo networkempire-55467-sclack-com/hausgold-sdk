@@ -55,6 +55,24 @@ module Hausgold
           req.headers.merge!('Content-Type' => CONTENT_TYPE[format])
         end
 
+        # For some requests we must ensure the given identifier is a valid
+        # UUID. This method also applies some force to cast UUIDs from GIDs,
+        # too. It also can be configured to ignore/untouch non-UUIDs by the
+        # +force_uuid_ids+ class attribute.
+        #
+        # @param id [String] the identifier to use
+        # @return [String, Boolean] the (un)touched id, or +false+ for
+        #   broken UUIDs
+        def enforce_uuid(id)
+          # When we must not enforce UUIDs, we keep it untouched
+          return id unless force_uuid_ids?
+
+          # Force the given id into a UUID, if possible
+          id = Hausgold::Utils::Matchers.uuid(id)
+          # Pass back the enforced UUID, when valid - otherwise +false+
+          Hausgold::Utils::Matchers.uuid?(id) ? id : false
+        end
+
         private
 
         # Get the request starting action/method name from the caller backtrace.

@@ -7,13 +7,14 @@ module Hausgold
     class Base
       include ActiveModel::Model
 
+      include Hausgold::ClientUtils::Dsl
       include Hausgold::ClientUtils::Request
       include Hausgold::ClientUtils::Response
       include Hausgold::Utils::Decision
       include Hausgold::Utils::Bangers
 
       # List of all regular client/CRUD actions
-      ACTIONS = %i[find find_by update create delete].freeze
+      ACTIONS = %i[find find_by reload update create delete].freeze
 
       # Allow the client to be configured
       class_attribute :app_name
@@ -22,6 +23,8 @@ module Hausgold
       # of the writer is not recommended without a client specialization like
       # +Hausgold::ClientUtils::GrapeCrud+.
       class_attribute :action_formats
+
+      class_attribute :force_uuid_ids
 
       # Create a new client instance with the charme of mass assigning all
       # options at once.  We support the following options as a base client:
@@ -131,6 +134,7 @@ module Hausgold
         def inherited(child_class)
           child_class.app_name = ''
           child_class.action_formats = {}
+          child_class.force_uuid_ids = true
         end
 
         # Allow a nice interface for the application name setting.
@@ -138,6 +142,13 @@ module Hausgold
         # @param name [String] the application name
         def app(name)
           self.app_name = name
+        end
+
+        # Just a nice looking short cut for the +force_uuid_ids+ class
+        # attribute. By default we force clients to ensure given identifiers
+        # are UUID or Global Id based, but there are exceptions.
+        def disable_forced_uuid_ids
+          self.force_uuid_ids = false
         end
 
         # Fetch the configured action request and response formats.

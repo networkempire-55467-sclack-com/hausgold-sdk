@@ -15,6 +15,11 @@ module Hausgold
     include Hausgold::EntityConcern::Query
     include Hausgold::EntityConcern::Persistence
 
+    # Additional singleton class functionalities
+    class << self
+      include Hausgold::Utils::Bangers
+    end
+
     # We collect all unknown attributes instead of raising while creating a new
     # instance. The unknown attributes are wrapped inside a
     # +RecursiveOpenStruct+ to ease the accessibility. This also allows us to

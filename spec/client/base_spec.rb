@@ -98,7 +98,8 @@ RSpec.describe Hausgold::Client::Base do
         delete: :json,
         find: :json,
         find_by: :json,
-        update: :json
+        update: :json,
+        reload: :json
       }
     end
 

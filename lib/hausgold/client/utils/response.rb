@@ -35,11 +35,14 @@ module Hausgold
         # accordingly.
         #
         # @param res [Faraday::Response] the response to check
+        # @param action [Class, String] the related action
+        # @param criteria [Hash{Symbol => Mixed}] the request criteria
         # @return [Faraday::Response] pass back the response, for chaining
         # @raise [Hausgold::EntityNotFound] when status is 404
-        def raise_on_errors(res)
+        def raise_on_errors(res, action = nil, **criteria)
           # The requested entity was not found
-          raise Hausgold::EntityNotFound if res.status == 404
+          raise Hausgold::EntityNotFound.new(nil, action, **criteria) \
+            if res.status == 404
           # An error occured, but it's not handled in a specific way
           raise Hausgold::RequestError.new(nil, res) \
             if failed?(res, code: 400..600)

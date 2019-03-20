@@ -1,0 +1,126 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"e62b24be417ccfbf4f7485c9b99c66b2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f4e92172-40cc-4d1c-9b25-f62600058c89
+      X-Runtime:
+      - '0.078117'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTI5ODAzMDIsImV4cCI6MTU1MzU4NTEwMiwianRpIjoiMGY3ODU1MjMwNDlkIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.nupUEGHAZL-uVBflYZEBmUdzhUt2FIMImrLxST8nW8hDEqhsMquIY7dP-WugTDKpD07c09KsC27j9L8SJyJZhLACdWJoamV69qrALN4-1nreNQG63i5h3Xxx0ET_H2qu2Xe9OoDyj-sYho8zaJ36t8Lye1JGJ95Igg0RAIBkqybOHBkwJNoLuC_b3ipABheRH68NKuldwaXLgccBeSjHRyNXkIq7RmZxJD4kT81O7NnFtdqG5ukiy--qL0VT3KQm_DSzCg3Zyo1qNMVKjwt5Ox8mEuY3ZuGYkqsYq_de4jht8rXw2QwCwbZPbaSUslpUfCPaDrgBs5DXgVQSg6lyVA","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTI5ODAzMDIsImV4cCI6MTU1NDE4OTkwMiwianRpIjoiMTFjN2U0ODA4ZWI3IiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.zxcvhBRJf6jc4F4Lvtw86D5fJJQElfSZEAc1gVylP4mzfR-XmrGqYs89XYpm6whyfu2FQJIrjuUSzn-TzkBb-77nsx_G4gSmIuOguDG1eGRbphqzYneuM7VFxwwnPKFOqpTVmv1bjoechqpbGyH7lhVHQLdXVKg-Ihs5ZbKmnRTcYBRjA92_CusHthuRTPXkcJAoeJViibaVN4Kodex02XiznzwMVzdA5zy8oogv4y8ZPeDgBoTacUgVYpoloy6R0eHUqXihvjihbiGCI6jZ46Uerfrsymbd8v4aF3iPMG-IIruzMXEbzIyH2zon9Rk_dIf7uvmZ7hRXZAtrX_u1pA","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTI5ODAzMDIsImV4cCI6MTU1MzU4NTEwMiwianRpIjoiMjdkMTgwMWQ2OWU5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.V5zBQtdmgnHj4aAAA6jCk4r8cw6Q5k16FlXC4D618ZA5xA4pfdvzQFo-eiQXYKWKqHo-qhHGlPw_cCv00rXyBbl0NWQjbg-iq7FR5cOrSZgvU-gd9aZ-9Vr3oycYLwYpAEokDTdfl-qHmLe5-vCdSJ85BXptsnWSWQfPCzDVkVewtbScRora6CQSKMuTSWvDUxO_UmHlDhHMpWQ8TMf9w3QmkoUYNYFUa03zBTeO7A5b4Mu-gaebL_ynyaKcxLdpBXtdvXuQYX-92iKVjlhsUXcjJChsLXue_nesKGGJtkfHG21LQBrtSvqa9El26s0sHnEQ03aMe9CDPA6REIHBAw","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-19T07:25:02Z","created_at":"2019-03-18T10:04:33Z","updated_at":"2019-03-18T10:04:33Z","confirmed_at":"2019-03-18T10:04:33Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Tue, 19 Mar 2019 07:25:02 GMT
+- request:
+    method: post
+    uri: http://pdf-api.local/v1/pdf
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://maintenance.hausgold.de","media":"screen","landscape":true,"background":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTI5ODAzMDIsImV4cCI6MTU1MzU4NTEwMiwianRpIjoiMGY3ODU1MjMwNDlkIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.nupUEGHAZL-uVBflYZEBmUdzhUt2FIMImrLxST8nW8hDEqhsMquIY7dP-WugTDKpD07c09KsC27j9L8SJyJZhLACdWJoamV69qrALN4-1nreNQG63i5h3Xxx0ET_H2qu2Xe9OoDyj-sYho8zaJ36t8Lye1JGJ95Igg0RAIBkqybOHBkwJNoLuC_b3ipABheRH68NKuldwaXLgccBeSjHRyNXkIq7RmZxJD4kT81O7NnFtdqG5ukiy--qL0VT3KQm_DSzCg3Zyo1qNMVKjwt5Ox8mEuY3ZuGYkqsYq_de4jht8rXw2QwCwbZPbaSUslpUfCPaDrgBs5DXgVQSg6lyVA
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/v1/pdf/004970f901300fd1c8dc759066a7b2df94824abe"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"7d06c2feaf39175c1060f793c88a178a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dfecefa6-1e74-4656-8e9a-395a0cf696fe
+      X-Runtime:
+      - '0.004351'
+      Vary:
+      - Origin
+      Content-Length:
+      - '116'
+    body:
+      encoding: UTF-8
+      string: '{"id":"004970f901300fd1c8dc759066a7b2df94824abe","gid":"gid://pdf-api/Pdf/004970f901300fd1c8dc759066a7b2df94824abe"}'
+    http_version: 
+  recorded_at: Tue, 19 Mar 2019 07:25:02 GMT
+- request:
+    method: get
+    uri: http://pdf-api.local/v1/pdf/004970f901300fd1c8dc759066a7b2df94824abe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTI5ODAzMDIsImV4cCI6MTU1MzU4NTEwMiwianRpIjoiMGY3ODU1MjMwNDlkIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.nupUEGHAZL-uVBflYZEBmUdzhUt2FIMImrLxST8nW8hDEqhsMquIY7dP-WugTDKpD07c09KsC27j9L8SJyJZhLACdWJoamV69qrALN4-1nreNQG63i5h3Xxx0ET_H2qu2Xe9OoDyj-sYho8zaJ36t8Lye1JGJ95Igg0RAIBkqybOHBkwJNoLuC_b3ipABheRH68NKuldwaXLgccBeSjHRyNXkIq7RmZxJD4kT81O7NnFtdqG5ukiy--qL0VT3KQm_DSzCg3Zyo1qNMVKjwt5Ox8mEuY3ZuGYkqsYq_de4jht8rXw2QwCwbZPbaSUslpUfCPaDrgBs5DXgVQSg6lyVA
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"dc7a7ead56edad114f415b394b1b89b1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 28812094-7725-4427-962e-d95b42e07219
+      X-Runtime:
+      - '0.224511'
+      Vary:
+      - Origin
+      Content-Length:
+      - '735'
+    body:
+      encoding: UTF-8
+      string: '{"id":"004970f901300fd1c8dc759066a7b2df94824abe","gid":"gid://pdf-api/Pdf/004970f901300fd1c8dc759066a7b2df94824abe","url":"https://pdf-api-test.s3.eu-west-1.amazonaws.com/004970f901300fd1c8dc759066a7b2df94824abe?response-content-disposition=inline%3B%20filename%3D%22004970f901300fd1c8dc759066a7b2df94824abe.pdf%22%3B%20filename%2A%3DUTF-8%27%27004970f901300fd1c8dc759066a7b2df94824abe.pdf\u0026response-content-type=application%2Fpdf\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAI6T2V5K4SRLWSSTQ%2F20190319%2Feu-west-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20190319T072502Z\u0026X-Amz-Expires=432000\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=f470e99d62466cce4fecc3d72b061cb8278f4f8540c1190eebca7378d938c443"}'
+    http_version: 
+  recorded_at: Tue, 19 Mar 2019 07:25:02 GMT
+recorded_with: VCR 3.0.3

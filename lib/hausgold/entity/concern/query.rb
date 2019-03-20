@@ -17,9 +17,9 @@ module Hausgold
         # @return [Hausgold::ClientCriteria] the criteria object
         # @raise [Hausgold::EntityNotFound]
         def find(id)
-          # In case we have to deal with UUIDs
+          # In case we have to deal with non-GIDs, we convert them
           id = Hausgold.build_gid(client_class.app_name, self, id) \
-            if Hausgold::Utils::Matchers.uuid?(id)
+            unless Hausgold::Utils::Matchers.gid?(id)
           # Try to locate the entity with our lovely base client locater
           Hausgold.locate(id).tap do |entity|
             # When we found something else than expected, we raise

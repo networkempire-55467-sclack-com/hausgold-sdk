@@ -112,6 +112,10 @@ ready to use. Here comes a list of them:
 * [Hausgold::Appointment](lib/hausgold/entity/appointment.rb)
 * [Hausgold::Timeframe](lib/hausgold/entity/timeframe.rb)
 * [Hausgold::Asset](lib/hausgold/entity/asset.rb)
+* [Hausgold::NotificationToken](lib/hausgold/entity/notification_token.rb)
+* [Hausgold::Pdf](lib/hausgold/entity/pdf.rb)
+* [Hausgold::DataPoint](lib/hausgold/entity/data_point.rb)
+* [Hausgold::DataPointEntity](lib/hausgold/entity/data_point_entity.rb)
 
 #### Locating entities
 

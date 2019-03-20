@@ -8,7 +8,7 @@ module Hausgold
     # API services, you can access with a client
     API_NAMES = %i[asset-api calendar-api identity-api jabber pdf-api
                    preferences property-api verkaeuferportal-api
-                   maklerportal-api].freeze
+                   maklerportal-api analytic-api].freeze
 
     # Used to identity this client on the user agent header
     config_accessor(:app_name) { Hausgold.local_app_name }
