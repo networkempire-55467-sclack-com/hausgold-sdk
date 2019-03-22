@@ -46,8 +46,8 @@ RSpec.describe Hausgold::DataPoint do
     let(:args) do
       {
         entity: "gid://maklerportal-api/User/#{user_id}",
-        context: 'user',
-        metric: 'login',
+        context: 'is24',
+        metric: 'visits',
         start_at: 30.days.ago,
         end_at: 1.day.ago,
         aggregation: :sum,
@@ -74,6 +74,10 @@ RSpec.describe Hausgold::DataPoint do
 
     it 'returns the mapped total count' do
       expect(action.total_count).to be(30)
+    end
+
+    it 'returns the mapped total value' do
+      expect(action.total_value).to match(/[1-9]\d+\.\d+/)
     end
 
     it 'returns the mapped aggregation' do

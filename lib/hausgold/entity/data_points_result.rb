@@ -7,7 +7,7 @@ module Hausgold
   class DataPointsResult < BaseEntity
     # Mapped and tracked attributes
     tracked_attr :entity, :metric, :context, :aggregation, :interval,
-                 :start_at, :end_at, :total_count, :data
+                 :start_at, :end_at, :total_count, :total_value, :data
 
     # Define attribute types for casting
     typed_attr :metric, :symbol
