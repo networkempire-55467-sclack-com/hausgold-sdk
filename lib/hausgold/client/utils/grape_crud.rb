@@ -28,6 +28,23 @@ module Hausgold
           end
         end
 
+        # Perform a search request on the given path, with the given filters.
+        # This results in a "get multiple entities" request.
+        #
+        # @param path [String] the path to use for the URL
+        # @param filters [Hash{Symbol => Mixed}] the search filters
+        # @param format [Symbol] the request format to use
+        # @return [Faraday::Response] the response
+        def search(path, filters = {}, format = :json)
+          connection.get do |req|
+            req.path = path.to_s
+            req.params = filters
+            use_format(req, format)
+            use_default_context(req)
+            use_jwt(req)
+          end
+        end
+
         # Perform a create request on the given path, with the given attributes.
         # This results in a "create a single entity" request.
         #
@@ -82,6 +99,16 @@ module Hausgold
             use_jwt(req)
           end
         end
+
+        # Convert a criteria object to respective Grape API pagination
+        # parameters which can be passed the low level +#search+ method.
+        #
+        # @param criteria [Hausgold::SearchCriteria] the search criteria
+        # @return [Hash{Symbol => Mixed}] the search parameters
+        def criteria_to_filters(criteria)
+          criteria.where.merge(page: criteria.current_page,
+                               per_page: criteria.per_page)
+        end
       end
 
       class_methods do
@@ -110,6 +137,39 @@ module Hausgold
 
             # Generate bang method variants
             bangers :find_#{name}
+          RUBY
+        end
+
+        # Define a simple find method for the given entity.
+        #
+        # @param name [String, Symbol] the singular entity name
+        # @param path [String] the API path of the entity
+        # @param class_name [Class] the class of the entity
+        def define_entity_search(name, path, class_name)
+          class_eval <<-RUBY, __FILE__, __LINE__ + 1
+            # Fetch multiple entities by criteria.
+            #
+            # @param criteria [Hausgold::SearchCriteria] the search criteria
+            # @param args [Hash{Symbol => Mixed}] additional options
+            # @return [#{class_name}, nil] the entity, or +nil+ on error
+            def search_#{name.to_s.pluralize}(criteria, **args)
+              filters = criteria_to_filters(criteria)
+              res = search('#{path}', filters, format(:#{name}, :search))
+
+              # By convention the elements are stored under the entity name
+              # (snake_case, pluralized)
+              elements_key = #{class_name}.model_name.element.pluralize
+              elements = res.body.send(elements_key)
+
+              decision(bang: args.fetch(:bang, false)) do |result|
+                result.bang(&bang_entities(criteria, res))
+                result.good(&assign_entities(#{class_name}, elements))
+                successful?(res)
+              end
+            end
+
+            # Generate bang method variants
+            bangers :search_#{name.to_s.pluralize}
           RUBY
         end
 

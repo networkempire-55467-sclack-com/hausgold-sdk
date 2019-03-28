@@ -51,7 +51,7 @@ RSpec.describe Hausgold::Client::Base do
     end
   end
 
-  %i[find find_by update create delete].each do |method|
+  %i[find search update create delete].each do |method|
     describe "##{method}" do
       it 'raises because it not implemented on the base client' do
         expect { described_class.new.send(method) }.to \
@@ -97,7 +97,7 @@ RSpec.describe Hausgold::Client::Base do
         create: :json,
         delete: :json,
         find: :json,
-        find_by: :json,
+        search: :json,
         update: :json,
         reload: :json
       }

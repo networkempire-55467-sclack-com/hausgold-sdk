@@ -8,17 +8,18 @@ module Hausgold
     include ActiveModel::Serialization
 
     include Hausgold::Utils::Bangers
+
+    # Additional singleton class functionalities
+    class << self
+      include Hausgold::Utils::Bangers
+    end
+
     include Hausgold::EntityConcern::Callbacks
     include Hausgold::EntityConcern::Attributes
     include Hausgold::EntityConcern::Associations
     include Hausgold::EntityConcern::Client
     include Hausgold::EntityConcern::Query
     include Hausgold::EntityConcern::Persistence
-
-    # Additional singleton class functionalities
-    class << self
-      include Hausgold::Utils::Bangers
-    end
 
     # We collect all unknown attributes instead of raising while creating a new
     # instance. The unknown attributes are wrapped inside a

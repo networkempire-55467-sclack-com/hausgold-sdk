@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"5b9d85e3780238bc45c5002f771ffdb3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2b397c3f-30b6-452b-be55-e4645a899908
+      X-Runtime:
+      - '0.100305'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTMyNzI5MjQsImV4cCI6MTU1Mzg3NzcyNCwianRpIjoiNzE4YmFhODgwZmMxIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.k2QopubM3CUp0X2Ldi7HfVVC5phDa_sUCzs4vdZHN9Vv42ic_u26YBAkPln6GliSxJh7LpyOYtE5hn0FHFL4StbhodY-gsb1TCkbpFj8nqkC5ISfVXF2IZ8B_R_Je3Hgl2lr9YJQo2Y3rtIXDk_bR5OUkQHowsqC2wN7uVYx9hXy6R01kcVdbaeL0alisxaUNWB8h8cHLGfcZGvV0nzYa3JUSRqWkv9Pn7DyUgVpgYeiswW67WAERBJoWwSir5R3ZCfLeW7Nwy2_j2Jdyxa78RwpWAWgXgD6W8l2wi-yS_T1xNUxxe1u-2RiqyUw_UcpCYw5JEIIL0bTRrG61P3D6A","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTMyNzI5MjQsImV4cCI6MTU1NDQ4MjUyNCwianRpIjoiYTlkNGM0NWYzNzhiIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.zHErTFzZxp79fIRbhwlFXjOVPIgFyYk5yN-UQnEpCQ5uOn45uMJCLj51S-Y_DxUw4xDbiRnyvHkVg2poc7RPlsRIDtdrLfWn1KbKbfQ53VZIsdzp7lfPCAIWCB1cJi4dONiUExUCy2AuR1XWBwiIIZj477pCbKcaQRWU4IvZSOp-NVC6wHfl69t33pzgzVFtvFXOm4ngqnKngwuE_3U6Xgg52x17A54hn5_P3Lcvo6sbBy_EzNEXlVvhHz6lH0iOTAonEavXcVEh96XAy5mRBlqeygTke9wBnIweBWaS9_yyZh9e9HNWAdVr0CrfcIdHzlqLISma98_2wy95vgzuow","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTMyNzI5MjQsImV4cCI6MTU1Mzg3NzcyNCwianRpIjoiOTZlOWU5NzY2MDhhIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.Iuv_uCInGQ75qcEw8Mws-GrSlcCUGZx04xDjmr32IIPr1y3j5qXrtArdmDQ-ibZbTLnn_BBPVw5JKGjcMrGLAzDTzJe5cs2bnC7QWJPeiMLh_ELuuils0w_Cnb0MCbFGFADP3EX7UKk-zUOhHBMG-xIaUoH-mer52WNl31C23zHXJ-P6yiLiAyU2pIVIzaa4Em5P5NovITZD79NxOEFJ_dRkWX_1LpFS0SMMeGMhFoN8fLNAQU76qqVBZ4oKa1gi99Tr7S1h7C0l42IZTgbIYEK627UjYZ8ghh3_mHh-ZLCkKlb-jjuyA1_rnJyb63W40eKF0qm4xHhAfwjjBrWOWg","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-22T16:42:04Z","created_at":"2019-03-20T11:12:33Z","updated_at":"2019-03-20T11:12:33Z","confirmed_at":"2019-03-20T11:12:33Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Fri, 22 Mar 2019 16:42:04 GMT
+- request:
+    method: get
+    uri: http://identity-api.local/v1/users?page=1&per_page=2&text=@
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTMyNzI5MjQsImV4cCI6MTU1Mzg3NzcyNCwianRpIjoiNzE4YmFhODgwZmMxIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.k2QopubM3CUp0X2Ldi7HfVVC5phDa_sUCzs4vdZHN9Vv42ic_u26YBAkPln6GliSxJh7LpyOYtE5hn0FHFL4StbhodY-gsb1TCkbpFj8nqkC5ISfVXF2IZ8B_R_Je3Hgl2lr9YJQo2Y3rtIXDk_bR5OUkQHowsqC2wN7uVYx9hXy6R01kcVdbaeL0alisxaUNWB8h8cHLGfcZGvV0nzYa3JUSRqWkv9Pn7DyUgVpgYeiswW67WAERBJoWwSir5R3ZCfLeW7Nwy2_j2Jdyxa78RwpWAWgXgD6W8l2wi-yS_T1xNUxxe1u-2RiqyUw_UcpCYw5JEIIL0bTRrG61P3D6A
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"b3633223cfc81f4d8808c905b17a3d7f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d8bf0188-73d5-48e0-9bf9-ad4aead7343e
+      X-Runtime:
+      - '0.012112'
+      Vary:
+      - Origin
+      Content-Length:
+      - '751'
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"total_count":9,"users":[{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-22T16:42:04Z","created_at":"2019-03-20T11:12:33Z","updated_at":"2019-03-20T11:12:33Z","confirmed_at":"2019-03-20T11:12:33Z","locked_at":null,"recovery_at":null},{"id":"bf136aed-0259-4458-8cf7-762553eebfc2","gid":"gid://identity-api/User/bf136aed-0259-4458-8cf7-762553eebfc2","email":"test@example.com","type":"employee","status":"active","last_login_at":null,"created_at":"2019-03-20T11:12:33Z","updated_at":"2019-03-20T11:12:33Z","confirmed_at":"2019-03-20T11:12:33Z","locked_at":null,"recovery_at":null}]}'
+    http_version: 
+  recorded_at: Fri, 22 Mar 2019 16:42:04 GMT
+recorded_with: VCR 3.0.3

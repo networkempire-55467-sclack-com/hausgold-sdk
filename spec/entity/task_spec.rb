@@ -628,6 +628,9 @@ RSpec.describe Hausgold::Task do
   end
 
   describe 'query' do
+    let(:user_id) { '96092fa8-707d-4fe6-af5e-4898b9d87a90' }
+    let(:unknown_user_id) { '7775b36b-d4ab-4c69-9e24-352d6a35b8b9' }
+
     describe '#find' do
       let(:uuid) { 'c150681f-c514-438a-8413-7c8f24a5f9dd' }
       let(:unknown_uuid) { '94cccc31-630e-40d5-8100-5ce6bc95fd12' }
@@ -661,6 +664,76 @@ RSpec.describe Hausgold::Task do
             raise_error(Hausgold::EntityNotFound,
                         'Found Hausgold::User instead of Hausgold::Task')
         end
+      end
+    end
+
+    describe '#find_by' do
+      let(:task) { described_class.find_by(user_id: user_id, text: 'Task #5') }
+
+      it 'returns a Hausgold::Task instance' do
+        expect(task).to be_a(described_class)
+      end
+
+      it 'returns the correct task' do
+        expect(task.title).to be_eql('Task #5')
+      end
+
+      it 'returns nil when not found' do
+        expect(described_class.find_by(user_id: unknown_user_id)).to be(nil)
+      end
+    end
+
+    describe '#exists?' do
+      it 'returns true when found' do
+        expect(described_class.exists?(user_id: user_id)).to be(true)
+      end
+
+      it 'returns false when not found' do
+        expect(described_class.exists?(user_id: unknown_user_id)).to be(false)
+      end
+    end
+
+    describe '#all' do
+      let(:action) { described_class.all }
+
+      it 'returns a Hausgold::SearchCriteria instance' do
+        expect(action).to be_a(Hausgold::SearchCriteria)
+      end
+    end
+
+    describe '#where' do
+      let(:action) { described_class.where(user_id: user_id) }
+
+      it 'returns a Hausgold::SearchCriteria instance' do
+        expect(action).to be_a(Hausgold::SearchCriteria)
+      end
+
+      it 'sets the arguments correctly' do
+        expect(action.where).to be_eql(user_id: user_id)
+      end
+    end
+
+    describe '#limit' do
+      let(:action) { described_class.limit(34) }
+
+      it 'returns a Hausgold::SearchCriteria instance' do
+        expect(action).to be_a(Hausgold::SearchCriteria)
+      end
+
+      it 'sets the limit correctly' do
+        expect(action.limit).to be(34)
+      end
+    end
+
+    describe '#offset' do
+      let(:action) { described_class.offset(14) }
+
+      it 'returns a Hausgold::SearchCriteria instance' do
+        expect(action).to be_a(Hausgold::SearchCriteria)
+      end
+
+      it 'sets the offset correctly' do
+        expect(action.offset).to be(14)
       end
     end
   end

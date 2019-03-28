@@ -1,0 +1,126 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"d62bb84c163ab021cd51c419c580a0e2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 01f774de-a99a-43bc-a9d4-4b5f2e452eb2
+      X-Runtime:
+      - '0.093820'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM1ODk0ODIsImV4cCI6MTU1NDE5NDI4MiwianRpIjoiZmU3MTNkZjhmMjhhIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.C9ziCy73xggLDZ5DVJufMl7O9an1VLVbhGWPCzFpevSAE8jSyIeVHxhuGL17JLcnZ4N5qMd_dEW2p-Wk7BzkGAzdqpv7_ajOCz8yC9WcH2Vm-ipcGiYjbETIE8NyDI_ittz0r8_KWbz-OShUcF8KUeoKcU_Z1Q8yJuJKtZS872Qe40xXLRFNb0DawfzYyzROSGyC8zFEet5z6Z6aQkqwZhSEqDMgWNIHA1Xyh_Ep-QY2IAl_d6S-imQEf7ucUUFal5pabUTeV2DO6NKEnYmSZQaHYTvmrJoa1km9QDaRcSYlF9Po08FIak2zPu2qcY46ybrfbSS9MyLFxpIF2_m20A","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM1ODk0ODIsImV4cCI6MTU1NDc5OTA4MiwianRpIjoiYzU1M2UzOTU0MDg2IiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.CfTIPYH9aHCZcb80q-Odhfn8wSN4Of9R3kjOUldskygXu2jFko-62HlTNNhopqp3gtmqa27OYJTR-VO-yMtu7qJiE1Wx1ngZmse9t1F_9WDWntH50hQTK9nbwme0GUGdm8f9ZTuLJu0XL9JRZ8ydIZJVhYp4f6gnteZFYzuJzx4gM3xbdhE9LYbepoPo-JeXDDmHEk7K40AGYEXVzkaudN_qtrVtqvZt3E5GVyjSXI9z-jjgbAHOMtaARO6CsjXdwQH2_Rl5op0gGpXDcoLcwDW3DiAhWBXgQ2AG8ZKRTVH8f1K4ONh0W4J-f0jLexicu8h9Zwk6UL9JaUe4ZyIEXQ","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM1ODk0ODIsImV4cCI6MTU1NDE5NDI4MiwianRpIjoiZjc0YjhjYmI5MDAwIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.ofnamFCqBStixVa5490ib4nyGEEqCP7YEACXMW9jEH_LFtkP2PGr7ikJRjonEUWBj675DpEySwGefbl2WDViti7la3twEThQVImQ-v6y-Y6aoZ3nWvTsVnF5R7Ght3WoIeGU83ohO1a72oZPI8avk-STcroik1BvvxicSgmioXAikUXGf6pFsm997yIZ73j5y4Pqr-FW2lZPHxEeO2gQAk0UQyl9tW3ZF09iOoA7ViIiKPYEL_NdnrdqyXS1KWQIW34l69KSv2yc4wSVnIwg6hugLvBs4WPiXyH0Auj8DI2SCitX6NoC94LrguhmhDqkkTQ_qqIFMEhjrcMSDp2-BA","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-26T08:38:02Z","created_at":"2019-03-20T11:12:33Z","updated_at":"2019-03-20T11:12:33Z","confirmed_at":"2019-03-20T11:12:33Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Tue, 26 Mar 2019 08:38:03 GMT
+- request:
+    method: post
+    uri: http://identity-api.local/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"zaida2@torp.co.uk","type":"employee","status":"active","password":"moreSecure","password_confirmation":"moreSecure"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM1ODk0ODIsImV4cCI6MTU1NDE5NDI4MiwianRpIjoiZmU3MTNkZjhmMjhhIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.C9ziCy73xggLDZ5DVJufMl7O9an1VLVbhGWPCzFpevSAE8jSyIeVHxhuGL17JLcnZ4N5qMd_dEW2p-Wk7BzkGAzdqpv7_ajOCz8yC9WcH2Vm-ipcGiYjbETIE8NyDI_ittz0r8_KWbz-OShUcF8KUeoKcU_Z1Q8yJuJKtZS872Qe40xXLRFNb0DawfzYyzROSGyC8zFEet5z6Z6aQkqwZhSEqDMgWNIHA1Xyh_Ep-QY2IAl_d6S-imQEf7ucUUFal5pabUTeV2DO6NKEnYmSZQaHYTvmrJoa1km9QDaRcSYlF9Po08FIak2zPu2qcY46ybrfbSS9MyLFxpIF2_m20A
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/v1/users/f538cfa5-f33a-463b-95e3-6049ca6794a5"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"4ec9110edacfc582b45015059c841ec6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 52389780-9434-40bf-af49-df3d148a1f71
+      X-Runtime:
+      - '0.069505'
+      Vary:
+      - Origin
+      Content-Length:
+      - '327'
+    body:
+      encoding: UTF-8
+      string: '{"id":"f538cfa5-f33a-463b-95e3-6049ca6794a5","gid":"gid://identity-api/User/f538cfa5-f33a-463b-95e3-6049ca6794a5","email":"zaida2@torp.co.uk","type":"employee","status":"active","last_login_at":null,"created_at":"2019-03-26T08:38:03Z","updated_at":"2019-03-26T08:38:03Z","confirmed_at":null,"locked_at":null,"recovery_at":null}'
+    http_version: 
+  recorded_at: Tue, 26 Mar 2019 08:38:03 GMT
+- request:
+    method: post
+    uri: http://identity-api.local/v1/users/workflows/recover
+    body:
+      encoding: UTF-8
+      string: '{"id":"f538cfa5-f33a-463b-95e3-6049ca6794a5","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM1ODk0ODIsImV4cCI6MTU1NDE5NDI4MiwianRpIjoiZmU3MTNkZjhmMjhhIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.C9ziCy73xggLDZ5DVJufMl7O9an1VLVbhGWPCzFpevSAE8jSyIeVHxhuGL17JLcnZ4N5qMd_dEW2p-Wk7BzkGAzdqpv7_ajOCz8yC9WcH2Vm-ipcGiYjbETIE8NyDI_ittz0r8_KWbz-OShUcF8KUeoKcU_Z1Q8yJuJKtZS872Qe40xXLRFNb0DawfzYyzROSGyC8zFEet5z6Z6aQkqwZhSEqDMgWNIHA1Xyh_Ep-QY2IAl_d6S-imQEf7ucUUFal5pabUTeV2DO6NKEnYmSZQaHYTvmrJoa1km9QDaRcSYlF9Po08FIak2zPu2qcY46ybrfbSS9MyLFxpIF2_m20A
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"bad1303808c527fb450f6159038a8647"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 02d71c23-bf49-4b8c-909f-d1291253327e
+      X-Runtime:
+      - '0.016317'
+      Vary:
+      - Origin
+      Content-Length:
+      - '345'
+    body:
+      encoding: UTF-8
+      string: '{"id":"f538cfa5-f33a-463b-95e3-6049ca6794a5","gid":"gid://identity-api/User/f538cfa5-f33a-463b-95e3-6049ca6794a5","email":"zaida2@torp.co.uk","type":"employee","status":"active","last_login_at":null,"created_at":"2019-03-26T08:38:03Z","updated_at":"2019-03-26T08:38:03Z","confirmed_at":null,"locked_at":null,"recovery_at":"2019-03-26T08:38:03Z"}'
+    http_version: 
+  recorded_at: Tue, 26 Mar 2019 08:38:03 GMT
+recorded_with: VCR 3.0.3

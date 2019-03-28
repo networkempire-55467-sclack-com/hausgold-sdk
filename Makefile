@@ -15,11 +15,15 @@ VENDOR_DIR ?= vendor/bundle
 GEMFILES_DIR ?= gemfiles
 
 # Host binaries
+AWK ?= awk
 BASH ?= bash
 COMPOSE ?= docker-compose
+DOCKER ?= docker
+GREP ?= grep
 ID ?= id
 MKDIR ?= mkdir
 RM ?= rm
+XARGS ?= xargs
 
 # Container binaries
 BUNDLE ?= bundle
@@ -97,6 +101,11 @@ test-style-ruby:
 clean:
 	# Clean the dependencies
 	@$(RM) -rf $(VENDOR_DIR)
+	@$(RM) -rf $(VENDOR_DIR)/Gemfile.lock
+	@$(RM) -rf $(GEMFILES_DIR)/vendor
+	@$(RM) -rf $(GEMFILES_DIR)/*.lock
+	@$(RM) -rf pkg
+	@$(RM) -rf coverage
 
 clean-containers:
 	# Clean running containers
@@ -104,7 +113,15 @@ ifeq ($(MAKE_ENV),docker)
 	@$(COMPOSE) down
 endif
 
-distclean: clean clean-containers
+clean-images:
+	# Clean build images
+ifeq ($(MAKE_ENV),docker)
+	@-$(DOCKER) images | $(GREP) hausgold-sdk \
+		| $(AWK) '{ print $$3 }' \
+		| $(XARGS) -rn1 $(DOCKER) rmi -f
+endif
+
+distclean: clean clean-containers clean-images
 
 shell: install
 	# Run an interactive shell on the container

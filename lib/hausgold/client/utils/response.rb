@@ -75,6 +75,26 @@ module Hausgold
           end
         end
 
+        # Perform a common error handling for entity search responses. This
+        # allows a lean usage of the decision work flow. Here comes an
+        # example:
+        #
+        #   decision do |result|
+        #     result.bang(&bang_entities(criteria, res)
+        #   end
+        #
+        # @param criteria [Hausgold::SearchCriteria] the search criteria
+        # @param res [Faraday::Response] the response object
+        # @return [Proc] the proc which performs the error handling
+        def bang_entities(criteria, res)
+          lambda do
+            next Hausgold::EntitySearchError.new(criteria, res.body.message) \
+              if res.status == 400
+
+            Hausgold::RequestError.new(nil, res)
+          end
+        end
+
         # Perform the assignment of the response to the given entity. This
         # allows a clean usage of the decision flow control for successful
         # requests. Here comes an example:
@@ -83,7 +103,9 @@ module Hausgold
         #     result.good(&assign_entity(entity, res))
         #   end
         #
-        # @return [Proc] the proc which performs the error handling
+        # @param entity [Hausgold::BaseEntity] the entity instance to handle
+        # @param res [Faraday::Response] the response object
+        # @return [Proc] the proc which performs the entity handling
         def assign_entity(entity, res, &block)
           lambda do
             entity.assign_attributes(res.body.to_h)
@@ -94,6 +116,25 @@ module Hausgold
             entity.changed?
             yield(entity) if block
             entity
+          end
+        end
+
+        # Perform the assignment of the response collection data to actual
+        # instances of the given entity class. This allows a clean usage of the
+        # decision flow control for successful requests. Here comes an example:
+        #
+        #   decision do |result|
+        #     result.good(&assign_entities(Hausgold::User, res))
+        #   end
+        #
+        # @param entity_class [Class] the entity class to instantiate
+        # @param elements [Array<RecursiveOpenStruct>] the response elements
+        # @return [Proc] the proc which performs the entity handling
+        def assign_entities(entity_class, elements, &block)
+          lambda do
+            elements.map do |data|
+              entity_class.new(data).tap { |entity| yield(entity) if block }
+            end
           end
         end
 

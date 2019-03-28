@@ -1,0 +1,221 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"29656e481bc1f528b8120cf6e25059e6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a4b929ea-d8c5-440f-8f4c-4cde565aab2b
+      X-Runtime:
+      - '0.077774'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM1MjM5ODksImV4cCI6MTU1NDEyODc4OSwianRpIjoiNjg5NzE5ZWZkYThlIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.MaxeqaMNu2uPW97btwJNr6Kg2S_ixt-HMPkTwxzFavwoSz8Yj4-BtsT_I43dHjQyPMwg-VyjYdpIfLXHveONozqPQU7aDBjo7KE5U3O-pa5IIS3-TQYrw-NGrlRaS0lq8zAx0nEIF29pZQKxZFz13YCtxk35uY4rbghvn1di-_myJwoC5ikvUnFtUPBF-3pm5n5vboFIgJBxt3JEyW6wIYSo1iZKxvaM-EmjCaz8YvFJIMgRXWz_CvT4IEhJa31uqEaJtAATm2VmbAfM_nhxbGgEgSPjBdlz6ZkkeAcU_7OBinp3SErRwlFIyq8r-Xcc7Fq2oXIBj0n6iLdFNCHPYQ","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM1MjM5ODksImV4cCI6MTU1NDczMzU4OSwianRpIjoiNTIxZjU2ODVmODMzIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.FRWu0KGG693Emqh0x6lAzW11rKIrN4l7VgMalomZgq6xUYdZyX30KeVq9CImRU7aCPzdR_y5btG9LPYuPwSgdXmKK_-FznrZwwrIZjNLbqXdRHUm44QOIBdTLiJvjWXL0OGPy4n3X45Q43fw81kmSmzgNKbdKX5pfJIsM-UW7t3w-pHJYrqw5e0xUQZ4EdLZiurVATdQgvfk-GpUWKMK7-xcH4vPlgeMtSyxvTR_dPJgtKqBuImn4qJ2HHonbsOoWYjm26E59fUoFyF0lhg0O8FAtxtgPSy_MLSkkvs92hijKtf2IXQ3iYKZoPypdjOYF363HFpitd9LC5f7JgVokQ","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM1MjM5ODksImV4cCI6MTU1NDEyODc4OSwianRpIjoiYmI4ZGM3OGM4MGI4IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.aBkMhBZYHt62WRbIotBaW5KJ5Ad6eZiD2VzRUKaskMjb6U9YEY0cHXMiFNcWYziIk4JfIH3AWKpECNBtuWD6Yi7VESM7QwfEBGmIZwj4deNaEe2aHEGmsXaPJMQ6nDu5ZUXkjmpZ4ig6yqt5lMGH2E6SjRuP0vhG0NUCUc4Nh_tR-xltzgOhTG6yAgpwJv2vHNxDOZ2WOOSnGweEIVn3c7XlGijHniONAHvZ42gGcPbwOHyjXofcCnvZsaFY0ntgfGdB5cuf8l2MmAvSFW_WHF0BJv5Dy6nT0YgDr5P0H1WfLM49bwRdsht81nQenasyr8U5HyTpitjDsL8C2hK5Ww","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-25T14:26:29Z","created_at":"2019-03-20T11:12:33Z","updated_at":"2019-03-20T11:12:33Z","confirmed_at":"2019-03-20T11:12:33Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Mon, 25 Mar 2019 14:26:29 GMT
+- request:
+    method: get
+    uri: http://calendar-api.local/v1/tasks?from=2019-03-25T00:00:00%2B01:00&page=2&per_page=3&text=Ehrenberg&to=2019-04-25T00:00:00%2B02:00&user_id=96092fa8-707d-4fe6-af5e-4898b9d87a90
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM1MjM5ODksImV4cCI6MTU1NDEyODc4OSwianRpIjoiNjg5NzE5ZWZkYThlIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.MaxeqaMNu2uPW97btwJNr6Kg2S_ixt-HMPkTwxzFavwoSz8Yj4-BtsT_I43dHjQyPMwg-VyjYdpIfLXHveONozqPQU7aDBjo7KE5U3O-pa5IIS3-TQYrw-NGrlRaS0lq8zAx0nEIF29pZQKxZFz13YCtxk35uY4rbghvn1di-_myJwoC5ikvUnFtUPBF-3pm5n5vboFIgJBxt3JEyW6wIYSo1iZKxvaM-EmjCaz8YvFJIMgRXWz_CvT4IEhJa31uqEaJtAATm2VmbAfM_nhxbGgEgSPjBdlz6ZkkeAcU_7OBinp3SErRwlFIyq8r-Xcc7Fq2oXIBj0n6iLdFNCHPYQ
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"caf719142fdb255585a559b5bddc7fa3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ba5ab2f1-d9fd-4863-9499-6082fc1c4909
+      X-Runtime:
+      - '0.010636'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2170'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwYWdlIjoyLCJ0b3RhbF9jb3VudCI6MjAsInRhc2tzIjpbeyJpZCI6IjZi
+        OGJjZmUyLTI4MzEtNDA5NS1iNGEzLWEyYjgxYWFmOGEzMiIsImdpZCI6Imdp
+        ZDovL2NhbGVuZGFyLWFwaS9UYXNrLzZiOGJjZmUyLTI4MzEtNDA5NS1iNGEz
+        LWEyYjgxYWFmOGEzMiIsInRpdGxlIjoiVGFzayAjNCIsImRlc2NyaXB0aW9u
+        IjoiTWVhbmluZ2Z1bCBkZXNjcmlwdGlvbiB3aXRoIG1hbnkgZGV0YWlscyIs
+        ImxvY2F0aW9uIjoiMDQxNzggTGVpcHppZyBCw7ZobGl0ei1FaHJlbmJlcmci
+        LCJkdWVfZGF0ZSI6IjIwMTktMDMtMjlUMTA6NTk6MzNaIiwiZWRpdGFibGUi
+        OnRydWUsInN0YXR1cyI6Im9wZW4iLCJyZXN1bHQiOm51bGwsInR5cGUiOm51
+        bGwsInVzZXJfaWQiOiI5NjA5MmZhOC03MDdkLTRmZTYtYWY1ZS00ODk4Yjlk
+        ODdhOTAiLCJyZWZlcmVuY2VfaWRzIjpbImNhYTFmNmNmLTZjMTUtNGIzYS05
+        NzRiLTAxNDU3NjFhMWE0OSIsImM0ZmU1NzMwLTcyNjctNGNiMC04ZThjLTVj
+        ZTFiYjAzMmZhOCIsIjM2NTI5OTE2LThkZTAtNDIxNy05NGZiLTUyMjRhMTAx
+        MTUwOSIsIjI2YTg2YWUwLTM1MzYtNGQ1OC1hNWMyLWJiMDdhNWRjZWNiMCIs
+        ImM2MjUzZTM3LWQ4Y2QtNGFkOS1iYjMxLWEwMWRmZThhYTc5MiJdLCJjcmVh
+        dGVkX2F0IjoiMjAxOS0wMy0yNVQxMDo1OTozM1oiLCJ1cGRhdGVkX2F0Ijoi
+        MjAxOS0wMy0yNVQxMDo1OTozM1oiLCJhbGFybXMiOltdLCJtZXRhZGF0YSI6
+        eyJhZGRfMSI6dHJ1ZSwiYWRkXzIiOiIyMDE5LTAzLTI2VDEwOjU5OjMzLjEw
+        N1oiLCJhZGRfMyI6IkluZm8ifX0seyJpZCI6IjU4ODA1YTc3LTc2NWItNDM4
+        Ny1iYmZmLTkxNjU1NDBkMDk1ZCIsImdpZCI6ImdpZDovL2NhbGVuZGFyLWFw
+        aS9UYXNrLzU4ODA1YTc3LTc2NWItNDM4Ny1iYmZmLTkxNjU1NDBkMDk1ZCIs
+        InRpdGxlIjoiVGFzayAjNSIsImRlc2NyaXB0aW9uIjoiTWVhbmluZ2Z1bCBk
+        ZXNjcmlwdGlvbiB3aXRoIG1hbnkgZGV0YWlscyIsImxvY2F0aW9uIjoiMDQx
+        NzggTGVpcHppZyBCw7ZobGl0ei1FaHJlbmJlcmciLCJkdWVfZGF0ZSI6IjIw
+        MTktMDMtMzBUMTA6NTk6MzNaIiwiZWRpdGFibGUiOnRydWUsInN0YXR1cyI6
+        Im9wZW4iLCJyZXN1bHQiOm51bGwsInR5cGUiOm51bGwsInVzZXJfaWQiOiI5
+        NjA5MmZhOC03MDdkLTRmZTYtYWY1ZS00ODk4YjlkODdhOTAiLCJyZWZlcmVu
+        Y2VfaWRzIjpbIjIzM2EzNDVkLTNlZTctNDE2ZS1hODI3LTc4MjMxMjg0NzBj
+        NyIsImQzNzM5NzMyLTRmNDAtNDgzYS1hMmZiLTE5YzUxNjVmNTc1NCIsImQ3
+        NjE1ZDk3LTdiOGEtNGJlOS05NDI2LTc5YmE3MWViMzQ1ZSIsIjNlNWE1ZTVh
+        LTJhMTAtNGZiNy1iMjI4LWQ1MWQzZTVhYzc3YyIsImM1MTI5N2U1LWVhNTAt
+        NDk0NS1iMTBlLTM1MmE0YmViMjAxZSJdLCJjcmVhdGVkX2F0IjoiMjAxOS0w
+        My0yNVQxMDo1OTozM1oiLCJ1cGRhdGVkX2F0IjoiMjAxOS0wMy0yNVQxMDo1
+        OTozM1oiLCJhbGFybXMiOltdLCJtZXRhZGF0YSI6eyJhZGRfMSI6dHJ1ZSwi
+        YWRkXzIiOiIyMDE5LTAzLTI2VDEwOjU5OjMzLjExMVoiLCJhZGRfMyI6Iklu
+        Zm8ifX0seyJpZCI6IjI3ZDcwYjNiLTZjZWEtNGY5OS05YTNlLTI1N2MzNDcw
+        MTI0NCIsImdpZCI6ImdpZDovL2NhbGVuZGFyLWFwaS9UYXNrLzI3ZDcwYjNi
+        LTZjZWEtNGY5OS05YTNlLTI1N2MzNDcwMTI0NCIsInRpdGxlIjoiVGFzayAj
+        NiIsImRlc2NyaXB0aW9uIjoiTWVhbmluZ2Z1bCBkZXNjcmlwdGlvbiB3aXRo
+        IG1hbnkgZGV0YWlscyIsImxvY2F0aW9uIjoiMDQxNzggTGVpcHppZyBCw7Zo
+        bGl0ei1FaHJlbmJlcmciLCJkdWVfZGF0ZSI6IjIwMTktMDMtMzFUMTA6NTk6
+        MzNaIiwiZWRpdGFibGUiOnRydWUsInN0YXR1cyI6Im9wZW4iLCJyZXN1bHQi
+        Om51bGwsInR5cGUiOm51bGwsInVzZXJfaWQiOiI5NjA5MmZhOC03MDdkLTRm
+        ZTYtYWY1ZS00ODk4YjlkODdhOTAiLCJyZWZlcmVuY2VfaWRzIjpbIjcxMmY0
+        ZTEwLTM0M2UtNDgzNS1hNGJjLTkwYTZlZDFjOGFmMiIsImQ1NTlmMmQ5LTRi
+        NWYtNGE4Zi05Zjc5LTdkZWQwZmQ3MWFmNCJdLCJjcmVhdGVkX2F0IjoiMjAx
+        OS0wMy0yNVQxMDo1OTozM1oiLCJ1cGRhdGVkX2F0IjoiMjAxOS0wMy0yNVQx
+        MDo1OTozM1oiLCJhbGFybXMiOltdLCJtZXRhZGF0YSI6eyJhZGRfMSI6dHJ1
+        ZSwiYWRkXzIiOiIyMDE5LTAzLTI2VDEwOjU5OjMzLjExNVoiLCJhZGRfMyI6
+        IkluZm8ifX1dfQ==
+    http_version: 
+  recorded_at: Mon, 25 Mar 2019 14:26:29 GMT
+- request:
+    method: get
+    uri: http://calendar-api.local/v1/tasks?from=2019-03-25T00:00:00%2B01:00&page=3&per_page=3&text=Ehrenberg&to=2019-04-25T00:00:00%2B02:00&user_id=96092fa8-707d-4fe6-af5e-4898b9d87a90
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.4.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM1MjM5ODksImV4cCI6MTU1NDEyODc4OSwianRpIjoiNjg5NzE5ZWZkYThlIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.MaxeqaMNu2uPW97btwJNr6Kg2S_ixt-HMPkTwxzFavwoSz8Yj4-BtsT_I43dHjQyPMwg-VyjYdpIfLXHveONozqPQU7aDBjo7KE5U3O-pa5IIS3-TQYrw-NGrlRaS0lq8zAx0nEIF29pZQKxZFz13YCtxk35uY4rbghvn1di-_myJwoC5ikvUnFtUPBF-3pm5n5vboFIgJBxt3JEyW6wIYSo1iZKxvaM-EmjCaz8YvFJIMgRXWz_CvT4IEhJa31uqEaJtAATm2VmbAfM_nhxbGgEgSPjBdlz6ZkkeAcU_7OBinp3SErRwlFIyq8r-Xcc7Fq2oXIBj0n6iLdFNCHPYQ
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"63951282557a635b4bf68c8205de6d20"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 678f0a6a-f383-4d52-b882-3d600af8b2dd
+      X-Runtime:
+      - '0.008775'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2131'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwYWdlIjozLCJ0b3RhbF9jb3VudCI6MjAsInRhc2tzIjpbeyJpZCI6ImNj
+        NDlmNmNmLTU0YTAtNDExYS05MDZkLTI5ZmZhMmUyMGZlYiIsImdpZCI6Imdp
+        ZDovL2NhbGVuZGFyLWFwaS9UYXNrL2NjNDlmNmNmLTU0YTAtNDExYS05MDZk
+        LTI5ZmZhMmUyMGZlYiIsInRpdGxlIjoiVGFzayAjNyIsImRlc2NyaXB0aW9u
+        IjoiTWVhbmluZ2Z1bCBkZXNjcmlwdGlvbiB3aXRoIG1hbnkgZGV0YWlscyIs
+        ImxvY2F0aW9uIjoiMDQxNzggTGVpcHppZyBCw7ZobGl0ei1FaHJlbmJlcmci
+        LCJkdWVfZGF0ZSI6IjIwMTktMDQtMDFUMTA6NTk6MzNaIiwiZWRpdGFibGUi
+        OnRydWUsInN0YXR1cyI6Im9wZW4iLCJyZXN1bHQiOm51bGwsInR5cGUiOm51
+        bGwsInVzZXJfaWQiOiI5NjA5MmZhOC03MDdkLTRmZTYtYWY1ZS00ODk4Yjlk
+        ODdhOTAiLCJyZWZlcmVuY2VfaWRzIjpbIjhmYWY0YTg5LTgwYWItNDExMC1h
+        MWU5LWFkNGE4NjM3Y2I3MiIsImVkYzJiOTI1LWUxMDgtNDcyNS04NjM3LTQ0
+        MGZmMjcyNjFlNyIsImEwYjY5MDBhLTc4YzctNGRiMy1iNmM5LTY4ZTA3ZmFi
+        OGRmNCJdLCJjcmVhdGVkX2F0IjoiMjAxOS0wMy0yNVQxMDo1OTozM1oiLCJ1
+        cGRhdGVkX2F0IjoiMjAxOS0wMy0yNVQxMDo1OTozM1oiLCJhbGFybXMiOltd
+        LCJtZXRhZGF0YSI6eyJhZGRfMSI6dHJ1ZSwiYWRkXzIiOiIyMDE5LTAzLTI2
+        VDEwOjU5OjMzLjExOVoiLCJhZGRfMyI6IkluZm8ifX0seyJpZCI6ImEyM2Jh
+        YjJkLWEzYTAtNGVmZS05MzNmLTYzYjY1MTE3OWVmYyIsImdpZCI6ImdpZDov
+        L2NhbGVuZGFyLWFwaS9UYXNrL2EyM2JhYjJkLWEzYTAtNGVmZS05MzNmLTYz
+        YjY1MTE3OWVmYyIsInRpdGxlIjoiVGFzayAjOCIsImRlc2NyaXB0aW9uIjoi
+        TWVhbmluZ2Z1bCBkZXNjcmlwdGlvbiB3aXRoIG1hbnkgZGV0YWlscyIsImxv
+        Y2F0aW9uIjoiMDQxNzggTGVpcHppZyBCw7ZobGl0ei1FaHJlbmJlcmciLCJk
+        dWVfZGF0ZSI6IjIwMTktMDQtMDJUMTA6NTk6MzNaIiwiZWRpdGFibGUiOnRy
+        dWUsInN0YXR1cyI6Im9wZW4iLCJyZXN1bHQiOm51bGwsInR5cGUiOm51bGws
+        InVzZXJfaWQiOiI5NjA5MmZhOC03MDdkLTRmZTYtYWY1ZS00ODk4YjlkODdh
+        OTAiLCJyZWZlcmVuY2VfaWRzIjpbIjNhMzg5ZmZlLThmNWItNDRkOC1iOTM0
+        LTgzY2M1MzMxMTA0NiIsImFjMGQ3ODNjLWMxOTMtNGY4Zi1iNjI4LTY1NjVm
+        MTNlN2U4NyIsIjU3NDhlOGZlLWU5M2YtNGYxNS05ODE4LTU2N2FmZWU0ZmI1
+        ZCIsIjZmNmUyODE5LWNjYjYtNDRlMy04YWNhLWZhYWYyOTFlOWViMSJdLCJj
+        cmVhdGVkX2F0IjoiMjAxOS0wMy0yNVQxMDo1OTozM1oiLCJ1cGRhdGVkX2F0
+        IjoiMjAxOS0wMy0yNVQxMDo1OTozM1oiLCJhbGFybXMiOltdLCJtZXRhZGF0
+        YSI6eyJhZGRfMSI6dHJ1ZSwiYWRkXzIiOiIyMDE5LTAzLTI2VDEwOjU5OjMz
+        LjEyM1oiLCJhZGRfMyI6IkluZm8ifX0seyJpZCI6IjU1MDkzMDU4LWM4ODUt
+        NDRlOC1hMjIzLTY1ZTBjZDAzZmJlMiIsImdpZCI6ImdpZDovL2NhbGVuZGFy
+        LWFwaS9UYXNrLzU1MDkzMDU4LWM4ODUtNDRlOC1hMjIzLTY1ZTBjZDAzZmJl
+        MiIsInRpdGxlIjoiVGFzayAjOSIsImRlc2NyaXB0aW9uIjoiTWVhbmluZ2Z1
+        bCBkZXNjcmlwdGlvbiB3aXRoIG1hbnkgZGV0YWlscyIsImxvY2F0aW9uIjoi
+        MDQxNzggTGVpcHppZyBCw7ZobGl0ei1FaHJlbmJlcmciLCJkdWVfZGF0ZSI6
+        IjIwMTktMDQtMDNUMTA6NTk6MzNaIiwiZWRpdGFibGUiOnRydWUsInN0YXR1
+        cyI6Im9wZW4iLCJyZXN1bHQiOm51bGwsInR5cGUiOm51bGwsInVzZXJfaWQi
+        OiI5NjA5MmZhOC03MDdkLTRmZTYtYWY1ZS00ODk4YjlkODdhOTAiLCJyZWZl
+        cmVuY2VfaWRzIjpbImE1Y2IyY2EzLTllYmMtNDg0Mi04NzViLWRlNjk5ZjBh
+        ZWU3NyIsImI2YzY2MjcxLTgxYzMtNDQyOS1iMDg0LWE2MTNlMzNlY2Y5ZSIs
+        IjBkODM1MjFkLTNlMTktNDM4Zi04YmMxLWI5MDgwNTdlZWZiNiIsIjFlNDIx
+        MDkxLTBlYTctNDkzMS04NjI1LWFkOGNhOTlhZDA1YyJdLCJjcmVhdGVkX2F0
+        IjoiMjAxOS0wMy0yNVQxMDo1OTozM1oiLCJ1cGRhdGVkX2F0IjoiMjAxOS0w
+        My0yNVQxMDo1OTozM1oiLCJhbGFybXMiOltdLCJtZXRhZGF0YSI6eyJhZGRf
+        MSI6dHJ1ZSwiYWRkXzIiOiIyMDE5LTAzLTI2VDEwOjU5OjMzLjEyN1oiLCJh
+        ZGRfMyI6IkluZm8ifX1dfQ==
+    http_version: 
+  recorded_at: Mon, 25 Mar 2019 14:26:29 GMT
+recorded_with: VCR 3.0.3

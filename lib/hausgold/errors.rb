@@ -69,4 +69,23 @@ module Hausgold
       super(message, entity, criteria)
     end
   end
+
+  # Raised when a search request was rejected. This is mostly caused wrong or
+  # missing filters.
+  class EntitySearchError < EntityError
+    attr_reader :criteria
+
+    # Create a new instance of the error.
+    #
+    # @param criteria [Hausgold::SearchCriteria] the search criteria
+    # @param details [String] additional error details
+    def initialize(criteria, details = nil)
+      @criteria = criteria
+      entities = criteria.entity_class.to_s.pluralize
+      message = "Couldn't search for #{entities} with #{criteria.inspect}, " \
+        "because: #{details || 'No error details available.'}"
+
+      super(message)
+    end
+  end
 end

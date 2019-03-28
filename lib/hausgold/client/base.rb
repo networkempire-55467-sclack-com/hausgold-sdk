@@ -14,7 +14,7 @@ module Hausgold
       include Hausgold::Utils::Bangers
 
       # List of all regular client/CRUD actions
-      ACTIONS = %i[find find_by reload update create delete].freeze
+      ACTIONS = %i[find reload search update create delete].freeze
 
       # Allow the client to be configured
       class_attribute :app_name
@@ -99,8 +99,8 @@ module Hausgold
       end
 
       # Find entities by the given criteria.
-      def find_by(*_args)
-        raise NotImplementedError.new(self, :find_by)
+      def search(*_args)
+        raise NotImplementedError.new(self, :search)
       end
 
       # Update an entity by the given attributes.

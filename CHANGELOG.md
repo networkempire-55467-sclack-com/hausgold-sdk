@@ -8,6 +8,9 @@
 * Added the Analytic API client and the `Hausgold::DataPoint` and
   `Hausgold::DataPointEntity` entities (with partial CRUD support,
   based on the API features)
+* Implemented the ability to search for entities, this includes
+  ActiveRecord-compatible query chaining, cursors (offset/limit) and
+  transparent paging (with optimized page layout planning)
 
 ### 0.4.0
 

@@ -4,6 +4,7 @@ require 'active_support'
 require 'active_support/concern'
 require 'active_support/configurable'
 require 'active_support/cache'
+require 'active_support/inflector'
 require 'active_support/core_ext/object'
 require 'active_support/core_ext/hash'
 require 'active_support/core_ext/string'
@@ -32,7 +33,14 @@ module Hausgold
   autoload :Identity, 'hausgold/identity'
   autoload :GlobalId, 'hausgold/global_id'
   autoload :Instrumentation, 'hausgold/instrumentation'
-  autoload :ClientCriteria, 'hausgold/client_criteria'
+  autoload :SearchCriteria, 'hausgold/search_criteria'
+
+  # Search components
+  module Search
+    autoload :Executor, 'hausgold/search_criteria/executor'
+    autoload :Paging, 'hausgold/search_criteria/paging'
+    autoload :Settings, 'hausgold/search_criteria/settings'
+  end
 
   # Entities
   autoload :BaseEntity, 'hausgold/entity/base_entity'

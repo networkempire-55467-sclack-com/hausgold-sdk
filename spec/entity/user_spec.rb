@@ -198,4 +198,37 @@ RSpec.describe Hausgold::User do
         change(empty, :recovery_at).from(nil).to(Time)
     end
   end
+
+  describe '#unlock' do
+    let(:password) { 'verySecure' }
+    let(:user) { create(:user, password: password).tap(&:lock!) }
+    let(:params) { { token: 'token', password: password } }
+
+    it 'unlocks the user (stub)' do
+      # We cannot know the unlock token, because of its only sent by mail
+      expect(user.client).to receive(:unlock_user).with(user, **params).once
+      user.unlock(**params)
+    end
+  end
+
+  describe '#recovered' do
+    let(:password) { 'moreSecure' }
+    let(:user) { create(:user, password: password).tap(&:recover!) }
+    let(:params) { { token: 'token', password: password } }
+
+    it 'recoveres the user (stub)' do
+      # We cannot know the recovery token, because of its only sent by mail
+      expect(user.client).to receive(:recovered_user).with(user, **params).once
+      user.recovered(**params)
+    end
+  end
+
+  describe '#unconfirm' do
+    let(:user) { create(:user).tap(&:confirm!) }
+
+    it 'unconfirms the user' do
+      expect { user.unconfirm }.to \
+        change(user, :confirmed_at).from(Time).to(nil)
+    end
+  end
 end
