@@ -37,11 +37,11 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTMyNTExMDYsImV4cCI6MTU1Mzg1NTkwNiwianRpIjoiYTRkNmE5MDk3MDI3IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.BM4nmgBuWvMLjcN0TcEM8XWds3nspyYyzCCZjlTCyOpLL9k4FuS04bteBvPbloWEbQsLc8v5nxhpNe8CpVD-BCs8YPQmVeRlkB4POgCzw7btCZQkF6j_9K_cKbDlGdQLYed17Xpdgp_Zifo5LaLLly77BoPpZFhj6UySzfwQHXPZFZkbScaVVRlOIC0ZLSRgE5jKQ8aYDbXNdB4Ercigk4uwGuJeU8zjtJTVbRbed_0PhVjcY0PKtA_-SdSpqDTK8PNG3Ra8Z7ZjEmimcsHoU-ip-zHDFI5m-TD4bu1TIz-5griKUoXO6O1QCLYPJ4rgUryewt8qsTn3KEZWGMHVZw","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTMyNTExMDYsImV4cCI6MTU1NDQ2MDcwNiwianRpIjoiNjBhZDEyMTQ4NjY5IiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.vmqsZkA39nJ-n2Nq_mDlltPZszX-MiAPqUDU2v5kl9Q5HTvtFWuakRyskBbzo9lzduFNI6rBOLgYlrUPjn88XJG_CcahGyqTdCdiNiW5P-Z8Fs7MTKHechUX2hptGXvY_9l0b4cOLjzB31k5XHDUUUWEobjjupumrE_Swyt49i_9TY99rrPUkhIDurmyDLq--k0XHuK9cBoPhcCD40IsBVz7E3J3a7r_J4NR8IItX9-xLTHIL4P1hyilbha1E1f9lOZrHBNr1Iy5v2iqach1GxGh85hCjp2b61oXWcO713ilwUJ_yEvUjL7JHhN6v1KqVRyo1h1nLqc9uCZ3WGGiAA","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTMyNTExMDYsImV4cCI6MTU1Mzg1NTkwNiwianRpIjoiOTMxMzQ5MGRjZjNkIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.eM7LZStU2i_B1Y47JpBrdAWojlxPfpnWnPunqd7SML6oe47fNlfUKhmXyNh18VNc3pJSeF8x4hwvOv96r9Z1BV-y4-ql_VO5Hb0J5qVlSVHBqEBwgbZmVKxGHi1f0RZwXRT9F1T-wTUPWUMrXLMf4B5tKu4QniNgXIvO5Oe8YXEbRdRuAuD-23NXH1hdmkUKHYBS5JdRdloSjZHl5ONskxhKdhUS5dheoyv5juvOT4jvfgGD8_DtuaPA3O3vY92Ku3J7gUNTjK2qBGSicQgZszehNeMk4bRQB0HXfwPiQf-BSuWCn_0M2BXpmqeG_1Pv5S8GePTlSzMi2mWHNkEpeA","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-22T10:38:26Z","created_at":"2019-03-20T11:12:33Z","updated_at":"2019-03-20T11:12:33Z","confirmed_at":"2019-03-20T11:12:33Z","locked_at":null,"recovery_at":null}}'
-    http_version: 
+    http_version:
   recorded_at: Fri, 22 Mar 2019 10:38:26 GMT
 - request:
     method: get
-    uri: http://analytic-api.local/v1/data_points?bang=true&context=user&entity=gid://maklerportal-api/User/99ef6d07-7a19-45c0-9be4-daed2147eb6e&metric=login
+    uri: http://analytic-api.local/v1/data_points?context=user&entity=gid://maklerportal-api/User/99ef6d07-7a19-45c0-9be4-daed2147eb6e&metric=login
     body:
       encoding: US-ASCII
       string: ''
@@ -77,6 +77,6 @@ http_interactions:
       encoding: UTF-8
       string: '{"code":201,"message":"No entity with GID ''gid://maklerportal-api/User/99ef6d07-7a19-45c0-9be4-daed2147eb6e''
         was found."}'
-    http_version: 
+    http_version:
   recorded_at: Fri, 22 Mar 2019 10:38:26 GMT
 recorded_with: VCR 3.0.3

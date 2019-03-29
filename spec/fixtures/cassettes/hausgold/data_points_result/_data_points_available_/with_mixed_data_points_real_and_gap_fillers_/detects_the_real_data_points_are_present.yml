@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.5.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"52d7d847bd1bfe3b47bbfa8fc9d5472a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dd81e0cb-6c9e-457e-aa35-2036294d4312
+      X-Runtime:
+      - '0.075743'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM3NzkyMDcsImV4cCI6MTU1NDM4NDAwNywianRpIjoiMzIwYmE1YmQxZTg3IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.wNEg2JAWvuOqIOaonUkSA1Vpwxb3fWa2YssCWpFcGOcGNUXbIV7DHVT_uWkDZvqx_Mw5oA1fFSSxqwPrWvfTVhb7ESzHtA1jOFcPCyRMcmVwX_h61L-pJgLoJ5B7Y4dNwRKGnMUa8ojdMJ8-09FIh5eDTvSXYnYFJnztQMQP8Iqw1nmwAXLthWXL4XxtBoALrOSoNYSwXIr-Juy0yOJ1SVBivvBaG2FSV7Al5qCqJWOGJEd5uo2sJN0luLrVds8hGtH6ovSDwAsvASnfplnU1Z7dNR4Ux_n1MdV-Kg-vYJ0P1SXbknvBeK06rgpgj2sxEglkBm4CVtfSSxFt_OAcDA","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM3NzkyMDcsImV4cCI6MTU1NDk4ODgwNywianRpIjoiM2ZlZTUxMWI1NjFkIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.IDR268dGTlwAQO1GBydiJiW3ml94E-RFTSqGCHGmUVNSHk9Lec_ga2EscOe2CJFjkJzVP9GkwQHDRbHA7_3gkzWg4ZMrRa61qwFK65raumWbybjXcRnFrGQVMr8UbiKTOPoDmfbvEbavsdaj4V_qflY42RB0fLkS3bberacxl1Vwi-SpE_S5RlL1zFvJbM4XhJ0RvCtCqsD8xRtfTaMp1UA9k5Yw1Y8aT9bNUcKWYQFZN_7QlWSIXZgaEZ6F3_609At4eY5H6lypIXo2S74_d8pBODx8JOtq5EOwnpVpWSMOUvtSvgXNQeTgsm0J0NAb0-KYhXj_Y5_pBdq-ett2dA","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM3NzkyMDcsImV4cCI6MTU1NDM4NDAwNywianRpIjoiMjQ3ODU0ZWNkZjY3IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.G0xk_Am7YVbvuMVgw5qSTctHo5O3spe2jDtjqRbj8BDT-WaF9VDHD4o97BNeYFY3jiwZhLO8W0hfqyajc-98Vv2zmIzJxB_3j9QF14OBfvfO71dIviuZb-7X4wJDMSsIKAojvkqrWqac5lJGxEQc6bQL9WbONvJtXjoNHzqgxARCEKycS6VAkuK4gTcQCnIaWwo0ryJreOgrBlimCrTB3obdTZGOBAPf0kNGSw6FRGHgoyBgnPllxSL2hkUMlajaAvs1EVTxOvlGt0ljvqJlCOn0mBLPTyBYNoUCaBPOfxCPEi79hXS5FOBeeAIy7pvOihQ4GyV6LzbTRTujGt-MRw","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-03-28T13:20:07Z","created_at":"2019-03-28T13:06:54Z","updated_at":"2019-03-28T13:06:54Z","confirmed_at":"2019-03-28T13:06:54Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Tue, 19 Mar 2019 12:00:00 GMT
+- request:
+    method: get
+    uri: http://analytic-api.local/v1/data_points?aggregation=sum&context=is24&end_at=2019-04-08%2013:00:00%20%2B0200&entity=gid://maklerportal-api/User/96092fa8-707d-4fe6-af5e-4898b9d87a90&internal=day&metric=visits&start_at=2019-03-16%2013:00:00%20%2B0100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.5.0 test-client
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NTM3NzkyMDcsImV4cCI6MTU1NDM4NDAwNywianRpIjoiMzIwYmE1YmQxZTg3IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.wNEg2JAWvuOqIOaonUkSA1Vpwxb3fWa2YssCWpFcGOcGNUXbIV7DHVT_uWkDZvqx_Mw5oA1fFSSxqwPrWvfTVhb7ESzHtA1jOFcPCyRMcmVwX_h61L-pJgLoJ5B7Y4dNwRKGnMUa8ojdMJ8-09FIh5eDTvSXYnYFJnztQMQP8Iqw1nmwAXLthWXL4XxtBoALrOSoNYSwXIr-Juy0yOJ1SVBivvBaG2FSV7Al5qCqJWOGJEd5uo2sJN0luLrVds8hGtH6ovSDwAsvASnfplnU1Z7dNR4Ux_n1MdV-Kg-vYJ0P1SXbknvBeK06rgpgj2sxEglkBm4CVtfSSxFt_OAcDA
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"eea3c8ba4cb73ee66af9a097c59b1ecb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5f88ade0-d223-4f21-a78e-31355d3abbb7
+      X-Runtime:
+      - '0.014879'
+      Vary:
+      - Origin
+      Content-Length:
+      - '1725'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"value":"72.71179","count":12,"date":"2019-03-16T00:00:00Z"},{"value":"85.69381","count":24,"date":"2019-03-17T00:00:00Z"},{"value":"-63.79194","count":24,"date":"2019-03-18T00:00:00Z"},{"value":"-139.81222","count":24,"date":"2019-03-19T00:00:00Z"},{"value":"-54.81886","count":24,"date":"2019-03-20T00:00:00Z"},{"value":"93.30616","count":24,"date":"2019-03-21T00:00:00Z"},{"value":"133.97593","count":24,"date":"2019-03-22T00:00:00Z"},{"value":"20.35338","count":24,"date":"2019-03-23T00:00:00Z"},{"value":"-116.70896","count":24,"date":"2019-03-24T00:00:00Z"},{"value":"-119.36435","count":24,"date":"2019-03-25T00:00:00Z"},{"value":"15.44527","count":24,"date":"2019-03-26T00:00:00Z"},{"value":"132.46749","count":24,"date":"2019-03-27T00:00:00Z"},{"value":"96.93457","count":24,"date":"2019-03-28T00:00:00Z"},{"value":"-50.23226","count":24,"date":"2019-03-29T00:00:00Z"},{"value":"36.84903","count":14,"date":"2019-03-30T00:00:00Z"},{"value":"0.0","count":0,"date":"2019-03-31T00:00:00Z"},{"value":"0.0","count":0,"date":"2019-04-01T00:00:00Z"},{"value":"0.0","count":0,"date":"2019-04-02T00:00:00Z"},{"value":"0.0","count":0,"date":"2019-04-03T00:00:00Z"},{"value":"0.0","count":0,"date":"2019-04-04T00:00:00Z"},{"value":"0.0","count":0,"date":"2019-04-05T00:00:00Z"},{"value":"0.0","count":0,"date":"2019-04-06T00:00:00Z"},{"value":"0.0","count":0,"date":"2019-04-07T00:00:00Z"},{"value":"0.0","count":0,"date":"2019-04-08T00:00:00Z"}],"metadata":{"entity":"gid://maklerportal-api/User/96092fa8-707d-4fe6-af5e-4898b9d87a90","metric":"visits","context":"is24","aggregation":"sum","interval":"day","start_at":"2019-03-16T12:00:00Z","end_at":"2019-04-08T11:00:00Z","total_count":24,"total_value":"143.00884"}}'
+    http_version: 
+  recorded_at: Tue, 19 Mar 2019 12:00:00 GMT
+recorded_with: VCR 3.0.3

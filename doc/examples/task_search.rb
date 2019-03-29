@@ -3,6 +3,9 @@
 
 require_relative './config'
 
+# rubocop:disable Lint/ShadowingOuterLocalVariable because of the example
+# rubocop:disable Lint/Void because of the example
+
 filters = {
   user_id: '96092fa8-707d-4fe6-af5e-4898b9d87a90',
   text: 'Ehrenberg',
@@ -48,3 +51,5 @@ rescue Hausgold::EntitySearchError => err
   # => ".. because: user_id, reference_ids are missing,
   #    at least one parameter must be provided"
 end
+# rubocop:enable Lint/ShadowingOuterLocalVariable
+# rubocop:enable Lint/Void

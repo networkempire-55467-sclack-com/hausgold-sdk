@@ -17,7 +17,7 @@ module Hausgold
         def query_data_points(**args)
           res = connection.get do |req|
             req.path = '/v1/data_points'
-            req.params = args
+            req.params = args.except(:bang)
             use_default_context(req)
             use_jwt(req)
           end

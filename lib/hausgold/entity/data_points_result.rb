@@ -15,5 +15,16 @@ module Hausgold
     typed_attr :aggregation, :symbol
     typed_attr :interval, :symbol
     typed_attr :data, :recursive_open_struct_array
+
+    # Check that the data points result set was build by actual data points.
+    # The result set may also contain just out of gap-filling data points. This
+    # can be detected by their respective individual count. When the count for
+    # a single data point is zero, its a gap-filler. We check all resulting
+    # data points, and look at least for one containing a positive count.
+    #
+    # @return [Boolean] whenever real data was present, or not
+    def data_points_available?
+      data.select { |point| point.count.positive? }.any?
+    end
   end
 end
