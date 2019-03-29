@@ -1,3 +1,9 @@
+### 0.6.0
+
+* The `bang` parameter was removed from `Hausgold::DataPoint#query` requests
+* A new helper method `Hausgold::DataPointsResult#data_points_available?` was
+  added to answer a common question about the underlying data source
+
 ### 0.5.0
 
 * Added `content_type` and `byte_size` to the Asset entity attributes
