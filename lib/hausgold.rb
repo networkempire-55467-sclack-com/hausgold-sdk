@@ -11,6 +11,7 @@ require 'active_support/core_ext/string'
 require 'active_support/time'
 require 'active_support/time_with_zone'
 require 'active_support/string_inquirer'
+require 'active_support/subscriber'
 require 'active_model'
 require 'global_id'
 require 'recursive-open-struct'
@@ -40,6 +41,11 @@ module Hausgold
     autoload :Executor, 'hausgold/search_criteria/executor'
     autoload :Paging, 'hausgold/search_criteria/paging'
     autoload :Settings, 'hausgold/search_criteria/settings'
+  end
+
+  # Instrumentation
+  module Instrumentation
+    autoload :LogSubscriber, 'hausgold/instrumentation/log_subscriber'
   end
 
   # Entities

@@ -8,6 +8,10 @@ require 'pp'
 require_relative '../spec/support/configuration'
 reset_test_configuration!
 
+Hausgold.configure do |conf|
+  conf.request_logging = true
+end
+
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
 

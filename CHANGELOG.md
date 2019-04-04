@@ -1,3 +1,9 @@
+### 0.7.0
+
+* Improved the instrumentation and request logging facility (logs are colored
+  now to make local development easier and error handling was added to be more
+  robust on response issues)
+
 ### 0.6.0
 
 * The `bang` parameter was removed from `Hausgold::DataPoint#query` requests

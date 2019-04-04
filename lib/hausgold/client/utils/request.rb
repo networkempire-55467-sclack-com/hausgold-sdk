@@ -78,6 +78,10 @@ module Hausgold
         # Get the request starting action/method name from the caller backtrace.
         #
         # @return [String] the starting request action/method name
+        #
+        # rubocop:disable Metrics/AbcSize because of the reverse engineering
+        # rubocop:disable Metrics/CyclomaticComplexity because of the
+        #   reverse engineering
         def request_action
           # Parse the client action from the caller backtrace
           methods = caller.each_with_object([]) do |call, memo|
@@ -87,13 +91,20 @@ module Hausgold
 
             memo << call[/`.*'/][1..-2]
           end
-          # When only two are available, it sounds like a abstraction, so
+
+          # We use the most specific method (2nd) when we are in a locate call
+          return methods.second \
+            if methods.last == 'locate' && methods.count == 3
+
+          # When only two are available, it sounds like an abstraction, so
           # we use the most specific one
           return methods.last if methods.count == 2
 
           # Otherwise we use the first method
           methods.first
         end
+        # rubocop:enable Metrics/AbcSize
+        # rubocop:enable Metrics/CyclomaticComplexity
       end
     end
     # rubocop:enable Metrics/BlockLength
