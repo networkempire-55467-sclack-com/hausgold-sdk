@@ -7,7 +7,7 @@ def reset_test_configuration!
   Hausgold.configure do |conf|
     conf.app_name = 'test-client'
     conf.env = :local
-    conf.request_logging = true
+    conf.request_logging = false
     conf.identity_scheme = :password
     conf.identity_params = { email: 'identity-api@hausgold.de',
                              password: 'Oacbos8otAc=' }

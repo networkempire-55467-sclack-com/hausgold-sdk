@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://asset-api.local/v1/assets/06474f95-4363-4490-8a63-6007ef756f29/download
+    uri: http://asset-api.local/v1/assets/06474f95-4363-4490-8a63-6007ef756f29/download/avatar.jpg
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - HausgoldSDK/0.3.0 test-client
+      - HausgoldSDK/0.7.0 test-client
       Accept:
       - application/json
       Content-Type:
@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 040b2c47-6133-432f-ba08-af557d1c583a
+      - 220afe01-fea4-45d2-b1fb-dc505df4e854
       X-Runtime:
-      - '0.005736'
+      - '0.004070'
       Vary:
       - Origin
       Content-Length:
@@ -37,5 +37,5 @@ http_interactions:
       string: '{"code":201,"message":"No asset with id ''06474f95-4363-4490-8a63-6007ef756f29''
         was found."}'
     http_version: 
-  recorded_at: Thu, 14 Mar 2019 08:28:07 GMT
+  recorded_at: Fri, 05 Apr 2019 11:27:27 GMT
 recorded_with: VCR 3.0.3

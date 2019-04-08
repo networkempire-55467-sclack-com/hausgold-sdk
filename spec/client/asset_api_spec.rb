@@ -20,7 +20,7 @@ RSpec.describe Hausgold::Client::AssetApi do
   describe '.find_asset' do
     let(:id) { '4530919a-3868-405e-8a84-001c7b9bb6b8' }
     let(:url) do
-      "http://asset-api.local/v1/assets/#{id}/download"
+      "http://asset-api.local/v1/assets/#{id}/download/avatar.jpg"
     end
 
     it 'sets the file url correctly' do
@@ -33,7 +33,7 @@ RSpec.describe Hausgold::Client::AssetApi do
 
     it 'sets the file url while uploading a new asset' do
       expect { instance.create_asset(asset) }.to \
-        change(asset, :file_url).from(nil).to(%r{/download$})
+        change(asset, :file_url).from(nil).to(%r{/download/avatar.jpg$})
     end
   end
 end

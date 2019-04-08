@@ -66,6 +66,8 @@ RSpec.describe Hausgold::Asset do
     end
 
     describe 'filename' do
+      let(:asset) { build :asset, filename: nil }
+
       it 'sets filename correctly' do
         expect { asset.save }.to \
           change(asset, :filename).from(nil).to('avatar.jpg')
@@ -74,13 +76,15 @@ RSpec.describe Hausgold::Asset do
   end
 
   describe '.create' do
+    let(:base_url) { 'http://asset-api.local/v1/assets' }
+
     context 'with direct file upload' do
       let(:params) { attributes_for :asset }
 
       it 'creates a new asset' do
         asset = described_class.create(params)
         expect(asset.file_url).to \
-          be_eql("http://asset-api.local/v1/assets/#{asset.id}/download")
+          be_eql("#{base_url}/#{asset.id}/download/avatar.jpg")
       end
     end
 
@@ -90,7 +94,7 @@ RSpec.describe Hausgold::Asset do
       it 'creates a new asset' do
         asset = described_class.create(params)
         expect(asset.file_url).to \
-          be_eql("http://asset-api.local/v1/assets/#{asset.id}/download")
+          be_eql("#{base_url}/#{asset.id}/download/avatar.jpg")
       end
     end
   end

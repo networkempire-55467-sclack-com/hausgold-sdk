@@ -13,7 +13,8 @@ FactoryBot.define do
     attachable { "gid://#{owner_app}/#{owner_entity}/#{owner_id}" }
     permissions { { owner_id => 'x' } }
     metadata { { add_1: true, add_2: 1.day.from_now, add_3: 'Info' } }
-    file { UploadIO.new(file_fixture('avatar.jpg'), 'image/jpeg') }
+    filename { 'avatar.jpg' }
+    file { UploadIO.new(file_fixture(filename || 'avatar.jpg'), 'image/jpeg') }
     add_attribute(:public) { true }
 
     trait :private do
@@ -21,7 +22,7 @@ FactoryBot.define do
     end
 
     trait :with_file_url do
-      file_url { "http://asset-api.local/v1/assets/#{id}/download" }
+      file_url { "http://asset-api.local/v1/assets/#{id}/download/#{filename}" }
     end
 
     trait :with_file_from_url do
