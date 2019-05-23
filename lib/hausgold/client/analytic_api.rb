@@ -13,7 +13,7 @@ module Hausgold
 
       # Define all the CRUD resources
       entity :data_point, '/v1/data_points', only: %i[create]
-      entity :data_point_entity, '/v1/entities', only: %i[create]
+      entity :data_point_entity, '/v1/entities', only: %i[find create delete]
     end
   end
 end

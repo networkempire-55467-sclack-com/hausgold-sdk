@@ -62,4 +62,28 @@ RSpec.describe Hausgold::DataPointEntity do
       expect(initial.id).to be_eql(updated.id)
     end
   end
+
+  describe '.delete' do
+    before do
+      allow(instance).to receive(:save)
+      allow(instance.client).to receive(:delete_data_point_entity)
+    end
+
+    it 'calls the save method' do
+      expect(instance).to receive(:save)
+      instance.delete
+    end
+  end
+
+  describe '.delete!' do
+    before do
+      allow(instance).to receive(:save)
+      allow(instance.client).to receive(:delete_data_point_entity)
+    end
+
+    it 'calls the save! method' do
+      expect(instance).to receive(:save!)
+      instance.delete!
+    end
+  end
 end
