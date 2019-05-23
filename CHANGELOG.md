@@ -1,3 +1,7 @@
+### 0.8.0
+
+* Added the `find` and `delete` actions for DataPointEntity (#16)
+
 ### 0.7.0
 
 * Improved the instrumentation and request logging facility (logs are colored
