@@ -61,6 +61,7 @@ module Hausgold
   autoload :DataPointEntity, 'hausgold/entity/data_point_entity'
   autoload :NotificationToken, 'hausgold/entity/notification_token'
   autoload :Pdf, 'hausgold/entity/pdf'
+  autoload :Property, 'hausgold/entity/property'
 
   # Some general purpose utilities
   module Utils
