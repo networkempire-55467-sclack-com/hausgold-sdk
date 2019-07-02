@@ -1,3 +1,7 @@
+### 0.9.0
+
+* Added `Hausgold::Property` entity with CRUD support (#17)
+
 ### 0.8.0
 
 * Added the `find` and `delete` actions for DataPointEntity (#16)
