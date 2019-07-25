@@ -1,3 +1,8 @@
+### 0.10.0
+
+* Added `lead_id` and `metadata` attributes to the `Hausgold::Property`
+  entity (#18)
+
 ### 0.9.0
 
 * Added `Hausgold::Property` entity with CRUD support (#17)
