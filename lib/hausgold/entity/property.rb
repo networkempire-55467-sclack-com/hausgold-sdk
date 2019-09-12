@@ -9,6 +9,6 @@ module Hausgold
 
     # Mapped and tracked attributes
     tracked_attr :id, :owner_id, :permissions, :object_details, :lead_id,
-                 :metadata, :source, :created_at, :updated_at
+                 :metadata, :source, :created_at, :updated_at, :geo_details
   end
 end
