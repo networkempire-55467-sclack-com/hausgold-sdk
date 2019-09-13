@@ -1,3 +1,8 @@
+### 0.11.0
+
+* Added `geo_details` attribute to the `Hausgold::Property`
+  entity
+
 ### 0.10.0
 
 * Added `lead_id` and `metadata` attributes to the `Hausgold::Property`
