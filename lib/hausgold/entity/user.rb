@@ -83,6 +83,33 @@ module Hausgold
       client.unlock_user(self, **params)
     end
 
+    # Start the account activation for the current user instance.
+    # No additional options required for this, but you can pass in a +metadata+
+    # argument as hash with additional workflow data.
+    #
+    # @param args [Hash{Symbol => Mixed}] additional options
+    # @return [Hausgold::User] the current user instance
+    def activate(**args)
+      client.activate_user(self, args)
+    end
+
+    # Finish the account activation for the current user instance.  You need to
+    # pass in the +token+ and +password+ as additional parameters.  This method
+    # returns a valid +Hausgold::Jwt+ instance which can directly be used to
+    # operated as the activated user. This is especially handy on frontend
+    # applications.
+    #
+    # @param token [String] the recovery token
+    # @param password [String] the new password of the user
+    # @param args [Hash{Symbol => Mixed}] additional options
+    # @return [Hausgold::Jwt] the returned JWT bundle for the activated user
+    def activated(token:, password: nil, **args)
+      params = { token: token, password: password }.merge(args).compact
+      client.activated_user(self, **params, good: proc do |_, res|
+        Hausgold::Jwt.new(res.body.to_h)
+      end)
+    end
+
     # Build an user identifier hash from the given user instance. It puts the
     # +id+, or the +email+ as identifier. When both are missing we raise an
     # +ArgumentError+. The +id+ takes precedence over the +email+.
@@ -98,6 +125,7 @@ module Hausgold
     end
 
     # Generate bang method variants
-    bangers :confirm, :lock, :recover, :recovered, :unconfirm, :unlock
+    bangers :confirm, :lock, :recover, :recovered, :unconfirm, :unlock,
+            :activate, :activated
   end
 end

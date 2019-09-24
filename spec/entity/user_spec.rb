@@ -231,4 +231,40 @@ RSpec.describe Hausgold::User do
         change(user, :confirmed_at).from(Time).to(nil)
     end
   end
+
+  describe '#activated' do
+    let(:user) { create(:user) }
+
+    context 'with password' do
+      let(:params) { { token: 'token', password: 'password' } }
+
+      it 'allows settings a new password' do
+        expect(user.client).to receive(:activated_user)
+          .with(user, good: Proc, **params)
+        user.activated(**params)
+      end
+    end
+
+    context 'without password' do
+      let(:params) { { token: 'token' } }
+
+      it 'allows keeping the old password' do
+        expect(user.client).to receive(:activated_user)
+          .with(user, good: Proc, **params)
+        user.activated(**params)
+      end
+    end
+
+    describe 'response handling', :vcr do
+      let(:token) { '9f0703c61103b9bf9e781989877aacd2' }
+      let(:user) do
+        create(:user, email: 'activation-test@example.com',
+                      status: :inactive).tap(&:activate!)
+      end
+
+      it 'returns a Hausgold::Jwt instance' do
+        expect(user.activated!(token: token)).to be_a(Hausgold::Jwt)
+      end
+    end
+  end
 end

@@ -39,7 +39,8 @@ RSpec.describe Hausgold::Client::IdentityApi do
     end
   end
 
-  %i[confirm lock recover recovered unconfirm unlock].each do |meth|
+  %i[confirm lock recover recovered unconfirm unlock
+     activate activated].each do |meth|
     it "includes the #{meth} method" do
       expect(instance.respond_to?("#{meth}_user")).to be(true)
     end

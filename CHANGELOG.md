@@ -1,3 +1,8 @@
+### 0.12.0
+
+* Added the new activation workflow for user accounts which are created
+  with an inactive state
+
 ### 0.11.0
 
 * Added `geo_details` attribute to the `Hausgold::Property`
