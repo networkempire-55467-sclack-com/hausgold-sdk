@@ -3,6 +3,22 @@
 RSpec.describe Hausgold::Client do
   let(:described_class) { Hausgold }
 
+  describe '#resolve_app' do
+    context 'with a configured alias' do
+      it 'returns the input when no alias was resolved' do
+        expect(described_class.resolve_app(:kundenportalApi)).to \
+          be_eql(:'verkaeuferportal-api')
+      end
+    end
+
+    context 'without a configured alias' do
+      it 'returns the input when no alias was resolved' do
+        expect(described_class.resolve_app(:identity_api)).to \
+          be_eql(:'identity-api')
+      end
+    end
+  end
+
   describe '#app' do
     context 'with a string' do
       it 'returns the correct client (kebab-case)' do

@@ -1,12 +1,18 @@
 ### 0.12.0
 
 * Added the new activation workflow for user accounts which are created
-  with an inactive state
+  with an inactive state (#24)
+* Added a full featured client for the Verkaeuferportal/Kundenportal API with
+  support for the remote user entity, locally called `Hausgold::Customer` (#25)
+* Implemented support for application/entity name aliases on Global Ids to
+  allow transparent masquerading on entities (eg. Kundenportal API is mapped to
+  Verkaeuferportal API (until migrated) and Verkaeuferportal API/User becomes
+  `Hausgold::Customer` on the SDK) (#25)
 
 ### 0.11.0
 
 * Added `geo_details` attribute to the `Hausgold::Property`
-  entity
+  entity (#23)
 
 ### 0.10.0
 

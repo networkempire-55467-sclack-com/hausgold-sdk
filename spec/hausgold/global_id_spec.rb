@@ -6,7 +6,7 @@ RSpec.describe Hausgold::GlobalId do
   let(:other_uuid) { 'c7ee24fc-4ccf-4205-b087-ff711d25ef3f' }
 
   describe 'initialization' do
-    let(:all_locators_count) { Hausgold::Configuration::API_NAMES.count }
+    let(:all_locators_count) { Hausgold::Configuration::ALL_API_NAMES.count }
 
     before do
       allow(GlobalID::Locator).to receive(:use)
@@ -186,6 +186,15 @@ RSpec.describe Hausgold::GlobalId do
       it 'builds the correct gid URI' do
         expect(described_class.build_gid(app, :task, uuid).to_s).to \
           be_eql(gid)
+      end
+    end
+
+    context 'with alias application' do
+      let(:app) { 'verkaeuferportal-api' }
+
+      it 'builds the correct gid URI' do
+        built = described_class.build_gid('kundenportal-api', :task, uuid).to_s
+        expect(built).to be_eql(gid)
       end
     end
   end

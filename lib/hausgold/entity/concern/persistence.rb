@@ -64,7 +64,7 @@ module Hausgold
         # @return [Hausgold::BaseEntity] the instance itself
         # @raise [Hausgold::EntityNotFound] when not found
         def reload
-          client.send("reload_#{entity_name.underscore}!", self)
+          client.send("reload_#{remote_entity_name.underscore}!", self)
           self
         end
 
@@ -121,7 +121,9 @@ module Hausgold
         # @return [Hausgold::BaseEntity, false] whenever the deletion
         #   was successful
         def delete(**args)
-          client.send("delete_#{entity_name.underscore}", self, **args) || false
+          client.send(
+            "delete_#{remote_entity_name.underscore}", self, **args
+          ) || false
         end
         alias_method :destroy, :delete
 
@@ -209,7 +211,7 @@ module Hausgold
         %i[create update].each do |method|
           class_eval <<-RUBY, __FILE__, __LINE__ + 1
             def #{method}_entity(**args)
-              method = '#{method}_'.concat(entity_name.underscore)
+              method = '#{method}_'.concat(remote_entity_name.underscore)
               client.send(method, self, **args)
             end
           RUBY

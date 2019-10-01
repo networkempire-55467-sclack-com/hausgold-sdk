@@ -24,7 +24,12 @@ module Hausgold
       # +Hausgold::ClientUtils::GrapeCrud+.
       class_attribute :action_formats
 
+      # By default we force clients to ensure given identifiers are UUID or
+      # Global Id based
       class_attribute :force_uuid_ids
+
+      # Keep track of all entities of a client class
+      class_attribute :entities
 
       # Create a new client instance with the charme of mass assigning all
       # options at once.  We support the following options as a base client:
@@ -135,6 +140,7 @@ module Hausgold
           child_class.app_name = ''
           child_class.action_formats = {}
           child_class.force_uuid_ids = true
+          child_class.entities = {}
         end
 
         # Allow a nice interface for the application name setting.

@@ -129,7 +129,8 @@ RSpec.describe Hausgold::Jwt do
       expect(described_class.associations).to \
         be_eql(user: { class_name: Hausgold::User,
                        from: :user,
-                       type: :has_one })
+                       type: :has_one,
+                       persist: false })
     end
 
     describe 'has_one user' do

@@ -108,6 +108,7 @@ ready to use. Here comes a list of them:
 
 * [Hausgold::Jwt](lib/hausgold/entity/jwt.rb)
 * [Hausgold::User](lib/hausgold/entity/user.rb)
+* [Hausgold::Customer](lib/hausgold/entity/customer.rb)
 * [Hausgold::Task](lib/hausgold/entity/task.rb)
 * [Hausgold::Appointment](lib/hausgold/entity/appointment.rb)
 * [Hausgold::Timeframe](lib/hausgold/entity/timeframe.rb)

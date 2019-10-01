@@ -3,6 +3,18 @@
 RSpec.describe Hausgold::Appointment do
   let(:instance) { described_class.new }
 
+  describe '#entity_name' do
+    it 'returns the correct entity name' do
+      expect(instance.entity_name).to be_eql('Appointment')
+    end
+  end
+
+  describe '#remote_entity_name' do
+    it 'returns the correct remote entity name' do
+      expect(instance.remote_entity_name).to be_eql('Appointment')
+    end
+  end
+
   describe 'client' do
     it 'sets the client class as module accessor' do
       expect(described_class.client_class).to \

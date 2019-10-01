@@ -5,6 +5,8 @@ module Hausgold
     # An ActiveRecord-like attribute management feature, with the exception
     # that the attributes are not generated through a schema file, but are
     # defined inline the entity class.
+    #
+    # rubocop:disable Metrics/ModuleLength because of ActiveSupport::Concern
     module Attributes
       extend ActiveSupport::Concern
 
@@ -18,7 +20,9 @@ module Hausgold
         # @return [Hash{String => Mixed}] the attribute data
         def attributes
           attribute_names.each_with_object({}) do |key, memo|
-            memo[key.to_s] = send(key)
+            result = send(key)
+            result = result.attributes if result.respond_to? :attributes
+            memo[key.to_s] = result
           end
         end
 
@@ -59,6 +63,8 @@ module Hausgold
         def assign_attributes(struct = {})
           # Build a RecursiveOpenStruct and a simple hash from the given data
           struct, hash = sanitize_data(struct)
+          # Initialize associations and map them accordingly
+          struct, hash = initialize_associations(struct, hash)
           # Initialize attributes and map unknown ones and pass back the known
           known = initialize_attributes(struct, hash)
           # Mass assign the known attributes via ActiveModel
@@ -224,5 +230,6 @@ module Hausgold
         end
       end
     end
+    # rubocop:enable Metrics/ModuleLength
   end
 end

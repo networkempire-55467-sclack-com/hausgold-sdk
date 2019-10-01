@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.11.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"1acb699fec55a9b2d5e3cf2c4637db51"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '08fb152e-6fea-47c0-b5a3-053bc60d98e9'
+      X-Runtime:
+      - '0.077702'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDM2NjY1OCwianRpIjoiOTMzYTk1MDNjYjZkIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.swxW6w_Pp2_qRt-PE7KUFVCnaxtjpghHSuJeKKllXN903LptsOC-LfFwOR25JiyfxJA9hdeyovQiUKMvFfq5rstJLcQJkHvC0D-DauiQzCIIUxLKhOiXSuGV4f80PryBagkVbWfK_1kKj_Sp88-kFul1iwFCnDKIwHuQ_RU_pHHCYm3fRcPuHZk4ZntL01ql_s-0y7t1wEIVSq1wtZ1q_QXXmpnbZgclv-YFHA_s6MFWChxLwjWmSD7fiVJnltM0hnE7kyL-rFtyLakKIKyivQX5eBUqSJJjD__QvVo8RiQRNrCE3cJybRjp0SS7fg4r8rR7szdKZ4t-p2d2vHBUaQ","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDk3MTQ1OCwianRpIjoiMDFmNjdiNGE2ZDRhIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.D4Og5XXVUCuB2WZr5rkzieSKVFtzJdJZQ4V54rsSlECQP6CRWRBBO74yvBRWZEkKLr6W69zsNhWQK6gsXdxnRIcQ9p1ww1B9X0-byz7Sl7yPcvIntyK7FXcQiCwThq9o5svWJqasXPFlg2XzK5Pa0hAP2Aefq2jJEStVgycUYTf7bkVdutqX-EI7Gcfw72-RsZhgwosWP0jfwyhxnEVcuohflJMYSgBwwcqVnPcgnF8lfYkL7S0Vq6nDTzcaQmy5REPN3GCtUZdJA4FYvFCJ7JwPcPFbqxDFbmVBdoDXe9vOd5HcgbMdTv1v3dICqwLFAVn02Pv9ulmlfDA-kpI7ZQ","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDM2NjY1OCwianRpIjoiZjAxZGZkYTdiMzhiIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.VlIU1ngG8LJoKOBGYNORRb6fKXCd8vdE1mcnd8hVNRYRyK-erCSlKr8bMTEjXxYmANhe7M0djDbsTvQn1eE5ccKBnSvECiDChR33yGdCI6Qp1XDmP9PWoCAJxjnBkeRnRtUYPLszu8h9jXO3kq3MxOMsMnBg2NI9Ka1AnsXWU8RSvgnjcZN2qFYvm9exb28gjuW9E8-56H0-c2tecYODfVKunZCwKuM4UerpRWyPPXxGiik__csmpFgUsr2i6n5coo5b8IekXsjwJggy4w5CpXNxXFD-EOkh0lMBLZDWflZ-e3jahMU0eOvcXciRgv4QyFkKBh5A3PcKpfKjeNsbAw","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-09-29T12:57:38Z","created_at":"2019-09-28T07:03:56Z","updated_at":"2019-09-28T07:03:56Z","confirmed_at":"2019-09-28T07:03:56Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Sun, 29 Sep 2019 12:57:38 GMT
+- request:
+    method: post
+    uri: http://verkaeuferportal-api.local/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"josefina@gmail.com","first_name":"Ludie","last_name":"Krause","gender":"female","mobile":"+49
+        158 6670623","phone":"02501 1535684","address":{"street":"Schmidtstr. 93","street_addition":"Apt.
+        210","city":"Gardelegen","zipcode":"78913","country_code":"de"}}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.11.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDM2NjY1OCwianRpIjoiOTMzYTk1MDNjYjZkIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.swxW6w_Pp2_qRt-PE7KUFVCnaxtjpghHSuJeKKllXN903LptsOC-LfFwOR25JiyfxJA9hdeyovQiUKMvFfq5rstJLcQJkHvC0D-DauiQzCIIUxLKhOiXSuGV4f80PryBagkVbWfK_1kKj_Sp88-kFul1iwFCnDKIwHuQ_RU_pHHCYm3fRcPuHZk4ZntL01ql_s-0y7t1wEIVSq1wtZ1q_QXXmpnbZgclv-YFHA_s6MFWChxLwjWmSD7fiVJnltM0hnE7kyL-rFtyLakKIKyivQX5eBUqSJJjD__QvVo8RiQRNrCE3cJybRjp0SS7fg4r8rR7szdKZ4t-p2d2vHBUaQ
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/v1/users/92a9d1ab-7a77-4d4b-b141-60e8d1254209"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"0f52b57ef9a913ffb39f13be3572660d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d9f0408d-53c6-48f7-8fd2-f2d81dd7d354
+      X-Runtime:
+      - '0.039514'
+      Vary:
+      - Origin
+      Content-Length:
+      - '459'
+    body:
+      encoding: UTF-8
+      string: '{"id":"92a9d1ab-7a77-4d4b-b141-60e8d1254209","gid":"gid://verkaeuferportal-api/User/92a9d1ab-7a77-4d4b-b141-60e8d1254209","email":"josefina@gmail.com","first_name":"Ludie","last_name":"Krause","gender":"female","mobile":"+49
+        158 6670623","phone":"02501 1535684","address":{"street":"Schmidtstr. 93","street_addition":"Apt.
+        210","city":"Gardelegen","zipcode":"78913","country_code":"de"},"created_at":"2019-09-29T12:57:38Z","updated_at":"2019-09-29T12:57:38Z"}'
+    http_version: 
+  recorded_at: Sun, 29 Sep 2019 12:57:38 GMT
+- request:
+    method: put
+    uri: http://verkaeuferportal-api.local/v1/users/92a9d1ab-7a77-4d4b-b141-60e8d1254209
+    body:
+      encoding: UTF-8
+      string: '{"address":{"street":"test","street_addition":"Apt. 210","city":"test","zipcode":"00000","country_code":"de"},"last_name":"Mustermann"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.11.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDM2NjY1OCwianRpIjoiOTMzYTk1MDNjYjZkIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.swxW6w_Pp2_qRt-PE7KUFVCnaxtjpghHSuJeKKllXN903LptsOC-LfFwOR25JiyfxJA9hdeyovQiUKMvFfq5rstJLcQJkHvC0D-DauiQzCIIUxLKhOiXSuGV4f80PryBagkVbWfK_1kKj_Sp88-kFul1iwFCnDKIwHuQ_RU_pHHCYm3fRcPuHZk4ZntL01ql_s-0y7t1wEIVSq1wtZ1q_QXXmpnbZgclv-YFHA_s6MFWChxLwjWmSD7fiVJnltM0hnE7kyL-rFtyLakKIKyivQX5eBUqSJJjD__QvVo8RiQRNrCE3cJybRjp0SS7fg4r8rR7szdKZ4t-p2d2vHBUaQ
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"50d2a1d2950f0daad802b91b757d7ad1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a356d5f7-b740-4b5c-8843-f7d866a8cd00
+      X-Runtime:
+      - '0.018570'
+      Vary:
+      - Origin
+      Content-Length:
+      - '447'
+    body:
+      encoding: UTF-8
+      string: '{"id":"92a9d1ab-7a77-4d4b-b141-60e8d1254209","gid":"gid://verkaeuferportal-api/User/92a9d1ab-7a77-4d4b-b141-60e8d1254209","email":"josefina@gmail.com","first_name":"Ludie","last_name":"Mustermann","gender":"female","mobile":"+49
+        158 6670623","phone":"02501 1535684","address":{"street":"test","street_addition":"Apt.
+        210","city":"test","zipcode":"00000","country_code":"de"},"created_at":"2019-09-29T12:57:38Z","updated_at":"2019-09-29T12:57:38Z"}'
+    http_version: 
+  recorded_at: Sun, 29 Sep 2019 12:57:38 GMT
+recorded_with: VCR 3.0.3

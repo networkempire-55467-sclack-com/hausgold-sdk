@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.11.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"1b2115070ec68c61be34d7ad5f9cb42f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c0b59813-b25c-4d0b-a8cf-921ab7d9f227
+      X-Runtime:
+      - '0.078512'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDM2NjY1OCwianRpIjoiYzk3NDVlNjQ1NjA2IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.qJ9wec52sKrnQX1RvhzdCPgS713Jg9wHLtRpuCjo_oGUHveqP69kjcF6D4IVSBOFVsUy9DH3J_TdYjamVZ2K2MdEviXS7NGYSUGwJUYWnmJ0Erg12Zynmj3hP75EEAL3p8pLAkuEY7uNcPoSC0W-ecJRbt-cRhE0_WflJDroQ1xhE1o27FbQMbFYHFOHSnsE4S5tRj053_sM_39y9zGmd9yU34VS66eKgyZCWBO-rVeGUPNDd_FRPL2oTGZLaPEp8rerOkZ5P_Nhc2kkzK3mgT0YI5JTVwrEfh3XVBKhCytsNv3vobmO5OD4Lc39TdRuxJRDjRDU5LAuLUyWcUbO6A","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDk3MTQ1OCwianRpIjoiNTgzZDExYjNiYzcyIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.QWTKSHoQsdU7CjmdfTGCSVXI-0R7WrImYs30fPEbKIvcPS_4rZsrcOOVXIetivz7yn1hbg1v_jj3FMIXRu3CPyOtuXv3v01Yl9FOysbD0t480xEzJemXwGu_ixU_o3X1MldGo0E-2raXVCILq3TrjXiLmWi1W0MhUGfPdnZetC3DqGCfZYgdcaUaWKddwy2JaY1K0uZlnhcPyTTmHwKB8JUpUeD213bdSkPYj41JlHHJZdD_KdiULtbJ1Mjn88OHMi1mOxP8OuAuoVyGYmW164XrGKnzRTaF0lF5rl4WPY8mPCXq6cALddXF8tCDIGEyMRUtbU49ct9GsPPUYOAQJw","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDM2NjY1OCwianRpIjoiYzBkYTE3NGI3NzdkIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.yvFbDAdO9G6myfj2VBeYnNU5C2sHUMqdjKW4l6RAZz-gcQ8hM3ZTW-sZZUa5CxgMLsUDp6g_ErZgROy39b1lfeDDyC2377x2pqhBCCNdUe8WiY72szty01hqHAdzY85ry3uN8rF1k_v8ILC4fJaTg6VYGJ6Rjr2bLUZtA2Fo-xRQfERdJ6EBKYXApioOFvbH2yKNuFMZuq9eQKHLE0TolOTxJDPXM7V_ljqg_plJcP2Uc5-OOaLM8Nb-gMUFbjgbREV5js1ovfzV38njsiTaEanyvpwjMoumS8pVAX6iowOcTswNoWXdONmMc5MOy2VMUrcmA7DB11bmO6e8iDU4gg","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-09-29T12:57:38Z","created_at":"2019-09-28T07:03:56Z","updated_at":"2019-09-28T07:03:56Z","confirmed_at":"2019-09-28T07:03:56Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Sun, 29 Sep 2019 12:57:38 GMT
+- request:
+    method: post
+    uri: http://verkaeuferportal-api.local/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"mertie@hotmail.com","first_name":"Alicia","last_name":"Schwarz","gender":"female","mobile":"+49
+        151 4290500","phone":"07964 4567925","address":{"street":"Yaekoweg 95","street_addition":"Suite
+        775","city":"Nauen","zipcode":"15484","country_code":"at"}}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.11.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDM2NjY1OCwianRpIjoiYzk3NDVlNjQ1NjA2IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.qJ9wec52sKrnQX1RvhzdCPgS713Jg9wHLtRpuCjo_oGUHveqP69kjcF6D4IVSBOFVsUy9DH3J_TdYjamVZ2K2MdEviXS7NGYSUGwJUYWnmJ0Erg12Zynmj3hP75EEAL3p8pLAkuEY7uNcPoSC0W-ecJRbt-cRhE0_WflJDroQ1xhE1o27FbQMbFYHFOHSnsE4S5tRj053_sM_39y9zGmd9yU34VS66eKgyZCWBO-rVeGUPNDd_FRPL2oTGZLaPEp8rerOkZ5P_Nhc2kkzK3mgT0YI5JTVwrEfh3XVBKhCytsNv3vobmO5OD4Lc39TdRuxJRDjRDU5LAuLUyWcUbO6A
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/v1/users/96b48751-7a8f-4214-9c34-4622dab3244c"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"b4494185af97bef87ce59107acba8d98"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 22ee7008-af21-480e-974a-51613989bf20
+      X-Runtime:
+      - '0.017746'
+      Vary:
+      - Origin
+      Content-Length:
+      - '454'
+    body:
+      encoding: UTF-8
+      string: '{"id":"96b48751-7a8f-4214-9c34-4622dab3244c","gid":"gid://verkaeuferportal-api/User/96b48751-7a8f-4214-9c34-4622dab3244c","email":"mertie@hotmail.com","first_name":"Alicia","last_name":"Schwarz","gender":"female","mobile":"+49
+        151 4290500","phone":"07964 4567925","address":{"street":"Yaekoweg 95","street_addition":"Suite
+        775","city":"Nauen","zipcode":"15484","country_code":"at"},"created_at":"2019-09-29T12:57:38Z","updated_at":"2019-09-29T12:57:38Z"}'
+    http_version: 
+  recorded_at: Sun, 29 Sep 2019 12:57:38 GMT
+recorded_with: VCR 3.0.3

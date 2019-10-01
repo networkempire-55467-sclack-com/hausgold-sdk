@@ -121,16 +121,17 @@ module Hausgold
         GlobalID::Locator.locate(GlobalID.parse(gid, **opts))
       end
 
-      # Build a new Global Id URI string from the given components.
+      # Build a new Global Id URI instance from the given components.
       #
       # @param app [String] the application name
       # @param entity [Class, String] the entity name
       # @param id [String] the entity identifier
+      # @param args [Hash{Symbol => Mixed}] additional URI parameters
       # @return [URI::GID] the assembled Global Id URI
       def build_gid(app, entity, id, **args)
         model = entity.to_s.camelcase
         model = entity.name if entity.is_a? Class
-        URI::GID.build(app: app.to_s,
+        URI::GID.build(app: resolve_app(app).to_s,
                        model_name: model.remove(/^Hausgold::/),
                        model_id: id.to_s,
                        **args)

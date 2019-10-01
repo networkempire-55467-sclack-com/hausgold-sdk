@@ -63,7 +63,8 @@ module Hausgold
         #   that's the optimized core
         def each(**args)
           client = entity_class.client_class.new
-          method = "search_#{entity_class.model_name.element.pluralize}"
+          method = \
+            "search_#{entity_class.remote_entity_name.downcase.pluralize}"
           args = { bang: criteria[:raise_errors] }.merge(args)
 
           loop do

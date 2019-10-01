@@ -55,7 +55,7 @@ module Hausgold
         def create(path, attributes = {}, format = :json)
           connection.post do |req|
             req.path = path.to_s
-            req.body = attributes.compact
+            req.body = attributes.deep_compact
             use_format(req, format)
             use_default_context(req)
             use_jwt(req)
@@ -158,7 +158,7 @@ module Hausgold
 
               # By convention the elements are stored under the entity name
               # (snake_case, pluralized)
-              elements_key = #{class_name}.model_name.element.pluralize
+              elements_key = #{class_name}.remote_entity_name.downcase.pluralize
               elements = res.body.send(elements_key)
 
               decision(bang: args.fetch(:bang, false)) do |result|

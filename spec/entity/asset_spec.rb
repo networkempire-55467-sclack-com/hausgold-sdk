@@ -9,6 +9,12 @@ RSpec.describe Hausgold::Asset do
     end
   end
 
+  describe '#remote_entity_name' do
+    it 'returns the correct remote entity name' do
+      expect(instance.remote_entity_name).to be_eql('Asset')
+    end
+  end
+
   describe 'client' do
     it 'sets the client class as module accessor' do
       expect(described_class.client_class).to \

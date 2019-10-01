@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.11.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"0c1a3dfb14874904dbc1436880cf7c1c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f950c7f2-66e5-4074-8608-4fde5c351daa
+      X-Runtime:
+      - '0.075686'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDM2NjY1OCwianRpIjoiMWQ2NTQyMjRhYzgxIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.VAQi1xqC8UZdXYEBdAJZlc6WE1nzheWB788XJK1UKadkWNX2cLZkjPfPQb55yGnF4MU10asZnwa_bLuBSP8FzfWaWfiUFTrC45ypsKFw2yBlV1MIzb4WHtGlpV68Ovb9ozJ0shbTr5jcUz6Zsz4i_nauj67Pu1By1OPOx8WLNpqYnGWSUuoV7M_2aq4EXJ1v3SJz44ThawuJMLr49N1eOnwpkplI4x9vDjCV_wOIlcqpQmjcgSD2R_WLU9agMhGYkio_rRrEbVT4zysRUy6ywR38TWO7DP1VNAsAN7jsImLvS2nzz8WVX4cfRb2gKszF9KQyLJFuvRRqyj-HDOk8ww","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDk3MTQ1OCwianRpIjoiYzI1MmZkYmY2MjkzIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.Cx_EU4fIcaund5bvDo3w3bug7EJwRSHtmHIHkp8KcpTnXG7WISwZwJ0dh6FIBh4UAg92JRks_lqMdBXii8eX_r-VG8mWwo3ovmdS4m2pzF8vHVKz1XJoKjERw7tlb7SN3vqZjKI5PD8APcpdyK17Bt8fEuNPqHC4p3xRtKt_tkv6cZr9LwDL7tExffokSaCrgrzwA1XxXInwn3NP3kZ9-EQf9xcyZQpcTSuI_7zPISkn6eYW5uKSeifYhcSIM-8pWySQ9XD8B5MJ3AYbCSPuJKFM7RbxMLjEIrfqVqC3yFkv7r3yUNIDLOj4SfhmkbYqYysn5RU_Y2Zu13Jk4kJrnA","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDM2NjY1OCwianRpIjoiYmZjOGVmOThmN2E4IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.YCvzea0wrVnBpnzUDKP4W6-BJHBhBVRyb98o-IfOuJc__oXlVP59a13zL4I36x77bbGB2hzrUVdYBUB0TgpomHfGj0xWD9zQ_7awU-um3SeXXgAab2D5p9ZzTFfMIFAIk-eQwpimGuSCDwmcFOkw6HQPcSue77QYgRPEDHN6MiOOS5BzHNjSm21_hegnFl5cdYH976E2LoDJcMxRJo51JTvJwsGxdzWILMeOqnCoM9SSnwP6ZulyQqDpv-CUDzNhGh5dFW1oj6numbAw03-Mw5KwUeecdOmeGRF38PDLp_0CnJTFJFG9xWcJFsxLQAKEgizHUfe5DypuculNz0wYAA","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-09-29T12:57:38Z","created_at":"2019-09-28T07:03:56Z","updated_at":"2019-09-28T07:03:56Z","confirmed_at":"2019-09-28T07:03:56Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Sun, 29 Sep 2019 12:57:38 GMT
+- request:
+    method: post
+    uri: http://verkaeuferportal-api.local/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"jessia_rempel@hotmail.com","first_name":"Myron","last_name":"Reitenbach","gender":"male","mobile":"+49
+        179 8052930","phone":"0659 7854355","address":{"street":"Orlandostr. 39","street_addition":"Apt.
+        797","city":"Dormagen","zipcode":"51164","country_code":"at"}}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.11.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1Njk3NjE4NTgsImV4cCI6MTU3MDM2NjY1OCwianRpIjoiMWQ2NTQyMjRhYzgxIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.VAQi1xqC8UZdXYEBdAJZlc6WE1nzheWB788XJK1UKadkWNX2cLZkjPfPQb55yGnF4MU10asZnwa_bLuBSP8FzfWaWfiUFTrC45ypsKFw2yBlV1MIzb4WHtGlpV68Ovb9ozJ0shbTr5jcUz6Zsz4i_nauj67Pu1By1OPOx8WLNpqYnGWSUuoV7M_2aq4EXJ1v3SJz44ThawuJMLr49N1eOnwpkplI4x9vDjCV_wOIlcqpQmjcgSD2R_WLU9agMhGYkio_rRrEbVT4zysRUy6ywR38TWO7DP1VNAsAN7jsImLvS2nzz8WVX4cfRb2gKszF9KQyLJFuvRRqyj-HDOk8ww
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/v1/users/f23d2e66-03d7-485d-955a-9a31a1d0c4ac"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"5bbdb5181705fef13b769286d2558b9e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f17f6a7e-3a15-4a82-9ec5-e422a19da1a1
+      X-Runtime:
+      - '0.018155'
+      Vary:
+      - Origin
+      Content-Length:
+      - '465'
+    body:
+      encoding: UTF-8
+      string: '{"id":"f23d2e66-03d7-485d-955a-9a31a1d0c4ac","gid":"gid://verkaeuferportal-api/User/f23d2e66-03d7-485d-955a-9a31a1d0c4ac","email":"jessia_rempel@hotmail.com","first_name":"Myron","last_name":"Reitenbach","gender":"male","mobile":"+49
+        179 8052930","phone":"0659 7854355","address":{"street":"Orlandostr. 39","street_addition":"Apt.
+        797","city":"Dormagen","zipcode":"51164","country_code":"at"},"created_at":"2019-09-29T12:57:38Z","updated_at":"2019-09-29T12:57:38Z"}'
+    http_version: 
+  recorded_at: Sun, 29 Sep 2019 12:57:38 GMT
+recorded_with: VCR 3.0.3

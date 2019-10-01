@@ -10,6 +10,14 @@ module Hausgold
                    preferences property-api verkaeuferportal-api
                    maklerportal-api analytic-api].freeze
 
+    # Resolve API service aliases to allow compatibility migrations
+    API_ALIASES = {
+      %i[kundenportal-api] => :'verkaeuferportal-api'
+    }.freeze
+
+    # The full list of all application names, aliases included
+    ALL_API_NAMES = (API_NAMES + API_ALIASES.keys).flatten.uniq.freeze
+
     # Used to identity this client on the user agent header
     config_accessor(:app_name) { Hausgold.local_app_name }
 

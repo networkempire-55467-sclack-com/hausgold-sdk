@@ -4,6 +4,7 @@ module Hausgold
   # The top-level configuration handling.
   #
   # rubocop:disable Style/ClassVars because we split module code
+  # rubocop:disable Metrics/BlockLength because of the ActiveSupport concern
   module ConfigurationHandling
     extend ActiveSupport::Concern
 
@@ -68,11 +69,12 @@ module Hausgold
         local_app = configuration.app_name
         # Return the full list when we should not exclude,
         # or no local app name is available
-        return Configuration::API_NAMES unless exclude_local_app && local_app
+        return Configuration::ALL_API_NAMES \
+          unless exclude_local_app && local_app
 
         # Return the partial list (which may be the full list, when the local
         # application name does not conflict)
-        Configuration::API_NAMES - [local_app.to_sym]
+        Configuration::ALL_API_NAMES - [local_app.to_sym]
       end
 
       # Retrieve the current configured logger instance.
@@ -82,4 +84,5 @@ module Hausgold
     end
   end
   # rubocop:enable Style/ClassVars
+  # rubocop:enable Metrics/BlockLength
 end

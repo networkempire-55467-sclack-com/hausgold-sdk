@@ -66,6 +66,18 @@ RSpec.describe Hausgold::ConfigurationHandling do
   end
 
   describe '.api_names' do
+    let(:all) do
+      %i[
+        asset-api calendar-api identity-api jabber pdf-api preferences
+        property-api verkaeuferportal-api maklerportal-api analytic-api
+        kundenportal-api
+      ]
+    end
+
+    it 'returns the correct list of applications' do
+      expect(described_class.api_names).to be_eql(all)
+    end
+
     context 'with local app exclusion' do
       context 'with app_name configured' do
         before { Hausgold.configuration.app_name = 'identity-api' }
@@ -81,7 +93,7 @@ RSpec.describe Hausgold::ConfigurationHandling do
 
         it 'returns the full list' do
           expect(described_class.api_names(exclude_local_app: true)).to \
-            be_eql(Hausgold::Configuration::API_NAMES)
+            be_eql(Hausgold::Configuration::ALL_API_NAMES)
         end
       end
     end
@@ -92,7 +104,7 @@ RSpec.describe Hausgold::ConfigurationHandling do
 
         it 'returns the full list' do
           expect(described_class.api_names(exclude_local_app: false)).to \
-            be_eql(Hausgold::Configuration::API_NAMES)
+            be_eql(Hausgold::Configuration::ALL_API_NAMES)
         end
       end
 
@@ -101,7 +113,7 @@ RSpec.describe Hausgold::ConfigurationHandling do
 
         it 'returns the full list' do
           expect(described_class.api_names(exclude_local_app: false)).to \
-            be_eql(Hausgold::Configuration::API_NAMES)
+            be_eql(Hausgold::Configuration::ALL_API_NAMES)
         end
       end
     end

@@ -4,6 +4,8 @@ module Hausgold
   module ClientUtils
     # A lot of (D)omain (S)pecific (L)anguage helpers to simplify the client
     # classes.
+    #
+    # rubocop:disable Metrics/BlockLength because of the ActiveSupport concern
     module Dsl
       extend ActiveSupport::Concern
 
@@ -13,8 +15,6 @@ module Hausgold
         # @param name [String, Symbol] the singular entity name
         # @param path [String] the API path of the entity
         # @param args [Hash{Symbol => Mixed}] additional options
-        #
-        #   core of the DSL method
         def entity(name, path, **args)
           update_action_formats(name, **args)
           define_entity_actions(name, path, **args)
@@ -40,6 +40,8 @@ module Hausgold
             .map { |method| "define_entity_#{method}".to_sym }
             .select { |method| respond_to?(method, true) }
             .each { |method| send(method, name, path, class_name) }
+          # Track the entity configurations
+          track_entity(name, path, only, args.merge(class_name: class_name))
         end
 
         # Get back the guessed class name or the explicitly set one.
@@ -64,7 +66,21 @@ module Hausgold
           self.action_formats = action_formats.merge \
             name.to_sym => default_formats.merge(formats)
         end
+
+        # Track a new entity configuration of the client.
+        #
+        # @param name [String, Symbol] the singular entity name
+        # @param path [String] the API path of the entity
+        # @param actions [Array<Symbol>] the actions the entity supports
+        # @param args [Hash{Symbol => Mixed}] additional options
+        def track_entity(name, path, actions, args)
+          self.entities = entities.merge(name => {
+            path: path,
+            actions: actions
+          }.merge(args.except(:formats)))
+        end
       end
     end
+    # rubocop:enable Metrics/BlockLength
   end
 end

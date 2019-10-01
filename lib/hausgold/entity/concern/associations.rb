@@ -44,6 +44,7 @@ module Hausgold
 
           # Instantiate a new entity from the association
           send("#{attribute}=", opts[:class_name].new(hash[key]))
+
           # Strip off the source key, because we mapped it
           struct.delete_field(key)
           hash = hash.delete(key)
@@ -67,13 +68,15 @@ module Hausgold
         # Options
         # * +:class_name+ - the entity class to use, otherwise it is guessed
         # * +:from+ - take the data from this attribute
+        # * +:persist+ - whenever to send the association
+        #                attributes (default: false)
         #
         # @param entity [String, Symbol] the attribute/entity name
         # @param args [Hash{Symbol => Mixed}] additional options
         def has_one(entity, **args)
           # Sanitize options
           entity = entity.to_sym
-          opts = { class_name: nil, from: entity } \
+          opts = { class_name: nil, from: entity, persist: false } \
                  .merge(args).merge(type: :has_one)
           # Resolve the given entity to a class name, when no explicit class
           # name was given via options
@@ -85,6 +88,8 @@ module Hausgold
           associations[entity] = opts
           # Generate getters and setters
           attr_accessor entity
+          # Add the entity to the tracked attributes if it should be persisted
+          tracked_attr entity if opts[:persist]
         end
       end
       # rubocop:enable Naming/PredicateName

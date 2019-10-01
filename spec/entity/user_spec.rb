@@ -13,6 +13,12 @@ RSpec.describe Hausgold::User do
     end
   end
 
+  describe '#remote_entity_name' do
+    it 'returns the correct remote entity name' do
+      expect(instance.remote_entity_name).to be_eql('User')
+    end
+  end
+
   describe 'client' do
     it 'sets the client class as module accessor' do
       expect(described_class.client_class).to \
@@ -119,6 +125,19 @@ RSpec.describe Hausgold::User do
             raise_error(Hausgold::EntityNotFound,
                         'Found Hausgold::Task instead of Hausgold::User')
         end
+      end
+    end
+  end
+
+  describe 'global id' do
+    describe '.to_gid' do
+      it 'returns a new URI::GID instance' do
+        expect(described_class.to_gid('uuid')).to be_a(URI::GID)
+      end
+
+      it 'returns the correct Global Id' do
+        expect(described_class.to_gid('uuid').to_s).to \
+          be_eql('gid://identity-api/User/uuid')
       end
     end
   end

@@ -23,6 +23,7 @@ require 'pp'
 
 # Load polyfills if needed
 require 'hausgold/compatibility'
+require 'hausgold/core_ext/hash'
 
 # The HAUSGOLD SDK namespace. Everything is bundled here.
 module Hausgold
@@ -52,6 +53,7 @@ module Hausgold
   autoload :BaseEntity, 'hausgold/entity/base_entity'
   autoload :Jwt, 'hausgold/entity/jwt'
   autoload :User, 'hausgold/entity/user'
+  autoload :Customer, 'hausgold/entity/customer'
   autoload :Task, 'hausgold/entity/task'
   autoload :Appointment, 'hausgold/entity/appointment'
   autoload :Timeframe, 'hausgold/entity/timeframe'
@@ -62,6 +64,7 @@ module Hausgold
   autoload :NotificationToken, 'hausgold/entity/notification_token'
   autoload :Pdf, 'hausgold/entity/pdf'
   autoload :Property, 'hausgold/entity/property'
+  autoload :Address, 'hausgold/entity/address'
 
   # Some general purpose utilities
   module Utils
@@ -111,6 +114,11 @@ module Hausgold
     autoload :Downloads, 'hausgold/client/pdf_api/downloads'
   end
 
+  # All the separated features of the Verkaeuferportal API client
+  module VerkaeuferportalApi
+    autoload :Users, 'hausgold/client/verkaeuferportal_api/users'
+  end
+
   # Dedicated application HTTP (low level) clients
   module Client
     autoload :Base, 'hausgold/client/base'
@@ -134,6 +142,7 @@ module Hausgold
     autoload :Client, 'hausgold/entity/concern/client'
     autoload :Query, 'hausgold/entity/concern/query'
     autoload :Persistence, 'hausgold/entity/concern/persistence'
+    autoload :GlobalId, 'hausgold/entity/concern/global_id'
   end
 
   # Load standalone code
