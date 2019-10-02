@@ -8,6 +8,10 @@
   allow transparent masquerading on entities (eg. Kundenportal API is mapped to
   Verkaeuferportal API (until migrated) and Verkaeuferportal API/User becomes
   `Hausgold::Customer` on the SDK) (#25)
+* Added Global Id helpers to all `Hausgold::BaseEnity` children, so we support
+  the regular `#to_gid` method on instances and a new, same named helper on
+  class level which allows us to build a `URI::GID` instance easily for a named
+  entity (eg. `Hausgold::Customer.to_gid('uuid')`)
 
 ### 0.11.0
 
