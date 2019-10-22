@@ -116,6 +116,7 @@ ready to use. Here comes a list of them:
 * [Hausgold::NotificationToken](lib/hausgold/entity/notification_token.rb)
 * [Hausgold::Pdf](lib/hausgold/entity/pdf.rb)
 * [Hausgold::Property](lib/hausgold/entity/property.rb)
+* [Hausgold::SearchProfile](lib/hausgold/entity/search_profile.rb)
 * [Hausgold::DataPoint](lib/hausgold/entity/data_point.rb)
 * [Hausgold::DataPointEntity](lib/hausgold/entity/data_point_entity.rb)
 

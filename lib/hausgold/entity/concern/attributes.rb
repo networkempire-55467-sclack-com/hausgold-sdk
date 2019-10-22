@@ -20,7 +20,9 @@ module Hausgold
         # @return [Hash{String => Mixed}] the attribute data
         def attributes
           attribute_names.each_with_object({}) do |key, memo|
-            result = send(key)
+            sanitizer = "sanitize_attr_#{key}".to_sym
+            reader = methods.include?(sanitizer) ? sanitizer : key
+            result = send(reader)
             result = result.attributes if result.respond_to? :attributes
             memo[key.to_s] = result
           end
@@ -200,6 +202,31 @@ module Hausgold
           RUBY
         end
 
+        # Register a casted float attribute.
+        #
+        # @param name [Symbol, String] the name of the attribute
+        # @param _args [Hash{Symbol => Mixed}] additional options
+        def typed_attr_float(name, **_args)
+          class_eval <<-RUBY, __FILE__, __LINE__ + 1
+            def #{name}=(value)
+              #{name}_will_change!
+              value = value.to_f if value.is_a? Numeric
+              value = ::Float::INFINITY if value == 'Infinity'
+
+              @#{name} = value
+
+              # @#{name} = value.finite? ? value : 'Infinity'
+            end
+
+            def sanitize_attr_#{name}
+              return if @#{name}.nil?
+              return 'Infinity' unless @#{name}.finite?
+
+              @#{name}
+            end
+          RUBY
+        end
+
         # Register a casted string inquirer attribute.
         #
         # @param name [Symbol, String] the name of the attribute
@@ -209,6 +236,20 @@ module Hausgold
             def #{name}=(value)
               #{name}_will_change!
               @#{name} = ActiveSupport::StringInquirer.new(value.to_s)
+            end
+          RUBY
+        end
+
+        # Register a casted array inquirer attribute.
+        #
+        # @param name [Symbol, String] the name of the attribute
+        # @param _args [Hash{Symbol => Mixed}] additional options
+        def typed_attr_array_inquirer(name, **_args)
+          class_eval <<-RUBY, __FILE__, __LINE__ + 1
+            def #{name}=(value)
+              #{name}_will_change!
+              value = [value] unless value.is_a? Array
+              @#{name} = ActiveSupport::ArrayInquirer.new(value)
             end
           RUBY
         end

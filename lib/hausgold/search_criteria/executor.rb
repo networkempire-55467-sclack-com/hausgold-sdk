@@ -64,7 +64,7 @@ module Hausgold
         def each(**args)
           client = entity_class.client_class.new
           method = \
-            "search_#{entity_class.remote_entity_name.downcase.pluralize}"
+            "search_#{entity_class.remote_entity_name.underscore.pluralize}"
           args = { bang: criteria[:raise_errors] }.merge(args)
 
           loop do

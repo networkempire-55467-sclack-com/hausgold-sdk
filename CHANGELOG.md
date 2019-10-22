@@ -1,3 +1,7 @@
+### 0.13.0
+
+* Added full featured CRUD support for the `SearchProfile` entity (#28)
+
 ### 0.12.0
 
 * Added the new activation workflow for user accounts which are created

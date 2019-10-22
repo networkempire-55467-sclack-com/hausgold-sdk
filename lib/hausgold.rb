@@ -64,6 +64,7 @@ module Hausgold
   autoload :NotificationToken, 'hausgold/entity/notification_token'
   autoload :Pdf, 'hausgold/entity/pdf'
   autoload :Property, 'hausgold/entity/property'
+  autoload :SearchProfile, 'hausgold/entity/search_profile'
   autoload :Address, 'hausgold/entity/address'
 
   # Some general purpose utilities

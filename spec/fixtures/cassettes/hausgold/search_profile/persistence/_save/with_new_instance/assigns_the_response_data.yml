@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"8e7f742a6631dd7f5e704217860804e0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 05d4aa86-09ea-4aff-b71c-2de05771dfe0
+      X-Runtime:
+      - '0.077146'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzEwNjA1MjcsImV4cCI6MTU3MTY2NTMyNywianRpIjoiOTI5NTFjMWFjNDM1IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.U7oQgcohR1e5qaexqZjOrltHF77MdIFpXfa4QRvIJe8INrCMgZoYDJlamNP8iUP6TE6R-Uju3AHq920WS6p-bQLYmfYQG6MVJPo8jsrKvNtAk9fQdhPgecNBNBeKBBipLzcIdoUeIfRA39AO_qxmzMEcyHjG8pDmv_XhEsxT3YpPl4VEw1uEIp8-fGqR9cpVHwO6ownLD20mlH_2wmHyTUeeCDNQRw1YJFmQd3dpmOErHmVj9QedAalrWQ5eckFiIueah7-N6USW8SixZFlXTMZvEmQzbawE2VSGMCta7-DJ6POiLdYffwNTBew2_WIB24Lfb7FqqiHCSqqsrefrXg","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzEwNjA1MjcsImV4cCI6MTU3MjI3MDEyNywianRpIjoiYmU2N2JkZjAwOGY2IiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.JSjPL0Ddwmqcw_cxzD7AdLo6zS8jrnJgSReYgN5uMHu8s8HaN03DQph-Rpuyz5WYJ0nM5mbLPg8ctOBSmx2fCZ4JiWkWN--yuLb5DQFOdWzZ5MIX-4jvMB2pUXoJ7XRZNn3mpGC96j-BQIPV2WwvUhg81vYgPj8INj9pxE4XpWF2Zq4SPMRwvpkc4XKqecJkvOwDD64HtsktjLnw4n08n82dGDrOe3TcnbGGmPZYQytyavB0AGi_zC_OMRvHzH86p0xG_1mzZI28OWmVw6ocLX1Bcs-wbC9ck0zSeAPe46pzCY1M0FWkt1K2JTL8g6VLJwUv8-GHSn0MXDLExRmx6g","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzEwNjA1MjcsImV4cCI6MTU3MTY2NTMyNywianRpIjoiMjJlY2U3NDFmMWQ1IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.X5LmP_gc-UD9TTnkDPCtrDnLCn1pWNO9InEpXsHUqafni99L6p7K7NMC5UzGwu9vWEd3N4BEEGMNe4bse3L-iQOfjVxtEZiBpMk2mD0IEGAcc28uJMV5bfG6NM2Dndnh-RYx0cKm2OnRoPDP-6nM-YKxsrOxWquA3H89zTBUfGusqhhE3x-_MZsjJMdI2p5jjmH8b2VmpoaZxr6fZeWPEXNdJA3kcYxZ_kIEupxCnoPnGjRjWZBWTM1tJBt5Mxb4AKikMo3OAZBHPp3AykIWDCXLqbEJGsC9eJkoGBi82nscccKlIeQW-U5pgx_FjUf03eQBQCm6_PCtmzoHWPM_mg","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-10-14T13:42:07Z","created_at":"2019-09-28T07:03:56Z","updated_at":"2019-09-28T07:03:56Z","confirmed_at":"2019-09-28T07:03:56Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Mon, 14 Oct 2019 13:42:07 GMT
+- request:
+    method: post
+    uri: http://property-api.local/v1/search_profiles
+    body:
+      encoding: UTF-8
+      string: '{"user_id":"gid://identity-api/User/d7476c18-e0f8-47f6-9362-1aab58bab50d","usages":["investment","residential"],"property_types":["retail","apartment"],"property_subtypes":["hunting_industry_and_forestry","big_store"],"city":"Leipzig","zipcode":"04178","perimeter":283.0,"price_from":0.0,"price_to":237774.0,"year_of_construction_from":0.0,"year_of_construction_to":"Infinity","amount_rooms_from":0.0,"amount_rooms_to":"Infinity","living_space_from":0.0,"living_space_to":"Infinity","land_size_from":0.0,"land_size_to":"Infinity","created_at":"2019-10-13","updated_at":"2019-10-14
+        15:42:07 +0200"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzEwNjA1MjcsImV4cCI6MTU3MTY2NTMyNywianRpIjoiOTI5NTFjMWFjNDM1IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.U7oQgcohR1e5qaexqZjOrltHF77MdIFpXfa4QRvIJe8INrCMgZoYDJlamNP8iUP6TE6R-Uju3AHq920WS6p-bQLYmfYQG6MVJPo8jsrKvNtAk9fQdhPgecNBNBeKBBipLzcIdoUeIfRA39AO_qxmzMEcyHjG8pDmv_XhEsxT3YpPl4VEw1uEIp8-fGqR9cpVHwO6ownLD20mlH_2wmHyTUeeCDNQRw1YJFmQd3dpmOErHmVj9QedAalrWQ5eckFiIueah7-N6USW8SixZFlXTMZvEmQzbawE2VSGMCta7-DJ6POiLdYffwNTBew2_WIB24Lfb7FqqiHCSqqsrefrXg
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/v1/search_profiles/2a4dd170-01ef-42ac-9922-b376b603bd56"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"2ca0467acab99b38ea350aae9adaa24c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ce3b5121-362b-4d24-aca7-38ba4a459717
+      X-Runtime:
+      - '0.011273'
+      Vary:
+      - Origin
+      Content-Length:
+      - '724'
+    body:
+      encoding: UTF-8
+      string: '{"id":"2a4dd170-01ef-42ac-9922-b376b603bd56","gid":"gid://property-api/SearchProfile/2a4dd170-01ef-42ac-9922-b376b603bd56","user_id":"gid://identity-api/User/d7476c18-e0f8-47f6-9362-1aab58bab50d","usages":["investment","residential"],"property_types":["retail","apartment"],"property_subtypes":["hunting_industry_and_forestry","big_store"],"city":"Leipzig","zipcode":"04178","perimeter":283.0,"price_from":0.0,"price_to":237774.0,"year_of_construction_from":0.0,"year_of_construction_to":"Infinity","amount_rooms_from":0.0,"amount_rooms_to":"Infinity","living_space_from":0.0,"living_space_to":"Infinity","land_size_from":0.0,"land_size_to":"Infinity","created_at":"2019-10-14T13:42:07Z","updated_at":"2019-10-14T13:42:07Z"}'
+    http_version: 
+  recorded_at: Mon, 14 Oct 2019 13:42:07 GMT
+recorded_with: VCR 3.0.3

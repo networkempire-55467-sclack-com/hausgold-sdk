@@ -158,7 +158,8 @@ module Hausgold
 
               # By convention the elements are stored under the entity name
               # (snake_case, pluralized)
-              elements_key = #{class_name}.remote_entity_name.downcase.pluralize
+              elements_key = #{class_name}.remote_entity_name
+                                          .underscore.pluralize
               elements = res.body.send(elements_key)
 
               decision(bang: args.fetch(:bang, false)) do |result|
