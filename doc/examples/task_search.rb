@@ -46,8 +46,8 @@ Hausgold::Task.all.count
 # => 0
 begin
   Hausgold::Task.all.raise!.count
-rescue Hausgold::EntitySearchError => err
-  err.message
+rescue Hausgold::EntitySearchError => e
+  e.message
   # => ".. because: user_id, reference_ids are missing,
   #    at least one parameter must be provided"
 end
