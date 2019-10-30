@@ -31,5 +31,23 @@ module Hausgold
     typed_attr :living_space_to, :float
     typed_attr :land_size_from, :float
     typed_attr :land_size_to, :float
+
+    # Search for matching properties with the help of the search profile. It
+    # returns the +Hausgold::SearchCriteria+ which can be customized for
+    # sorting or related actions. By default the sorting is set to newest
+    # created properties first.
+    #
+    # @param args [Hash{Symbol => Mixed}] additional options
+    # @return [Hausgold::SearchCriteria] the criteria object
+    def properties(**args)
+      criteria = Hausgold::SearchCriteria.new(
+        self.class, :search_properties_via_profile, id: id
+      ).sort(created_at: :desc)
+      criteria.raise! if args.fetch(:bang, false)
+      criteria
+    end
+
+    # Generate bang method variants
+    bangers :properties
   end
 end

@@ -5,6 +5,7 @@ module Hausgold
     # A high level client library for the Property API.
     class PropertyApi < Base
       include Hausgold::ClientUtils::GrapeCrud
+      include Hausgold::PropertyApi::SearchProfiles
 
       # Configure the application to use
       app 'property-api'

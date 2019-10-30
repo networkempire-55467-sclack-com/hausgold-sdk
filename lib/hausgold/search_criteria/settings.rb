@@ -14,6 +14,7 @@ module Hausgold
           filters: {},
           limit: 0,
           offset: 0,
+          sort: {},
           raise_errors: false
         }.freeze
 
@@ -58,6 +59,21 @@ module Hausgold
           return criteria[:offset] if count.nil?
 
           criteria[:offset] = count
+          self
+        end
+
+        # Set the new given sorting keys, otherwise return the current set
+        # sorting hash when the +by+ argument is nil. When a new sorting hash
+        # is set we return the criteria instance for method chaining.
+        #
+        # @param by [Hash{Mixed => Symbol}, nil] the sorting
+        #   keys (eg. +created_at: :desc)
+        # @return [Hausgold::SearchCriteria, Hash{Symbol => Symbol}] the
+        #   current criteria instance or the current set sorting hash
+        def sort(by = {})
+          return criteria[:sort] if by.empty?
+
+          criteria[:sort] = by.symbolize_keys.transform_values(&:to_sym)
           self
         end
 

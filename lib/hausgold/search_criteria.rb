@@ -5,8 +5,8 @@ module Hausgold
   # support a filter chaining interface like ActiveRecord to provide a powerful
   # method to build queries.
   class SearchCriteria
-    attr_accessor :max_per_page
-    attr_reader :entity_class
+    attr_accessor :max_per_page, :client_method_args
+    attr_reader :entity_class, :client_method
 
     include Hausgold::Search::Settings
     include Hausgold::Search::Paging
@@ -17,9 +17,18 @@ module Hausgold
     # class to manage the requests by the entity-client.
     #
     # @param entity_class [Class] the resulting entity class for the search
-    def initialize(entity_class)
-      @entity_class = entity_class
+    # @param client_method [String, Symbol, nil] the client method to use
+    #   for search, by default it is build by convention to
+    #   +search_#{entity_class.remote_entity_name} (snake_case, plural)
+    # @param client_method_args [Hash{Mixed => Mixed}] additional arguments
+    #   for the client method, they will be merged with runtime arguments
+    def initialize(entity_class, client_method = nil, client_method_args = {})
       @max_per_page = 250
+      @entity_class = entity_class
+      @client_method = client_method
+      @client_method ||= "search_#{entity_class.remote_entity_name
+                                               .underscore.pluralize}"
+      @client_method_args = client_method_args
     end
 
     # Print a nice but lean criteria information string for the current
@@ -28,8 +37,8 @@ module Hausgold
     # @return [String] the inspection output
     def inspect
       "#<#{self.class.name} filters=#{where}, offset=#{offset}, " \
-        "limit=#{limit}, pages=#{pages}, per_page=#{per_page}, " \
-        "slice=#{result_slice}>"
+        "limit=#{limit}, sort=#{sort}, pages=#{pages}, " \
+        "per_page=#{per_page}, slice=#{result_slice}>"
     end
   end
 end

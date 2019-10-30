@@ -9,6 +9,8 @@ RSpec.describe Hausgold::SearchProfile do
        living_space_from living_space_to land_size_from land_size_to created_at
        updated_at]
   end
+  let(:user_uuid) { 'f6d37ee5-66c7-4bdd-b987-f5261c01fa62' }
+  let(:user_gid) { Hausgold::Customer.to_gid(user_uuid) }
 
   describe '#entity_name' do
     it 'returns the correct entity name' do
@@ -75,8 +77,6 @@ RSpec.describe Hausgold::SearchProfile do
   end
 
   describe 'query' do
-    let(:user_uuid) { 'f6d37ee5-66c7-4bdd-b987-f5261c01fa62' }
-    let(:user_gid) { Hausgold::Customer.to_gid(user_uuid) }
     let(:valid) { build(:search_profile, user_id: user_gid) }
     let(:uuid) { valid.id }
     let(:gid) { valid.gid }
@@ -85,7 +85,7 @@ RSpec.describe Hausgold::SearchProfile do
 
     before { valid.save! }
 
-    describe '#find' do
+    describe '.find' do
       context 'with internal uuid' do
         it 'finds the expected instance' do
           expect(described_class.find(uuid).id).to be_eql(uuid)
@@ -117,7 +117,7 @@ RSpec.describe Hausgold::SearchProfile do
       end
     end
 
-    describe '#find_by' do
+    describe '.find_by' do
       let(:search_profile) { described_class.find_by(user_id: user_gid) }
 
       it 'returns a Hausgold::SearchProfile instance' do
@@ -126,6 +126,90 @@ RSpec.describe Hausgold::SearchProfile do
 
       it 'returns nil when not found' do
         expect(described_class.find_by(text: 'Unknown')).to be(nil)
+      end
+    end
+  end
+
+  describe '#properties' do
+    let(:search_profile) do
+      described_class.new(user_id: SecureRandom.uuid,
+                          city: 'Leipzig',
+                          property_types: %i[house site apartment])
+    end
+
+    describe 'mechanics' do
+      before { search_profile.id = '795a28df-9d34-404b-9c34-dc55364c9e30' }
+
+      it 'returns a Hausgold::SearchCriteria instance' do
+        expect(search_profile.properties).to be_a(Hausgold::SearchCriteria)
+      end
+
+      it 'sets the default sorting' do
+        expect(search_profile.properties.sort).to be_eql(created_at: :desc)
+      end
+
+      it 'passes down the bang variant' do
+        expect(search_profile.properties!.criteria).to \
+          include(raise_errors: true)
+      end
+
+      it 'sets the correct entity class' do
+        expect(search_profile.properties.entity_class).to \
+          be(described_class)
+      end
+
+      it 'sets the correct client method' do
+        expect(search_profile.properties.client_method).to \
+          be_eql(:search_properties_via_profile)
+      end
+
+      it 'sets the search profile id to the additional arguments' do
+        expect(search_profile.properties.client_method_args).to \
+          include(id: search_profile.id)
+      end
+
+      it 'respects reordering' do
+        expect(search_profile.properties.sort(price: :desc).criteria).to \
+          include(sort: { price: :desc })
+      end
+    end
+
+    describe 'error handling' do
+      it 'raises an EntityNotFound error on unknown search profile' do
+        search_profile.id = '795a28df-9d34-404b-9c34-dc55364c9e30'
+        expect { search_profile.properties!.to_a }.to \
+          raise_error(Hausgold::EntityNotFound, /#{search_profile.id}/)
+      end
+
+      it 'raises an EntityNotFound error on unpersisted search profile' do
+        expect { search_profile.properties!.to_a }.to \
+          raise_error(Hausgold::EntityNotFound, /id=>false/)
+      end
+
+      it 'returns an empty list on unpersisted search profile' do
+        expect(search_profile.properties.to_a).to be_eql([])
+      end
+    end
+
+    describe 'results' do
+      before { search_profile.save! }
+
+      it 'returns an array of Hausgold::Property instances' do
+        expect(search_profile.properties.to_a).to all(be_a(Hausgold::Property))
+      end
+
+      it 'returns the correct result count' do
+        expect(search_profile.properties.count).to be(1)
+      end
+
+      it 'returns the correct properties (first, city)' do
+        expect(search_profile.properties.first.object_details[:city]).to \
+          be_eql('Leipzig')
+      end
+
+      it 'returns the correct properties (first, street)' do
+        expect(search_profile.properties.first.object_details[:street]).to \
+          be_eql('Smaragdstraße 24')
       end
     end
   end

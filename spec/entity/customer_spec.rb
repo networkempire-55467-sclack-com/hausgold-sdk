@@ -155,7 +155,7 @@ RSpec.describe Hausgold::Customer do
   end
 
   describe 'query' do
-    describe '#find' do
+    describe '.find' do
       let(:uuid) { '1c3ae1e2-097a-42a2-bc11-cc7f4ee9121e' }
       let(:unknown_uuid) { '7775b36b-d4ab-4c69-9e24-352d6a35b8b9' }
       let(:gid) { "gid://verkaeuferportal-api/User/#{uuid}" }
@@ -191,7 +191,7 @@ RSpec.describe Hausgold::Customer do
       end
     end
 
-    describe '#find_by' do
+    describe '.find_by' do
       let(:customer) { described_class.find_by(text: '@example.com') }
 
       it 'returns a Hausgold::Customer instance' do

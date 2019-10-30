@@ -80,6 +80,15 @@ module Hausgold
         def offset(count)
           Hausgold::SearchCriteria.new(self).offset(count)
         end
+
+        # Define the sorting of the result.
+        #
+        # @param by [Hash{Mixed => Symbol}] the sorting
+        #   keys (eg. +created_at: :desc)
+        # @return [Hausgold::SearchCriteria] the criteria object
+        def sort(by = {})
+          Hausgold::SearchCriteria.new(self).sort(**by)
+        end
       end
     end
   end

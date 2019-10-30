@@ -116,6 +116,11 @@ module Hausgold
     autoload :Downloads, 'hausgold/client/pdf_api/downloads'
   end
 
+  # All the separated features of the Property API client
+  module PropertyApi
+    autoload :SearchProfiles, 'hausgold/client/property_api/search_profiles'
+  end
+
   # All the separated features of the Verkaeuferportal API client
   module VerkaeuferportalApi
     autoload :Users, 'hausgold/client/verkaeuferportal_api/users'

@@ -63,16 +63,15 @@ module Hausgold
         #   that's the optimized core
         def each(**args)
           client = entity_class.client_class.new
-          method = \
-            "search_#{entity_class.remote_entity_name.underscore.pluralize}"
-          args = { bang: criteria[:raise_errors] }.merge(args)
+          args = { bang: criteria[:raise_errors] }
+                 .merge(client_method_args).merge(args)
 
           loop do
             begin
               # The search request driver MAY raise errors or pass back +nil+
               # on errors for silent processing. We need to handle this and
               # cast them to empty pages.
-              page = client.send(method, self, args) || []
+              page = client.send(client_method, self, **args) || []
               transmission_count = page.count
 
               # Take care of the offset slicing when we are on the first page

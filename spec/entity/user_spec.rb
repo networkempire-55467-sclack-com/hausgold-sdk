@@ -92,7 +92,7 @@ RSpec.describe Hausgold::User do
   end
 
   describe 'query' do
-    describe '#find' do
+    describe '.find' do
       let(:uuid) { 'bf136aed-0259-4458-8cf7-762553eebfc2' }
       let(:unknown_uuid) { '94cccc31-630e-40d5-8100-5ce6bc95fd12' }
       let(:gid) { "gid://identity-api/User/#{uuid}" }

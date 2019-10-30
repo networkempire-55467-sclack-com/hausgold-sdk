@@ -8,13 +8,15 @@ RSpec.describe Hausgold::Search::Settings do
 
     it 'returns the default settings' do
       expect(criteria.criteria).to \
-        match(filters: {}, limit: 0, offset: 0, raise_errors: false)
+        match(filters: {}, limit: 0, offset: 0,
+              raise_errors: false, sort: {})
     end
 
     it 'returns changed settings' do
       instance = criteria.tap { |obj| obj.limit(123) }
       expect(instance.criteria).to \
-        match(filters: {}, limit: 123, offset: 0, raise_errors: false)
+        match(filters: {}, limit: 123, offset: 0,
+              raise_errors: false, sort: {})
     end
   end
 
@@ -83,6 +85,28 @@ RSpec.describe Hausgold::Search::Settings do
       it 'returns the offset' do
         instance = criteria
         expect(instance.offset).to be(0)
+      end
+    end
+  end
+
+  describe '#sort' do
+    context 'with by' do
+      it 'returns itself' do
+        instance = criteria
+        expect(instance.sort('created_at' => 'desc')).to be(instance)
+      end
+
+      it 'sets the new sorting hash' do
+        instance = criteria
+        expect(instance.sort('created_at' => 'desc').criteria).to \
+          include(sort: { created_at: :desc })
+      end
+    end
+
+    context 'without by' do
+      it 'returns the sorting hash' do
+        instance = criteria
+        expect(instance.sort).to be_eql({})
       end
     end
   end

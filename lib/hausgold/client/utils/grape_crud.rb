@@ -106,8 +106,13 @@ module Hausgold
         # @param criteria [Hausgold::SearchCriteria] the search criteria
         # @return [Hash{Symbol => Mixed}] the search parameters
         def criteria_to_filters(criteria)
-          criteria.where.merge(page: criteria.current_page,
-                               per_page: criteria.per_page)
+          sort = criteria.sort.map do |key, dir|
+            (dir == :desc ? '-' : '') + key.to_s
+          end.join(',')
+          res = criteria.where.merge(page: criteria.current_page,
+                                     per_page: criteria.per_page)
+          res = res.merge(sort: sort) if sort.present?
+          res
         end
       end
 
@@ -151,7 +156,8 @@ module Hausgold
             #
             # @param criteria [Hausgold::SearchCriteria] the search criteria
             # @param args [Hash{Symbol => Mixed}] additional options
-            # @return [#{class_name}, nil] the entity, or +nil+ on error
+            # @return [Array<#{class_name}>, nil] the entities, or +nil+
+            #   on error
             def search_#{name.to_s.pluralize}(criteria, **args)
               filters = criteria_to_filters(criteria)
               res = search('#{path}', filters, format(:#{name}, :search))

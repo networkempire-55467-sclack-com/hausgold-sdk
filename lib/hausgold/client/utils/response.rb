@@ -149,6 +149,7 @@ module Hausgold
           env = con.builder.build_env(con, con.build_request(:options))
           env.status = 404
           env.reason_phrase = 'Not found'
+          env.body = RecursiveOpenStruct.new
           res = Faraday::Response.new
           env.response = res
           res.finish(env)

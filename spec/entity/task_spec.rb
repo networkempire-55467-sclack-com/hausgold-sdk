@@ -637,7 +637,7 @@ RSpec.describe Hausgold::Task do
     let(:user_id) { '96092fa8-707d-4fe6-af5e-4898b9d87a90' }
     let(:unknown_user_id) { '7775b36b-d4ab-4c69-9e24-352d6a35b8b9' }
 
-    describe '#find' do
+    describe '.find' do
       let(:uuid) { 'c150681f-c514-438a-8413-7c8f24a5f9dd' }
       let(:unknown_uuid) { '94cccc31-630e-40d5-8100-5ce6bc95fd12' }
       let(:gid) { "gid://calendar-api/Task/#{uuid}" }
@@ -673,7 +673,7 @@ RSpec.describe Hausgold::Task do
       end
     end
 
-    describe '#find_by' do
+    describe '.find_by' do
       let(:task) { described_class.find_by(user_id: user_id, text: 'Task #5') }
 
       it 'returns a Hausgold::Task instance' do
@@ -699,7 +699,7 @@ RSpec.describe Hausgold::Task do
       end
     end
 
-    describe '#all' do
+    describe '.all' do
       let(:action) { described_class.all }
 
       it 'returns a Hausgold::SearchCriteria instance' do
@@ -707,7 +707,7 @@ RSpec.describe Hausgold::Task do
       end
     end
 
-    describe '#where' do
+    describe '.where' do
       let(:action) { described_class.where(user_id: user_id) }
 
       it 'returns a Hausgold::SearchCriteria instance' do
@@ -719,7 +719,7 @@ RSpec.describe Hausgold::Task do
       end
     end
 
-    describe '#limit' do
+    describe '.limit' do
       let(:action) { described_class.limit(34) }
 
       it 'returns a Hausgold::SearchCriteria instance' do
@@ -731,7 +731,7 @@ RSpec.describe Hausgold::Task do
       end
     end
 
-    describe '#offset' do
+    describe '.offset' do
       let(:action) { described_class.offset(14) }
 
       it 'returns a Hausgold::SearchCriteria instance' do

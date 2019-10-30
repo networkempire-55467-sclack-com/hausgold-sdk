@@ -31,4 +31,36 @@ RSpec.describe Hausgold::Property do
       end
     end
   end
+
+  describe 'query' do
+    describe '.sort' do
+      let(:action) { proc { |**params| described_class.sort(**params) } }
+      let(:details) do
+        proc do |results, key|
+          results.map(&:object_details).map { |details| details[key] }
+        end
+      end
+
+      context 'with city asc' do
+        it 'returns the properties in correct order' do
+          expect(details[action[city: :asc], :city]).to \
+            be_eql(%w[Amberg Augsburg Flemlingen Hof Leipzig Tröstau Trusetal])
+        end
+      end
+
+      context 'with city desc' do
+        it 'returns the properties in correct order' do
+          expect(details[action[city: :desc], :city]).to \
+            be_eql(%w[Trusetal Tröstau Leipzig Hof Flemlingen Augsburg Amberg])
+        end
+      end
+
+      context 'with postal code desc' do
+        it 'returns the properties in correct order' do
+          expect(details[action[postal_code: :desc], :postal_code]).to \
+            be_eql(%w[98596 95709 95032 92224 86150 76835 04319])
+        end
+      end
+    end
+  end
 end

@@ -2,7 +2,7 @@
 
 RSpec.describe Hausgold::SearchCriteria do
   describe 'handling' do
-    describe '#find_by' do
+    describe '.find_by' do
       let(:action) { Hausgold::User.find_by(email: email) }
       let(:email) { 'test@example.com' }
 
@@ -25,7 +25,7 @@ RSpec.describe Hausgold::SearchCriteria do
       end
     end
 
-    describe '#find_by!' do
+    describe '.find_by!' do
       let(:action) { Hausgold::User.find_by!(email: email) }
       let(:email) { 'test@example.com' }
 

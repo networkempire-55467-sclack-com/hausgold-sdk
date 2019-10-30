@@ -4,6 +4,12 @@
 * Added an initial client for the Maklerportal API (version 2) with
   support for the remote user entity, locally called `Hausgold::Broker` (#29)
 * Added the `Hausgold::Broker` entity with CRUD support (#29)
+* Added support for fetching matching properties (`Hausgold::Property`)
+  via the search profile (#30)
+* Enhanced the search subsystem to allow more flexible configuration (eg.
+  client method, additional client method arguments) and added support for a
+  generalized sorting. The Grape CRUD adapter makes use of the new sorting
+  filters from now on, but not all APIs support it yet.
 
 ### 0.12.0
 
