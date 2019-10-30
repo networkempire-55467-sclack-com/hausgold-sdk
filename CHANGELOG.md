@@ -1,6 +1,9 @@
 ### 0.13.0
 
 * Added full featured CRUD support for the `SearchProfile` entity (#28)
+* Added an initial client for the Maklerportal API (version 2) with
+  support for the remote user entity, locally called `Hausgold::Broker` (#29)
+* Added the `Hausgold::Broker` entity with CRUD support (#29)
 
 ### 0.12.0
 

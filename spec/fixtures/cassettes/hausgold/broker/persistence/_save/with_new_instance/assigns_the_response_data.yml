@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"c01a962cbee55ebdec2b1c2ceba7ab31"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5301aadb-5ec7-49b5-83fc-dab01e6f92bc
+      X-Runtime:
+      - '0.074338'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3Mjk1OTAzMCwianRpIjoiMmQwNzUxNWEyNzQ2IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.TLUUKremjvuIGgrp7r-LHtG1JIywNysnhOYSRcz1s8w5rNhzLJKuVUswcqktdcqxiWeytES0dNjCBomSiLSg8lSKNSoJmcUv5E7QettHtXWGAjbMMRN-GUb8uKo_yHVEk0vwZbpZUo8dvQ8F3spQrmWbJ8LG_jBXadGC0awTHo98HpIcatmgZOw8dwkyvzynfMPvjMV2gGfG9kcjRptl97WCY_wCoTVQm4plO1aJaZHIVINJdWDbDTfwVMnvs4aDQWjVCxLRohZ3rPAvnLo4hqtkAz50v-EBGrfFlTcdvVjcuNZzIoxG_B8Bp0JZl61pSutVGZoA4Ek_HFjNPcrRAw","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3MzU2MzgzMCwianRpIjoiMGE4OGFhNzZkZTZiIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.DmFcjQqFUAlhoXnli8mWf300i66Jquel-53M3clwsyKOH_n733PIL1A7MYwphx8AJle5esWNakO5mjlJrFp-QG_gwmhrgMInct8JUvwyklFkBye7vBHdlHIJTMKck4P-nG-bQPVQxXmoh9_iy2LzT4b8WWadoPAIqMeTlx_R-2PLzLFRJdhOGAfCFG1eQzhij5NezIfKOTo7rSzT-vjYmz8xX041Rq-C8Cc6MJybONcizgy_srMDVZGz1L6T87oR44P5OIVQnDylCDDMXwpgXrE-VypSUd3sqwbguxFnaVuFhOV09H54BSr7cCgbDplRSZ1itcOlcViRzuf-MxtzxQ","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3Mjk1OTAzMCwianRpIjoiMGQ2MzNjNmM1ZWEwIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.ymgPfeypEP9ihCCW8diKtLsNoQXv-7vfGmdBHQpXAPQ3Fn6ubOGDALevZtNBt67a8DW3QiKUk15YRAwCuFyY0oGmuRTfTSCTez7h_UiSjwXNPdFZ6k0CanzCmV3ppbb_cU95D-XdOStXtFtXldYo0W3YypDrqmf9DmUxSA-8sqfa5ICij0UtpR94xmCHRJo1WNJdjoUbxLkywZ-gsf3HrS5PxzcReAvqsFHEIJbL9Nu7ldgpfjBn0Fcja6hX1bYc9gw2bx--md7WpR6c60opavBphj4Pia9e671ERXsPGV3STFxWA384rmsb16EDO484Lwjmg7uunzHnQvEVN-jgcQ","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-10-29T13:03:50Z","created_at":"2019-10-29T10:06:35Z","updated_at":"2019-10-29T10:06:35Z","confirmed_at":"2019-10-29T10:06:34Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:03:50 GMT
+- request:
+    method: post
+    uri: http://maklerportal-api.local/v2/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"aurore.kub@yahoo.com","first_name":"Noella","last_name":"Frank","gender":"female","contact_phone":"+49
+        178 3221355","password":"password"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3Mjk1OTAzMCwianRpIjoiMmQwNzUxNWEyNzQ2IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.TLUUKremjvuIGgrp7r-LHtG1JIywNysnhOYSRcz1s8w5rNhzLJKuVUswcqktdcqxiWeytES0dNjCBomSiLSg8lSKNSoJmcUv5E7QettHtXWGAjbMMRN-GUb8uKo_yHVEk0vwZbpZUo8dvQ8F3spQrmWbJ8LG_jBXadGC0awTHo98HpIcatmgZOw8dwkyvzynfMPvjMV2gGfG9kcjRptl97WCY_wCoTVQm4plO1aJaZHIVINJdWDbDTfwVMnvs4aDQWjVCxLRohZ3rPAvnLo4hqtkAz50v-EBGrfFlTcdvVjcuNZzIoxG_B8Bp0JZl61pSutVGZoA4Ek_HFjNPcrRAw
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/users/0c130d32-8e49-4cf4-bfe5-ad42f1a61afa"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"b56a124184362a333abb9d607419846a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 594be3d4-09d4-46c4-ad02-f07769eab115
+      X-Runtime:
+      - '0.079392'
+      Vary:
+      - Origin
+      Content-Length:
+      - '485'
+    body:
+      encoding: UTF-8
+      string: '{"id":"0c130d32-8e49-4cf4-bfe5-ad42f1a61afa","gid":"gid://maklerportal-api/User/0c130d32-8e49-4cf4-bfe5-ad42f1a61afa","customer_id":null,"email":"aurore.kub@yahoo.com","contact_email":"aurore.kub@yahoo.com","unconfirmed_email":null,"first_name":"Noella","last_name":"Frank","gender":"female","locale":"de-DE","contact_id":null,"contact_phone":"+49
+        178 3221355","created_at":"2019-10-29T14:03:50+01:00","updated_at":"2019-10-29T14:03:50+01:00","confirmed_at":null,"deactivated_at":null}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:03:50 GMT
+recorded_with: VCR 3.0.3

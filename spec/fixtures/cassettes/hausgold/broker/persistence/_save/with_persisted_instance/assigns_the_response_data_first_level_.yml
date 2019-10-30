@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"71901e99bc329cacff4a29906e3d1b86"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 141292ca-8cc1-4481-8a10-febf8aa4820e
+      X-Runtime:
+      - '0.074578'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzEsImV4cCI6MTU3Mjk1OTAzMSwianRpIjoiMWZmZjI1YTU2NDMzIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.0QpagVSQJY-IFbJS-deBXPQ3_h53EsR4q_dbNijDklnHERhUN5VRpUIfa8wdiXbc6gpbtHAZJZhK2Xj4gLYQ9p3gj0nHz73YTGGuwYbNICIFMHm9_ioo7J7QlUCMb-E6uOyr_OpETJq2bqvbXQmJHcEfBumIJGote-WAO-rQiz81c6KAl9dFd-BuZZYC0BrgWq1ViYxLtu007m9H7NOynk2gtkS5ELkoCR4sFu_O5hhgPG71dEHpqNQkVB8PhMQxtkyCmHSkoZUOMhkfIM6f0Gpxm4Swdq4Fki3mncMolaLNCS0D-in3wZqAPtQzjs6axDOUU7vOttfSVFNXbLS0aA","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzEsImV4cCI6MTU3MzU2MzgzMSwianRpIjoiZjU0MTU2Njg0ZmU3IiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.zycc7zBg9hqruIK5MmJGONNFg8kPsqEc7dJHcWzqQnmzNjUNTGJFh568p_pkYAFhVQGVj1zealLkD0gLRvlCU2xKM79S9S_0pGAWT0_lT93N7G3Tzu3dF-zPPl53GjsNrIA-qR90_DToClp6_HUX4nrAGHC2Gge6YDEofeJqRKN51uAlRlF_0rjMxqRvuShdchekilICAyPPaYLmLIqivzvvu46T5crkIOhAis9xa1ySgz5I7EPBGYDlOjea9bcu6qyUEmj71PQ4b4FHGUFEeqZnbTHZkfYcSA8KtXpSgbonps1yNOCAICvuj5f5zjexZXlFGpI3h7BXBpG_hiSVng","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzEsImV4cCI6MTU3Mjk1OTAzMSwianRpIjoiNzU3ZmQwMDVhZjBkIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.NEN0AnKFRYsIOvputRb7bdbrSybKAg3eouSMrH5ZMb3XdRovuRZbnSniByA66wMy9_Es319_Utftl_l20digtDhUeHTBr8SAGqYFMpqJXI-MDhNiRLwbO4nLasCPS4JEPVFIH89O-XjMPSxgkmdRlx7CdVtz9wBXkTBzT53-zIXLDJxklfGszJbCk-YDMKTWh0dbruCkm2BsdxhPQMabIqzwc1NXdEn1I51YBb9IzOSURWya-ZQL9BLnM-vQKOpRji31SCCId5hBsYbKrSjRjKlqyuDFv7YxSgecg14w6gV-UxZ2VDcaph4qhkbKc5pXQsVUOaoK7FPh1nkYzS9AMg","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-10-29T13:03:51Z","created_at":"2019-10-29T10:06:35Z","updated_at":"2019-10-29T10:06:35Z","confirmed_at":"2019-10-29T10:06:34Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:03:51 GMT
+- request:
+    method: post
+    uri: http://maklerportal-api.local/v2/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"carla_schiller@yahoo.com","first_name":"Sanford","last_name":"Graf","gender":"male","contact_phone":"+49
+        171 4875606","password":"password"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzEsImV4cCI6MTU3Mjk1OTAzMSwianRpIjoiMWZmZjI1YTU2NDMzIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.0QpagVSQJY-IFbJS-deBXPQ3_h53EsR4q_dbNijDklnHERhUN5VRpUIfa8wdiXbc6gpbtHAZJZhK2Xj4gLYQ9p3gj0nHz73YTGGuwYbNICIFMHm9_ioo7J7QlUCMb-E6uOyr_OpETJq2bqvbXQmJHcEfBumIJGote-WAO-rQiz81c6KAl9dFd-BuZZYC0BrgWq1ViYxLtu007m9H7NOynk2gtkS5ELkoCR4sFu_O5hhgPG71dEHpqNQkVB8PhMQxtkyCmHSkoZUOMhkfIM6f0Gpxm4Swdq4Fki3mncMolaLNCS0D-in3wZqAPtQzjs6axDOUU7vOttfSVFNXbLS0aA
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/users/0011c9f0-8203-4b2a-b6e6-4eb8653ad23d"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"70170d0a3816783fc8b0dd80edc6afc1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5d06af7a-94d6-49d7-92c7-7ed1502519e4
+      X-Runtime:
+      - '0.072568'
+      Vary:
+      - Origin
+      Content-Length:
+      - '491'
+    body:
+      encoding: UTF-8
+      string: '{"id":"0011c9f0-8203-4b2a-b6e6-4eb8653ad23d","gid":"gid://maklerportal-api/User/0011c9f0-8203-4b2a-b6e6-4eb8653ad23d","customer_id":null,"email":"carla_schiller@yahoo.com","contact_email":"carla_schiller@yahoo.com","unconfirmed_email":null,"first_name":"Sanford","last_name":"Graf","gender":"male","locale":"de-DE","contact_id":null,"contact_phone":"+49
+        171 4875606","created_at":"2019-10-29T14:03:51+01:00","updated_at":"2019-10-29T14:03:51+01:00","confirmed_at":null,"deactivated_at":null}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:03:51 GMT
+- request:
+    method: put
+    uri: http://maklerportal-api.local/v2/users/0011c9f0-8203-4b2a-b6e6-4eb8653ad23d
+    body:
+      encoding: UTF-8
+      string: '{"last_name":"Mustermann"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzEsImV4cCI6MTU3Mjk1OTAzMSwianRpIjoiMWZmZjI1YTU2NDMzIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.0QpagVSQJY-IFbJS-deBXPQ3_h53EsR4q_dbNijDklnHERhUN5VRpUIfa8wdiXbc6gpbtHAZJZhK2Xj4gLYQ9p3gj0nHz73YTGGuwYbNICIFMHm9_ioo7J7QlUCMb-E6uOyr_OpETJq2bqvbXQmJHcEfBumIJGote-WAO-rQiz81c6KAl9dFd-BuZZYC0BrgWq1ViYxLtu007m9H7NOynk2gtkS5ELkoCR4sFu_O5hhgPG71dEHpqNQkVB8PhMQxtkyCmHSkoZUOMhkfIM6f0Gpxm4Swdq4Fki3mncMolaLNCS0D-in3wZqAPtQzjs6axDOUU7vOttfSVFNXbLS0aA
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"28014dedb0d51a7ed9a9dfff95d4a5c7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bb79530f-69d0-4d1f-8c04-4b670f2db9b5
+      X-Runtime:
+      - '0.013433'
+      Vary:
+      - Origin
+      Content-Length:
+      - '497'
+    body:
+      encoding: UTF-8
+      string: '{"id":"0011c9f0-8203-4b2a-b6e6-4eb8653ad23d","gid":"gid://maklerportal-api/User/0011c9f0-8203-4b2a-b6e6-4eb8653ad23d","customer_id":null,"email":"carla_schiller@yahoo.com","contact_email":"carla_schiller@yahoo.com","unconfirmed_email":null,"first_name":"Sanford","last_name":"Mustermann","gender":"male","locale":"de-DE","contact_id":null,"contact_phone":"+49
+        171 4875606","created_at":"2019-10-29T14:03:51+01:00","updated_at":"2019-10-29T14:03:51+01:00","confirmed_at":null,"deactivated_at":null}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:03:51 GMT
+recorded_with: VCR 3.0.3

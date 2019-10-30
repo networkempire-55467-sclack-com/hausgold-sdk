@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"baa180995d11dc6f31538a9f94ae3a6a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c789c0f3-b04f-4dee-a5d9-60cccfe2f1c6
+      X-Runtime:
+      - '0.078695'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTE5MjAsImV4cCI6MTU3Mjk1NjcyMCwianRpIjoiYzMwNzc3ZmQwOTBiIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.LWjK-DryVpaK6U-0rngq9VwIpr44uN2-KGQ9MKOdJ8RSBHrD2K_pfuvhbQCxiVoLJdwePyCSeQpQEVuJaRtzV3GcO4MvsNZDPlf1BonqhKDwHIUBvTQ87MG_wMkR1uf4ckmYW6ttO-ntP_FTPVQAKlUyYrWEqoW_ZJ37KdsrDL4aXj1GJZESbjT_Ro8dIP1X-UIg87aI8RRUp0bz6dfRBEtJ8riLV8ol4BAdOMVl7CI7QghKnpeWpiI27LfTP9WFKkm4A_na-SDiDVUnUyaQiMRHouCrbwqRMwwSQStLZ6bRcZHxydrgUWurczJ7BsY6woV4J6ZUQ_VIvITjom_Fxw","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTE5MjAsImV4cCI6MTU3MzU2MTUyMCwianRpIjoiMWMxOGRlZWRhMmM2IiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.iJlWyAPQCA-XelD0JNHbS0EPC2frCRAcCCCJMInWZ_SnN4es3lEAtsEXvzk0Ctc6ojdDHYgoHvVXH-3ha6pZRTOrzTqUJoIF-4xSSyvyqz0TqWpBKTjeYLgr5AuS1EW4TeT_6LSX2853hbnLG-s_vfKkH6C1JTiTSxavikCjigc3h7a6vYr8ZV8LbbRxWhOuNlTT2L16kP4f0aZe_J4qbplUtcNmD-kMJQytghvAROeit843C-6nORyYRP-rMyWbgwxP_dFm2bm1kzcHtzPJo6RnM4yWnyJu0ZwLlGjFsZVuMPSPqidQ4-euYnphVXgbEL_QY05IcKmZcCfJAeh9mg","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTE5MjAsImV4cCI6MTU3Mjk1NjcyMCwianRpIjoiZmFjYzFiNmMzYmZjIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.aKizOdM14iRnVMucYJQowpyXzpX44kPZ0tRlqKMISpHMWlTwKtS4IsNiFdSkValE3EunzWqcUJvdHUT4LzEpDnbWIl45kfq-qd6Zp18yPgVBxCIzdCAquNb78oDp_JQ36UinSFATRzS4Z0s6sORp-GD2HOyLCsDo1rmBBAhl72fGaMikKzBEA3LETEGhC7pdUwI-fjtmqqsNA18Xb0J8EsOEI0xm_QISupyv7th41gdindnqQrjXl-4ilnAfj5LczX1tEOeYsNjOUu21QTjwQgnoVWY1BZbjUZdenAi5qkIzAKJq_5S3NY2z_0GE389_0fLkfxcHvxv_UtRhp1ByuA","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-10-29T12:25:20Z","created_at":"2019-10-29T10:06:35Z","updated_at":"2019-10-29T10:06:35Z","confirmed_at":"2019-10-29T10:06:34Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 12:25:20 GMT
+- request:
+    method: get
+    uri: http://maklerportal-api.local/v2/users/96092fa8-707d-4fe6-af5e-4898b9d87a90
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTE5MjAsImV4cCI6MTU3Mjk1NjcyMCwianRpIjoiYzMwNzc3ZmQwOTBiIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.LWjK-DryVpaK6U-0rngq9VwIpr44uN2-KGQ9MKOdJ8RSBHrD2K_pfuvhbQCxiVoLJdwePyCSeQpQEVuJaRtzV3GcO4MvsNZDPlf1BonqhKDwHIUBvTQ87MG_wMkR1uf4ckmYW6ttO-ntP_FTPVQAKlUyYrWEqoW_ZJ37KdsrDL4aXj1GJZESbjT_Ro8dIP1X-UIg87aI8RRUp0bz6dfRBEtJ8riLV8ol4BAdOMVl7CI7QghKnpeWpiI27LfTP9WFKkm4A_na-SDiDVUnUyaQiMRHouCrbwqRMwwSQStLZ6bRcZHxydrgUWurczJ7BsY6woV4J6ZUQ_VIvITjom_Fxw
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"323f8d33460b0ea3458eb28fc22ff38d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0c7cf235-7f0e-400a-b8a9-21e1736f3551
+      X-Runtime:
+      - '0.010227'
+      Vary:
+      - Origin
+      Content-Length:
+      - '521'
+    body:
+      encoding: UTF-8
+      string: '{"id":"96092fa8-707d-4fe6-af5e-4898b9d87a90","gid":"gid://maklerportal-api/User/96092fa8-707d-4fe6-af5e-4898b9d87a90","customer_id":"KD1","email":"max.mustermann@example.com","contact_email":"max.mustermann@example.com","unconfirmed_email":null,"first_name":"Max","last_name":"Mustermann","gender":"male","locale":"de-DE","contact_id":null,"contact_phone":"+49
+        161 5319006","created_at":"2019-10-29T11:07:49+01:00","updated_at":"2019-10-29T11:07:49+01:00","confirmed_at":"2019-10-29T11:07:49+01:00","deactivated_at":null}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 12:25:20 GMT
+recorded_with: VCR 3.0.3

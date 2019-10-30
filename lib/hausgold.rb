@@ -53,6 +53,7 @@ module Hausgold
   autoload :BaseEntity, 'hausgold/entity/base_entity'
   autoload :Jwt, 'hausgold/entity/jwt'
   autoload :User, 'hausgold/entity/user'
+  autoload :Broker, 'hausgold/entity/broker'
   autoload :Customer, 'hausgold/entity/customer'
   autoload :Task, 'hausgold/entity/task'
   autoload :Appointment, 'hausgold/entity/appointment'

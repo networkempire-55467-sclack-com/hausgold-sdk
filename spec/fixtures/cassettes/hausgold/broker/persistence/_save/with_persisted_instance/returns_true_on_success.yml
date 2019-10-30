@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"dc9b97cec0e12ea648a3f0cb10f61ac0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8849e490-c664-4a8f-a4aa-0882ec153ac6
+      X-Runtime:
+      - '0.085987'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3Mjk1OTAzMCwianRpIjoiZTRiMTIzMjBlNjg5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.YpL06jRqv_adUJbvRaYIBRKk5Ef1px8mzFc8GBQJiidb2qCd2SiBgTTgcnP3PVlpXP7yd-74_NeZ4AtJIMaFYep8qWubjedx10RaIsK5dIxyYIJhnXf8h430RkVWMRN2jxw_k7gwoOHiasAs_IsPhaIykJhYM_LFOyLKkC9Yw1aLLyCCfUiC2TorfdVR3agRXEL1dc19S4LLHCAaoKJM8FgnfFQWknOdl-ZknwMphsNkXTGP6EZeYLsHJtxdUWM9OrgnKpf9YIGEEF4NQHVRpvSDJc50uhMN0KdxzqposxXmtp4gtbCyj1XmCbiWeMc31wwjJoDbbNAFYknY7RDumw","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3MzU2MzgzMCwianRpIjoiOGI4Y2EwYjJhYTJhIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.brEUKsYWKlKYn_MXyW8ThO2D0dUe0oWQvb0EfVZORLY2E91O0-JDjmfsDAV2fDLedNJFxz9233gFVhEw98ZHgAXa5tcbGUygDJFEyzSlwwY_mf01lvDqdzpjpjC4TKF1ul0xlIMnqqcaHRCq-zsRsPBPA1vL1kXc1gXl-1Yv7-Tk0mSPdzD2kdDL7VBqSmhfD0fy71niC4c-A8XybgoL37GpEJS9ktDW_UOo5JMNPvJ7tpQRmtLvIfZBQdjtHj2cEQzCssv0PA7Ve5GqOkV950vT_d4AJwwe6uqS43IxQFkpyh7dbINaM7xog_vk164bmaG7t67GumlS4Caj-DegXw","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3Mjk1OTAzMCwianRpIjoiYjI5ZTEwYWMyNmQ3IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.s5J2RrfjnMrqUMDdYZJyS_BcVd9UPhcvnZRymzeSH71I8fKYqN47JHoat84r651wVCkcXpSD36NpZsqJ9IRPSp2vzZ5oxelXRkCoC8n9SyqUHTy0fS__Z33SOhBJsqGIv_hgiz4SKlMYWeveBQFG-vVP2RfzvfI5y__MzoZDZvtLnq4U7TizSSxpVC9cvYF-hO2vc6JpzK9Dd4TXEjVHD3SDrfYW_ZBYVc_ksXFm5-IQdcCz6bZIQcKxZAvnD0Qxe8Celih-LfMXop2hQA6CkcHvRguvq83PKh_gO3ddMAAGOUo0mGgQf80zUUe7gqcQTqIzks2urJaYPCnJ6iPFBA","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-10-29T13:03:50Z","created_at":"2019-10-29T10:06:35Z","updated_at":"2019-10-29T10:06:35Z","confirmed_at":"2019-10-29T10:06:34Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:03:50 GMT
+- request:
+    method: post
+    uri: http://maklerportal-api.local/v2/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"rosita@gmail.com","first_name":"Mose","last_name":"Fuchs","gender":"male","contact_phone":"+49
+        167 8156422","password":"password"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3Mjk1OTAzMCwianRpIjoiZTRiMTIzMjBlNjg5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.YpL06jRqv_adUJbvRaYIBRKk5Ef1px8mzFc8GBQJiidb2qCd2SiBgTTgcnP3PVlpXP7yd-74_NeZ4AtJIMaFYep8qWubjedx10RaIsK5dIxyYIJhnXf8h430RkVWMRN2jxw_k7gwoOHiasAs_IsPhaIykJhYM_LFOyLKkC9Yw1aLLyCCfUiC2TorfdVR3agRXEL1dc19S4LLHCAaoKJM8FgnfFQWknOdl-ZknwMphsNkXTGP6EZeYLsHJtxdUWM9OrgnKpf9YIGEEF4NQHVRpvSDJc50uhMN0KdxzqposxXmtp4gtbCyj1XmCbiWeMc31wwjJoDbbNAFYknY7RDumw
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/users/d2e0871c-88a1-459f-bdb4-cd5cf1ffb021"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"28f763e96bcd8200d4b84417caec4381"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fc53c3a6-501d-451e-bcc5-630d55d1fe8e
+      X-Runtime:
+      - '0.155315'
+      Vary:
+      - Origin
+      Content-Length:
+      - '473'
+    body:
+      encoding: UTF-8
+      string: '{"id":"d2e0871c-88a1-459f-bdb4-cd5cf1ffb021","gid":"gid://maklerportal-api/User/d2e0871c-88a1-459f-bdb4-cd5cf1ffb021","customer_id":null,"email":"rosita@gmail.com","contact_email":"rosita@gmail.com","unconfirmed_email":null,"first_name":"Mose","last_name":"Fuchs","gender":"male","locale":"de-DE","contact_id":null,"contact_phone":"+49
+        167 8156422","created_at":"2019-10-29T14:03:51+01:00","updated_at":"2019-10-29T14:03:51+01:00","confirmed_at":null,"deactivated_at":null}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:03:51 GMT
+- request:
+    method: put
+    uri: http://maklerportal-api.local/v2/users/d2e0871c-88a1-459f-bdb4-cd5cf1ffb021
+    body:
+      encoding: UTF-8
+      string: '{"last_name":"Mustermann"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3Mjk1OTAzMCwianRpIjoiZTRiMTIzMjBlNjg5IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.YpL06jRqv_adUJbvRaYIBRKk5Ef1px8mzFc8GBQJiidb2qCd2SiBgTTgcnP3PVlpXP7yd-74_NeZ4AtJIMaFYep8qWubjedx10RaIsK5dIxyYIJhnXf8h430RkVWMRN2jxw_k7gwoOHiasAs_IsPhaIykJhYM_LFOyLKkC9Yw1aLLyCCfUiC2TorfdVR3agRXEL1dc19S4LLHCAaoKJM8FgnfFQWknOdl-ZknwMphsNkXTGP6EZeYLsHJtxdUWM9OrgnKpf9YIGEEF4NQHVRpvSDJc50uhMN0KdxzqposxXmtp4gtbCyj1XmCbiWeMc31wwjJoDbbNAFYknY7RDumw
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"94b7f22e5bfa939cf9f40d6233c60b6b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8dce2e68-c0f2-4bcf-baa5-15fcb18f92ac
+      X-Runtime:
+      - '0.016316'
+      Vary:
+      - Origin
+      Content-Length:
+      - '478'
+    body:
+      encoding: UTF-8
+      string: '{"id":"d2e0871c-88a1-459f-bdb4-cd5cf1ffb021","gid":"gid://maklerportal-api/User/d2e0871c-88a1-459f-bdb4-cd5cf1ffb021","customer_id":null,"email":"rosita@gmail.com","contact_email":"rosita@gmail.com","unconfirmed_email":null,"first_name":"Mose","last_name":"Mustermann","gender":"male","locale":"de-DE","contact_id":null,"contact_phone":"+49
+        167 8156422","created_at":"2019-10-29T14:03:51+01:00","updated_at":"2019-10-29T14:03:51+01:00","confirmed_at":null,"deactivated_at":null}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:03:51 GMT
+recorded_with: VCR 3.0.3

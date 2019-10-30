@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://identity-api.local/v1/jwt/password
+    body:
+      encoding: UTF-8
+      string: '{"email":"identity-api@hausgold.de","password":"Oacbos8otAc=","bang":true}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"f696447b7fef4d4c741d0bd3ca99d3eb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 312218c6-1a9b-4dbf-91c4-d5770bb3ab78
+      X-Runtime:
+      - '0.081593'
+      Vary:
+      - Origin
+      Content-Length:
+      - '2840'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"bearer","access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3Mjk1OTAzMCwianRpIjoiMzUzYTM4MTlkZGM1IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.owSUVf6XXFqP_n4zukU1HP2LvqjEu9oU6omMzkJFuzUTZUAD23qRWsyGgnYnMUkGUQEMtYiXS0yF9Mj9lNXyP9QxaztjLRR9ouNf_F0gO-stY9gENw6yrPWHASq_UN_zQIgSmEnQrWwfQ7455qBkafav-03Rq2F8wfOUnFV7wTsSSTM62FBCyaeLc3jkhMhQC1YYTA6ehQ7UyjLSdG6U1MMwUSG92dvKh8IwQ9A4ZDyGfRoXKD0Ia_ldnxqZEtKcEAxMwaNRxBWc60TY7gSxVzbv0_WA2SetNzRW7ZXMKQLuF8CXCHWYZGvRo7cTgOB0F1cjIN5sT-Wqj2qFIFs0JA","expires_in":604800,"refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJpZGVudGl0eS1hcGkiLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3MzU2MzgzMCwianRpIjoiNjU2Y2UxZjM4YTJiIiwidHlwIjoicmVmcmVzaCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.Z8NjT9t77_oX8bGG0rfZVa9zqffbbl-40U_6g6ri9Tp_yWQeWVnFC5yI_wuqqxJNh61jKfzIyEQurCOdzBbpj6aiJBQHV8EIUZMOlywgAhLuxb7dcYN7Pi0uB8HVWhHiwgNGRBuW-lLHAfmFjC36bbYhFQJlansEvoHtU7N1CLYiIOBeoOIdaCEqj1A-vwEksmZ7UIdAojwQap_BzQXGGwKkUN8XXbeYkrvOi5WUuP-wOnUJ2KpmsEYUYHhYa69wdN--7UBYBD-byeURfEZePN3MY86Ne34os1u91_DmRMDgueJFCMyfplrbm5NBiA3XJy4Z6kaJxu6gcrlTHQfb2A","bare_access_token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3Mjk1OTAzMCwianRpIjoiNTQzZDg3OGRhNmZiIiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiYmFyZSIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.n0j1RrS3gjvwVi2T2tlk2idfmaQ9-Ut0NWUiL2I00rZDq0R-hPF6pv4M1RMK7FclqOeKOher9xVQUN9B7rw0CISu7N76DPeuMDwEFsFD_kwSt3KhvdRPW_tZW57odJySFTz0f5dIRSMpIjfZ-KL5x0lIHZILyORsJXwLpnJdMaWuQDL6WqCAX8LPUsars_xHzc9r8Fg8GlxYNK6xqB3z3cqPb_xeKC92UnvCgyS7BeknuJGKOa1zTnYelfPfr3DmbkSMifL38hSs6RIDHvGxzQ6I5fiFksElgtmDpdtBTxr1HO6dd-YoXDkoLK8DzjhQeGM6ageol_hvi-JpL5lntw","user":{"id":"87a5317f-18a4-4fa3-98d3-b97a7076102e","gid":"gid://identity-api/User/87a5317f-18a4-4fa3-98d3-b97a7076102e","email":"identity-api@hausgold.de","type":"machine","status":"active","last_login_at":"2019-10-29T13:03:50Z","created_at":"2019-10-29T10:06:35Z","updated_at":"2019-10-29T10:06:35Z","confirmed_at":"2019-10-29T10:06:34Z","locked_at":null,"recovery_at":null}}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:03:50 GMT
+- request:
+    method: post
+    uri: http://maklerportal-api.local/v2/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"sondra@gmail.com","first_name":"Fidelia","last_name":"Walter","gender":"female","contact_phone":"+49
+        171 4373999","password":"password"}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.12.0 test-client
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiaWRlbnRpdHktYXBpIiwibWFrbGVycG9ydGFsLWFwaSIsInBkZi1hcGkiLCJjYWxlbmRhci1hcGkiLCJjcm0iLCJqYWJiZXIiLCJ2ZXJrYWV1ZmVycG9ydGFsLWFwaSIsInByb3BlcnR5LWFwaSIsImFzc2V0LWFwaSIsImFuYWx5dGljLWFwaSJdLCJpc3MiOiJIQVVTR09MRCBJZGVudGl0eSBBUEkiLCJpYXQiOjE1NzIzNTQyMzAsImV4cCI6MTU3Mjk1OTAzMCwianRpIjoiMzUzYTM4MTlkZGM1IiwidHlwIjoiYWNjZXNzIiwiY3R4IjoiZnVsbCIsInN1YiI6Ijg3YTUzMTdmLTE4YTQtNGZhMy05OGQzLWI5N2E3MDc2MTAyZSIsImVtYWlsIjoiaWRlbnRpdHktYXBpQGhhdXNnb2xkLmRlIiwidXNlcl90eXBlIjoibWFjaGluZSJ9.owSUVf6XXFqP_n4zukU1HP2LvqjEu9oU6omMzkJFuzUTZUAD23qRWsyGgnYnMUkGUQEMtYiXS0yF9Mj9lNXyP9QxaztjLRR9ouNf_F0gO-stY9gENw6yrPWHASq_UN_zQIgSmEnQrWwfQ7455qBkafav-03Rq2F8wfOUnFV7wTsSSTM62FBCyaeLc3jkhMhQC1YYTA6ehQ7UyjLSdG6U1MMwUSG92dvKh8IwQ9A4ZDyGfRoXKD0Ia_ldnxqZEtKcEAxMwaNRxBWc60TY7gSxVzbv0_WA2SetNzRW7ZXMKQLuF8CXCHWYZGvRo7cTgOB0F1cjIN5sT-Wqj2qFIFs0JA
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - "/users/b8517690-f2f2-44b8-861e-a005af4f36c3"
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"a86edb326c19f8b6ec46821521b26b85"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8499419c-b46a-449a-bc73-02cd799a94f2
+      X-Runtime:
+      - '0.157719'
+      Vary:
+      - Origin
+      Content-Length:
+      - '479'
+    body:
+      encoding: UTF-8
+      string: '{"id":"b8517690-f2f2-44b8-861e-a005af4f36c3","gid":"gid://maklerportal-api/User/b8517690-f2f2-44b8-861e-a005af4f36c3","customer_id":null,"email":"sondra@gmail.com","contact_email":"sondra@gmail.com","unconfirmed_email":null,"first_name":"Fidelia","last_name":"Walter","gender":"female","locale":"de-DE","contact_id":null,"contact_phone":"+49
+        171 4373999","created_at":"2019-10-29T14:03:50+01:00","updated_at":"2019-10-29T14:03:50+01:00","confirmed_at":null,"deactivated_at":null}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:03:50 GMT
+recorded_with: VCR 3.0.3
