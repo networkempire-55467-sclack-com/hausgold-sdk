@@ -40,8 +40,10 @@ module Hausgold
     # @param args [Hash{Symbol => Mixed}] additional options
     # @return [Hausgold::SearchCriteria] the criteria object
     def properties(**args)
+      method = new_record? ? :via_adhoc_profile : :via_profile
+      attrs = new_record? ? { attributes: attributes } : { id: id }
       criteria = Hausgold::SearchCriteria.new(
-        self.class, :search_properties_via_profile, id: id
+        self.class, "search_properties_#{method}".to_sym, **attrs
       ).sort(created_at: :desc)
       criteria.raise! if args.fetch(:bang, false)
       criteria

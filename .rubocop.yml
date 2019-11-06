@@ -61,3 +61,8 @@ Naming/FileName:
 # Because we just implemented the ActiveRecord API.
 Rails/SkipsModelValidations:
   Enabled: false
+
+# Because useless assignments illustrate the usage
+Lint/UselessAssignment:
+  Exclude:
+    - "doc/**/*"

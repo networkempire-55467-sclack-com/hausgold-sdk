@@ -32,3 +32,15 @@ pp profile.properties.to_a
 # first. See the API documentation for all supported sorting keys.
 pp profile.properties.sort(year_of_construction: :desc).count
 # => 1
+
+# Build a new adhoc search profile (not persisted) and use it to search for
+# properties. This comes in handy when you do not want a customer to get
+# notifications (eg. email) when new matches are available. This variant just
+# performs the search/fetch of matching properties without side effects. A good
+# use case for it could be an interactive filter which is shown to the user. Or
+# a deep search where the resulting properties are processed in a custom way.
+properties = Hausgold::SearchProfile.new(
+  city: 'Leipzig',
+  property_types: %i[house site apartment]
+).properties!.to_a
+# => [#<Hausgold::Property ..]
