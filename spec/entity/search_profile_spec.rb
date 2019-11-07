@@ -4,7 +4,7 @@ RSpec.describe Hausgold::SearchProfile do
   let(:instance) { described_class.new }
   let(:attributes) do
     %i[id gid user_id usages property_types property_subtypes city zipcode
-       perimeter price_from price_to year_of_construction_from
+       perimeter currency price_from price_to year_of_construction_from
        year_of_construction_to amount_rooms_from amount_rooms_to
        living_space_from living_space_to land_size_from land_size_to created_at
        updated_at]

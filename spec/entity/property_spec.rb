@@ -27,7 +27,8 @@ RSpec.describe Hausgold::Property do
       it 'collects all registed attribute names as symbols' do
         expect(described_class.attribute_names).to \
           be_eql(%i[id owner_id permissions object_details lead_id metadata
-                    source created_at updated_at geo_details])
+                    source created_at updated_at valuation_at
+                    geo_details valuation])
       end
     end
   end

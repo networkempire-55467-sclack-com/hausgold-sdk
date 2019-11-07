@@ -10,6 +10,7 @@
   client method, additional client method arguments) and added support for a
   generalized sorting. The Grape CRUD adapter makes use of the new sorting
   filters from now on, but not all APIs support it yet.
+* Added new attributes to the `SearchProfile` and `Property` entities (#31)
 * Implemented the adhoc search profile property search, without persisting
   an actual search profile (#32)
 
