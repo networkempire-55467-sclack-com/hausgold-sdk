@@ -28,7 +28,7 @@ RSpec.describe Hausgold::Property do
         expect(described_class.attribute_names).to \
           be_eql(%i[id owner_id permissions object_details lead_id metadata
                     source created_at updated_at valuation_at
-                    geo_details valuation])
+                    geo_details valuation searchable])
       end
     end
   end
