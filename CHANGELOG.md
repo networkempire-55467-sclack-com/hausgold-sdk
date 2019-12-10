@@ -1,3 +1,7 @@
+### 0.14.0
+
+* Implemented a generic factory_bot_instrumentation client (#36)
+
 ### 0.13.0
 
 * Added full featured CRUD support for the `SearchProfile` entity (#28)

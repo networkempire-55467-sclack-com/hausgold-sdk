@@ -6,12 +6,16 @@ module Hausgold
     class MaklerportalApi < Base
       # Include all the features
       include Hausgold::ClientUtils::GrapeCrud
+      include Hausgold::ClientUtils::FactoryBotInstrumentation
 
       # Configure the application to use
       app 'maklerportal-api'
 
       # Define all the CRUD resources
       entity :user, '/v2/users', class_name: Hausgold::Broker
+
+      # Define all instrumentation entities
+      factory_i13n :broker, factory: :user, class_name: Hausgold::Broker
     end
   end
 end

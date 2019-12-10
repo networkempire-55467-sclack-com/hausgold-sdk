@@ -27,6 +27,13 @@ require 'hausgold/core_ext/hash'
 
 # The HAUSGOLD SDK namespace. Everything is bundled here.
 module Hausgold
+  # Some general purpose utilities
+  module Utils
+    autoload :Decision, 'hausgold/utils/decision'
+    autoload :Bangers, 'hausgold/utils/bangers'
+    autoload :Matchers, 'hausgold/utils/matchers'
+  end
+
   # Top level elements
   autoload :Configuration, 'hausgold/configuration'
   autoload :ConfigurationHandling, 'hausgold/configuration_handling'
@@ -68,13 +75,6 @@ module Hausgold
   autoload :SearchProfile, 'hausgold/entity/search_profile'
   autoload :Address, 'hausgold/entity/address'
 
-  # Some general purpose utilities
-  module Utils
-    autoload :Decision, 'hausgold/utils/decision'
-    autoload :Bangers, 'hausgold/utils/bangers'
-    autoload :Matchers, 'hausgold/utils/matchers'
-  end
-
   # Faraday request middlewares
   module Request
     autoload :DefaultHeaders, 'hausgold/client/request/default_headers'
@@ -93,6 +93,8 @@ module Hausgold
     autoload :Request, 'hausgold/client/utils/request'
     autoload :Response, 'hausgold/client/utils/response'
     autoload :GrapeCrud, 'hausgold/client/utils/grape_crud'
+    autoload :FactoryBotInstrumentation,
+             'hausgold/client/utils/factory_bot_instrumentation'
   end
 
   # All the separated features of the Identity API client

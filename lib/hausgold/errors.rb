@@ -27,7 +27,10 @@ module Hausgold
     # @param response [Faraday::Response] the response
     def initialize(message = nil, response = nil)
       @response = response
-      message ||= response.body.message if response.body.respond_to? :message
+      body = response.body
+      message ||= body.message if body.respond_to? :message
+      message ||= body.exception if body.respond_to? :exception
+      message ||= body.error if body.respond_to? :error
 
       super(message)
     end

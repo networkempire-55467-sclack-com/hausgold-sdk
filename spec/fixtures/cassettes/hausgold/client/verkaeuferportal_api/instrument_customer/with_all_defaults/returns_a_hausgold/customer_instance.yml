@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://verkaeuferportal-api.local/instrumentation
+    body:
+      encoding: UTF-8
+      string: '{"factory":"user","traits":[],"overwrite":{}}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.13.0 test-client
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f395af7ff375461f94234302901581d8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5905c3bf-cd8b-44c1-ac62-88b549b78249
+      X-Runtime:
+      - '0.023669'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":"cb26267e-71b9-451e-b520-95b1b893bca7","gid":"gid://verkaeuferportal-api/User/cb26267e-71b9-451e-b520-95b1b893bca7","email":"nader@example.com","first_name":"Kornelius","last_name":"Tellinghusen","gender":"male","mobile":"+49
+        158 3025893","phone":"046 0961670","address":null,"created_at":"2019-12-10T09:19:04Z","updated_at":"2019-12-10T09:19:04Z"}'
+    http_version: 
+  recorded_at: Tue, 10 Dec 2019 09:19:04 GMT
+recorded_with: VCR 3.0.3

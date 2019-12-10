@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://maklerportal-api.local/instrumentation
+    body:
+      encoding: UTF-8
+      string: '{"factory":"user","traits":[],"overwrite":{}}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.13.0 test-client
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ee591b7d26ec1ad538b9a0798ae5c1e6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5d50b2c6-f440-401c-b141-e1a4a2e4784e
+      X-Runtime:
+      - '0.362897'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImExYTJlZjllLWNiODUtNGFhNi05Y2Y0LTBmYzczMmM5NjFhMiIs
+        ImdpZCI6ImdpZDovL21ha2xlcnBvcnRhbC1hcGkvVXNlci9hMWEyZWY5ZS1j
+        Yjg1LTRhYTYtOWNmNC0wZmM3MzJjOTYxYTIiLCJjdXN0b21lcl9pZCI6bnVs
+        bCwiZW1haWwiOiJpbkBleGFtcGxlLmNvbSIsImNvbnRhY3RfZW1haWwiOiJl
+        dmlhLnZvbkBleGFtcGxlLmNvbSIsInVuY29uZmlybWVkX2VtYWlsIjpudWxs
+        LCJmaXJzdF9uYW1lIjoiR8O8bnRoZXIiLCJsYXN0X25hbWUiOiJSb2h3ZXIi
+        LCJnZW5kZXIiOiJtYWxlIiwibG9jYWxlIjoiZGUtREUiLCJjb250YWN0X2lk
+        IjpudWxsLCJjb250YWN0X3Bob25lIjoiMDc2MiAzOTY0OTc1IiwiY3JlYXRl
+        ZF9hdCI6IjIwMTktMTItMTBUMTA6MjQ6NTQrMDE6MDAiLCJ1cGRhdGVkX2F0
+        IjoiMjAxOS0xMi0xMFQxMDoyNDo1NCswMTowMCIsImNvbmZpcm1lZF9hdCI6
+        bnVsbCwiZGVhY3RpdmF0ZWRfYXQiOm51bGx9
+    http_version: 
+  recorded_at: Tue, 10 Dec 2019 09:24:54 GMT
+recorded_with: VCR 3.0.3

@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://verkaeuferportal-api.local/instrumentation
+    body:
+      encoding: UTF-8
+      string: '{"factory":"user","traits":[],"overwrite":{}}'
+    headers:
+      User-Agent:
+      - HausgoldSDK/0.13.0 test-client
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"296b6413f14f0af65eaae080ba736d27"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 70b8dca6-d61d-4172-a314-76709714274a
+      X-Runtime:
+      - '0.014418'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6IjUxMWU4MjRjLTRlMzktNDM1NC1hZTYwLTgxZTE3NWQxYjFmNCIs
+        ImdpZCI6ImdpZDovL3ZlcmthZXVmZXJwb3J0YWwtYXBpL1VzZXIvNTExZTgy
+        NGMtNGUzOS00MzU0LWFlNjAtODFlMTc1ZDFiMWY0IiwiZW1haWwiOiJibGFu
+        Y2hAZXhhbXBsZS5jb20iLCJmaXJzdF9uYW1lIjoiS2Fyb2xpbmUiLCJsYXN0
+        X25hbWUiOiJIw7ZmbmVyIiwiZ2VuZGVyIjoiZmVtYWxlIiwibW9iaWxlIjoi
+        KzQ5IDE2MyA5OTI1ODI2IiwicGhvbmUiOiIwMjI2NSAxNTM3ODE4IiwiYWRk
+        cmVzcyI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMTktMTItMTBUMDk6MTk6MDRa
+        IiwidXBkYXRlZF9hdCI6IjIwMTktMTItMTBUMDk6MTk6MDRaIn0=
+    http_version: 
+  recorded_at: Tue, 10 Dec 2019 09:19:04 GMT
+recorded_with: VCR 3.0.3
