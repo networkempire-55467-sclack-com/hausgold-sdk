@@ -1,3 +1,8 @@
+### 0.15.0
+
+* Added full name shortcuts for `Hausgold::Broker` and
+  `Hausgold::Customer` (#37)
+
 ### 0.14.0
 
 * Implemented a generic factory_bot_instrumentation client (#36)

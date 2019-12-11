@@ -219,4 +219,14 @@ RSpec.describe Hausgold::Customer do
       end
     end
   end
+
+  describe '#full_name' do
+    let(:valid) do
+      build(:customer, first_name: 'Thomas', last_name: 'Mustermann')
+    end
+
+    it 'builds the correct full name' do
+      expect(valid.full_name).to be_eql('Thomas Mustermann')
+    end
+  end
 end

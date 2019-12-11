@@ -22,5 +22,13 @@ module Hausgold
     # Define attribute types for casting
     typed_attr :gender, :string_inquirer
     typed_attr :locale, :symbol
+
+    # A shortcut reader to assemble the full name of the broker. (Based on
+    # +first_name+ and +last_name+)
+    #
+    # @return [String] the full name of the broker
+    def full_name
+      [first_name, last_name].join(' ')
+    end
   end
 end

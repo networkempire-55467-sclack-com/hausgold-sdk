@@ -23,6 +23,14 @@ module Hausgold
     # Associations
     has_one :address, persist: true
 
+    # A shortcut reader to assemble the full name of the customer. (Based on
+    # +first_name+ and +last_name+)
+    #
+    # @return [String] the full name of the customer
+    def full_name
+      [first_name, last_name].join(' ')
+    end
+
     # Notify a customer/user about a created property.
     #
     # @deprecated This is deprecated by default and will be dropped
